@@ -350,7 +350,7 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
   <div class="tab" onclick="showTab('gsc',this)">Search Console</div>
   <div class="tab" onclick="showTab('ai',this)">✦ AI Search</div>
   <div class="tab" onclick="showTab('callrail',this)">CallRail</div>
-  <div class="tab" onclick="showTab('action',this)">Action Plan</div>
+  <div class="tab" onclick="showTab('action',this)">🎯 Content Strategy</div>
   <div class="tab" onclick="showTab('blog',this)">📅 Blog Calendar</div>
   <div class="tab" onclick="showTab('social',this)">📲 Social Calendar</div>
 
@@ -363,19 +363,19 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
     <div class="hero-title">12-Month Performance Summary</div>
     <div class="hero-sub">GA4 · Google Search Console · CallRail · Jul 2025 – Jul 9, 2026</div>
     <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">10,496</div><div class="hero-kpi-label">Total Sessions</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">10,359</div><div class="hero-kpi-label">Total Sessions</div></div>
       <div class="hero-kpi"><div class="hero-kpi-val brand">2,670</div><div class="hero-kpi-label">Organic Sessions (25.5%)</div></div>
       <div class="hero-kpi"><div class="hero-kpi-val green">+156%</div><div class="hero-kpi-label">Session Growth Dec→May</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val teal">79</div><div class="hero-kpi-label">AI-Referred Sessions ✦</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val teal">88</div><div class="hero-kpi-label">AI-Referred Sessions ✦</div></div>
       <div class="hero-kpi"><div class="hero-kpi-val">927</div><div class="hero-kpi-label">GSC Clicks</div></div>
       <div class="hero-kpi"><div class="hero-kpi-val red">0</div><div class="hero-kpi-label">Conversions Tracked ⚠</div></div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title">Monthly Sessions — Jul 2025 through Jun 2026</div>
+    <div class="card-title">Monthly Sessions — Jul 2025 through Jul 2026</div>
     <div class="monthly-chart" id="monthlyChart"></div>
-    <div style="font-size:11px;color:var(--muted);margin-top:44px">Peak: May 2026 (1,381 sessions). July 2026 is partial — 9 days only.</div>
+    <div style="font-size:11px;color:var(--muted);margin-top:44px">Peak: May 2026 (1,381 sessions). Dec 2025 was the low point (539). +156% growth Dec→May. Jul 2026 is partial — 9 days, 448 sessions.</div>
   </div>
 
   <div class="two-col">
@@ -388,13 +388,13 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
         <div class="channel-row"><div class="channel-label">Google Ads</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:8.9%;background:#F59E0B"></div></div><div class="channel-val">930</div></div>
         <div class="channel-row"><div class="channel-label">GBP / Maps</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.6%;background:#22C55E"></div></div><div class="channel-val">170</div></div>
         <div class="channel-row"><div class="channel-label">Email</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.7%;background:#EC4899"></div></div><div class="channel-val">175</div></div>
-        <div class="channel-row"><div class="channel-label">AI (ChatGPT / Gemini)</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.75%;background:#06B6D4"></div></div><div class="channel-val" style="color:var(--teal);font-weight:800">79 ✦</div></div>
+        <div class="channel-row"><div class="channel-label">AI (ChatGPT / Gemini)</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.85%;background:#06B6D4"></div></div><div class="channel-val" style="color:var(--teal);font-weight:800">88 ✦</div></div>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Key Signals</div>
       <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="alert success"><strong>ChatGPT &amp; Gemini are sending qualified visitors</strong>ChatGPT: 46 sessions at 65% engagement. Gemini: 31 at 55%. Unify360 is already appearing in AI conversations about review tools.</div>
+        <div class="alert success"><strong>ChatGPT &amp; Gemini are sending qualified visitors</strong>ChatGPT: 57 sessions, peaking May '26 (23 sessions, 65 pageviews, 72.7% engagement). Gemini: 31 sessions, strongest Sep–Oct '25. Total 88 AI sessions — all landing on the homepage.</div>
         <div class="alert warning"><strong>Conversion tracking gap is the #1 blocker</strong>Zero conversions tracked across all 10,496 sessions. No channel — including Google Ads — can show ROI until GA4 goals are configured.</div>
         <div class="alert info"><strong>Strong growth trajectory</strong>Sessions climbed from 539 (Dec 2025) to 1,381 (May 2026) — +156% in 5 months — driven by organic and referral channels.</div>
       </div>
@@ -427,6 +427,35 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
       <div style="font-size:12px;color:var(--muted)">Oct &amp; Dec 2025 were the low points (607 / 539)</div>
       <div style="font-size:12px;color:var(--muted)">Jun 2026 softened to 1,071 from May's 1,381 peak</div>
     </div>
+  </div>
+
+  <div style="margin-bottom:28px">
+    <div class="eyebrow">Monthly Breakdown</div>
+    <div class="section-title" style="font-size:17px;margin-bottom:4px">Sessions by Month — Jul 2025 to Jul 2026</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Month</th><th class="num">Sessions</th><th class="num">Users</th><th class="num">Engagement Rate</th><th class="num">Page Views</th><th>Signal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jul 2025</td><td class="num">703</td><td class="num">422</td><td class="num good">44.2%</td><td class="num">1,244</td><td><span class="tag-xs green">Strong start</span></td></tr>
+          <tr><td>Aug 2025</td><td class="num">824</td><td class="num">505</td><td class="num good">40.4%</td><td class="num">1,343</td><td><span class="tag-xs green">Growth</span></td></tr>
+          <tr><td>Sep 2025</td><td class="num">814</td><td class="num">500</td><td class="num good">39.9%</td><td class="num">1,294</td><td><span class="tag-xs green">Gemini traffic spike</span></td></tr>
+          <tr style="background:rgba(239,68,68,0.05)"><td>Oct 2025</td><td class="num bad">607</td><td class="num">318</td><td class="num good">48.3%</td><td class="num">1,070</td><td><span class="tag-xs red">Low point — traffic dip</span></td></tr>
+          <tr><td>Nov 2025</td><td class="num">664</td><td class="num">531</td><td class="num">33.7%</td><td class="num">878</td><td><span class="tag-xs amber">Recovery began</span></td></tr>
+          <tr style="background:rgba(239,68,68,0.05)"><td>Dec 2025</td><td class="num bad">539</td><td class="num">380</td><td class="num">36.5%</td><td class="num">833</td><td><span class="tag-xs red">Annual low — holiday effect</span></td></tr>
+          <tr><td>Jan 2026</td><td class="num">693</td><td class="num">403</td><td class="num good">42.9%</td><td class="num">1,532</td><td><span class="tag-xs green">Jan rebound — high pages/session</span></td></tr>
+          <tr><td>Feb 2026</td><td class="num">745</td><td class="num">400</td><td class="num good">49.4%</td><td class="num">1,621</td><td><span class="tag-xs green">Best engagement month</span></td></tr>
+          <tr><td>Mar 2026</td><td class="num">809</td><td class="num">554</td><td class="num">37.0%</td><td class="num">1,317</td><td><span class="tag-xs green">Consistent growth</span></td></tr>
+          <tr><td>Apr 2026</td><td class="num">1,061</td><td class="num">783</td><td class="num">32.7%</td><td class="num">1,507</td><td><span class="tag-xs blue">Broke 1,000 for first time</span></td></tr>
+          <tr style="background:rgba(6,147,227,0.07)"><td><strong>May 2026</strong></td><td class="num" style="color:var(--brand);font-weight:800;font-size:16px">1,381</td><td class="num" style="font-weight:700">1,203</td><td class="num">20.7%</td><td class="num" style="font-weight:700">1,866</td><td><span class="tag-xs blue">🔥 Peak — most sessions &amp; page views</span></td></tr>
+          <tr><td>Jun 2026</td><td class="num">1,071</td><td class="num">877</td><td class="num">31.8%</td><td class="num">1,445</td><td><span class="tag-xs amber">Post-peak normalization</span></td></tr>
+          <tr><td>Jul 2026 <span style="font-size:10px;color:var(--muted)">(thru Jul 9)</span></td><td class="num">448</td><td class="num">370</td><td class="num">28.3%</td><td class="num">671</td><td><span class="tag-xs amber">Partial — 9 days only</span></td></tr>
+          <tr style="font-weight:700;border-top:2px solid var(--border)"><td><strong>Total</strong></td><td class="num" style="color:var(--brand);font-weight:800">10,359</td><td class="num">—</td><td class="num">38.2% avg</td><td class="num" style="font-weight:700">16,966</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px;font-size:12px;color:var(--muted)">+156% growth from Dec '25 low (539) to May '26 peak (1,381). Oct and Dec were the low points; the site has not dipped below 600 sessions since Jan 2026.</div>
   </div>
 
   <div class="eyebrow" style="margin-top:28px">Source / Medium Breakdown</div>
@@ -793,15 +822,22 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
   <div class="section-title">Call Volume &amp; Lead Quality</div>
   <div class="section-desc">Jul 2025 – Jul 9, 2026 · Company: Unify360.com</div>
 
-  <div class="alert info"><strong>Context: Unify360 is B2B SaaS — call behavior differs from service businesses.</strong>Many of the 318 logged calls are tracking-number reroutes from client websites (straightshooterplumbing.com, titanroofingfl.com, goldstarplumbingaz.com) where Unify360's tracking number is embedded. These are client website visitors, not Unify360 prospects. Genuine inbound calls come from Direct, Google Organic, and Directory Listings.</div>
+  <div class="alert info" style="flex-direction:column;align-items:flex-start;gap:8px">
+    <strong>What are the 319 call events?</strong>
+    <div style="font-size:12.5px;line-height:1.7;color:var(--muted)">
+      <strong style="color:var(--text)">99 answered</strong> — calls actually picked up. Of these: 34 valid (≥30s, a real conversation) · 61 short (&lt;30s, hangups or wrong numbers) · 1 missed.<br>
+      <strong style="color:var(--text)">220 unconnected routing events</strong> — calls tracked by CallRail's tracking number but never connected: voicemail drops, ring-and-hang, and calls routed through Unify360's number embedded on <em>client</em> websites (straightshooterplumbing.com, titanroofingfl.com, goldstarplumbingaz.com). These are those clients' customers calling <em>them</em> — not Unify360 prospects — but they register in CallRail because Unify360's tracking infrastructure is what powers the client's call tracking.<br>
+      <strong style="color:var(--text)">Genuine Unify360 prospects</strong> are the calls from Direct, Google Organic, and Directory Listings sources below.
+    </div>
+  </div>
 
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-val">318</div><div class="kpi-label">Total Call Events</div><div class="kpi-sub">Incl. client-site reroutes</div></div>
-    <div class="kpi blue"><div class="kpi-val">49</div><div class="kpi-label">Answered</div><div class="kpi-sub">15.4% answer rate</div></div>
-    <div class="kpi green"><div class="kpi-val">18</div><div class="kpi-label">Valid Leads (≥30s)</div><div class="kpi-sub">Answered + 30s or more</div></div>
-    <div class="kpi red"><div class="kpi-val">29</div><div class="kpi-label">Short / Hangups</div><div class="kpi-sub">&lt;30s of answered calls</div></div>
-    <div class="kpi"><div class="kpi-val">33s</div><div class="kpi-label">Avg Duration</div><div class="kpi-sub">Answered calls</div></div>
-    <div class="kpi amber"><div class="kpi-val">3%</div><div class="kpi-label">Overall Valid Rate</div><div class="kpi-sub">Expected for B2B SaaS</div></div>
+    <div class="kpi"><div class="kpi-val">319</div><div class="kpi-label">Total Call Events</div><div class="kpi-sub">99 answered · 220 unconnected routing events</div></div>
+    <div class="kpi blue"><div class="kpi-val">99</div><div class="kpi-label">Answered</div><div class="kpi-sub">31.0% of total events</div></div>
+    <div class="kpi green"><div class="kpi-val">34</div><div class="kpi-label">Valid Calls (≥30s)</div><div class="kpi-sub">Of 99 answered calls</div></div>
+    <div class="kpi red"><div class="kpi-val">61</div><div class="kpi-label">Short / Hangups</div><div class="kpi-sub">&lt;30s · 1 missed call</div></div>
+    <div class="kpi"><div class="kpi-val">32s</div><div class="kpi-label">Avg Duration</div><div class="kpi-sub">Answered calls</div></div>
+    <div class="kpi amber"><div class="kpi-val">34%</div><div class="kpi-label">Answered → Valid Rate</div><div class="kpi-sub">34 of 99 answered calls ≥30s</div></div>
   </div>
 
   <div class="table-wrap">
@@ -812,9 +848,9 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
         <tr><td><strong>Directory Listings</strong></td><td class="num" style="color:var(--brand);font-weight:700">4</td><td class="num">0</td><td style="font-size:12px;color:var(--muted)">Wauchula FL (30s), Kansas City MO (33s), Avon Park FL (30s), Palmetto FL (36s)</td></tr>
         <tr><td><strong>Google Organic</strong></td><td class="num" style="color:var(--brand);font-weight:700">3</td><td class="num">1</td><td style="font-size:12px;color:var(--muted)">Pensacola FL (161s), Houston TX (50s), Sacramento CA (89s)</td></tr>
         <tr><td><strong>Facebook</strong></td><td class="num">1</td><td class="num">1</td><td style="font-size:12px;color:var(--muted)">Glasgow Rural KY (203s) — highly engaged</td></tr>
-        <tr><td><strong>Client sites (referral embeds)</strong></td><td class="num">5</td><td class="num" style="color:var(--red);font-weight:700">20+</td><td style="font-size:12px;color:var(--muted)">FISHER LUZ: 11 calls Jun 29 from straightshooterplumbing.com. MONTES PATRICIA: 5 calls Jun 1.</td></tr>
+        <tr><td><strong>Client sites (referral embeds)</strong></td><td class="num">5</td><td class="num" style="color:var(--red);font-weight:700">30+</td><td style="font-size:12px;color:var(--muted)">FISHER LUZ: 11 calls Jun 29 (straightshooterplumbing.com). MONTES PATRICIA: 5 calls Jun 1 (goldstarplumbing). These are client customers, not Unify360 prospects.</td></tr>
         <tr><td><strong>Google Ads</strong></td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red);font-weight:700">1</td><td style="font-size:12px;color:var(--muted)">ANDERSON TERI 21s — short hangup. No valid leads from paid search.</td></tr>
-        <tr class="total"><td>TOTAL</td><td class="num" style="color:var(--brand)">18 valid</td><td class="num" style="color:var(--red)">29 short</td><td></td></tr>
+        <tr class="total"><td>TOTAL (answered)</td><td class="num" style="color:var(--brand)">34 valid</td><td class="num" style="color:var(--red)">61 short · 1 missed</td><td style="font-size:12px;color:var(--muted)">+220 unconnected routing events = 319 total</td></tr>
       </tbody>
     </table>
   </div>
@@ -826,61 +862,165 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 <!-- ══ ACTION PLAN ══ -->
 <div id="tab-action" class="tab-content">
 <div class="page">
-  <div class="eyebrow">Recommendations</div>
-  <div class="section-title">Priority Action Plan</div>
-  <div class="section-desc">Ordered by impact. Focus Jul – Sep 2026.</div>
+  <div class="eyebrow">Content Strategy</div>
+  <div class="section-title">What Unify360 Needs to Grow</div>
+  <div class="section-desc">Based on traffic patterns, GSC page data, AI referral signals, and CallRail behavior — these are the content assets that will move the needle.</div>
 
-  <div class="action-list">
-    <div class="action-item">
-      <div class="action-num">1</div>
-      <div><div class="action-title">Configure GA4 conversion tracking — blocks everything else</div><div class="action-desc">Set up events for: free trial signups, demo requests, contact form completions, and CTA clicks. Until this is live, no channel can show ROI. Google Ads is especially blind — 930 sessions with zero measurable outcome.</div></div>
-      <div class="priority high">Critical</div>
+  <div class="alert info" style="margin-bottom:24px"><strong>The pattern:</strong> Unify360 attracts high-intent visitors but doesn't give them a "next step" before they leave. The homepage gets 1,072 clicks/month. /reputation-management-software/ gets 24,565 impressions. These visitors need something to take — a calculator, a case study, a kit — before they decide to book a demo.</div>
+
+  <!-- ASSET 1: CASE STUDIES -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--brand)">
+      <div style="background:var(--brand);color:#fff;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0">1</div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--text)">Contractor Case Studies <span style="font-size:12px;font-weight:600;color:var(--brand);background:rgba(6,147,227,0.1);padding:2px 8px;border-radius:12px;margin-left:6px">Highest Priority</span></div>
+        <div style="font-size:12.5px;color:var(--muted)">Format: 1-page PDF + web page · 3 stories needed · Timeline: 30 days</div>
+      </div>
     </div>
-    <div class="action-item">
-      <div class="action-num">2</div>
-      <div><div class="action-title">Rewrite title tags on three high-impression pages</div><div class="action-desc">/ai-review-response-generator/ (14,062 impr, 0.05% CTR), /messaging/ (12,500 impr, 0.20% CTR), /review-response-software/ (11,667 impr, 0.05% CTR). Include the exact search term and a clear benefit in each title. Even a 1% CTR lift adds 300+ free clicks per month across these three pages.</div></div>
-      <div class="priority high">High</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">3</div>
-      <div><div class="action-title">Add FAQ schema to AI-related pages</div><div class="action-desc">FAQ schema on /ai-review-response-generator/, /review-response-software/, and /4-best-ai-tools-for-small-business-owners/ makes these pages parseable by ChatGPT and Google AI Overviews. This directly amplifies the AI referral traffic already arriving (79 sessions) and positions Unify360 for AI search growth.</div></div>
-      <div class="priority high">High</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">4</div>
-      <div><div class="action-title">Publish vertical-specific AI guides</div><div class="action-desc">"Best AI Tools for Plumbers 2026", "AI Review Management for Electricians", "How AI is Changing Home Service Reviews" — each targets an AI-intent keyword where Unify360 already appears weakly in GSC. These posts both improve rankings and give ChatGPT/Gemini richer content to cite.</div></div>
-      <div class="priority high">High</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">5</div>
-      <div><div class="action-title">Pause or fix Google Ads until tracking is live</div><div class="action-desc">18.1% engagement, zero valid calls, zero tracked conversions. The campaign cannot optimize. Either pause until GA4 goals are configured, or fix tracking first then give smart bidding 30 days with a conversion target before evaluating.</div></div>
-      <div class="priority medium">Medium</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">6</div>
-      <div><div class="action-title">Create a dedicated /agency/ landing page</div><div class="action-desc">"Review management software for agencies" has only 9 GSC impressions but ranks at position 14.6 — Google already sees Unify360 as relevant with no dedicated page. An exact-match page targeting agencies could rank on page 1 within 60–90 days and attract high-value reseller/white-label leads.</div></div>
-      <div class="priority medium">Medium</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">7</div>
-      <div><div class="action-title">Push "can you incentivize google reviews" to page 1</div><div class="action-desc">This page is at position 7.0 with 4,822 impressions — sitting just outside the top 5. A content refresh (updated date, 2–3 new sections, improved internal linking) plus 3–5 backlinks should push it into top 5 and unlock a significant click increase from 16 clicks/month to 100+.</div></div>
-      <div class="priority medium">Medium</div>
-    </div>
-    <div class="action-item">
-      <div class="action-num">8</div>
-      <div><div class="action-title">Track AI referrals as a separate funnel in GA4</div><div class="action-desc">Create a custom GA4 segment for chatgpt.com + gemini.google.com. Target: grow AI sessions from 79 to 200+ by Dec 2026 through the content and schema actions above. Zero cost channel, above-average engagement — invest in it now before competitors capture the same citations.</div></div>
-      <div class="priority low">Ongoing</div>
+    <div class="two-col">
+      <div style="font-size:13px;color:var(--muted);line-height:1.7">
+        <p>B2B SaaS buyers need proof before they book a demo — and for home service contractors, that proof needs to look like them. A case study featuring a plumber, an HVAC company, or an electrician with specific numbers converts far better than any feature page.</p>
+        <p>ChatGPT and Gemini actively cite detailed case studies when answering "does [software] work?" questions. Three case studies would directly amplify the 88 AI sessions already arriving.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px">Case Study #1 — Star Rating Recovery</div>
+          <div style="font-size:12px;color:var(--muted)">"[Plumber] went from 3.2★ to 4.8★ in 90 days using Unify360's AI review responses"</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px">Case Study #2 — Agency Scale</div>
+          <div style="font-size:12px;color:var(--muted)">"How [Agency] manages 50+ client review profiles without adding headcount" → targets 17,209-impression agency page</div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px">
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px">Case Study #3 — Lead Recovery</div>
+          <div style="font-size:12px;color:var(--muted)">"[HVAC company] stopped losing leads with Unify360's unified inbox — 97% response rate in Week 1"</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card" style="margin-top:28px">
-    <div class="card-title">30 / 60 / 90 Day Focus</div>
+  <!-- ASSET 2: ROI CALCULATOR -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--green)">
+      <div style="background:var(--green);color:#fff;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0">2</div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--text)">Interactive ROI Calculator <span style="font-size:12px;font-weight:600;color:var(--green);background:rgba(34,197,94,0.1);padding:2px 8px;border-radius:12px;margin-left:6px">Highest Converting</span></div>
+        <div style="font-size:12.5px;color:var(--muted)">Format: Embedded web tool · Ungated · Timeline: 45 days</div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div style="font-size:13px;color:var(--muted);line-height:1.7">
+        <p>The most-converting B2B SaaS lead magnet is an ROI calculator — because it makes the cost of <em>not</em> buying feel real. For Unify360, the calculation is simple: missed calls × average job value = lost revenue that Unify360 recovers.</p>
+        <p>Place it on the homepage (1,072 clicks/month), the /review-response-software/ page (11,667 impr), and the /reputation-management-software/ page (24,565 impr). No email gate — let it run and track CTA clicks to "Book a Demo."</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px">
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px">Calculator Inputs:</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8">
+          ① Monthly inbound leads (calls + web forms)<br>
+          ② Average response time (hours)<br>
+          ③ Average job value ($)<br>
+          ④ Current review count + star rating<br>
+          <div style="margin-top:8px;padding:8px;background:rgba(34,197,94,0.08);border-radius:6px;color:var(--text);font-weight:600">→ Output: "You're losing $X/month. Here's how Unify360 fixes it."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASSET 3: EBOOK / LEAD MAGNET -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--amber)">
+      <div style="background:var(--amber);color:#fff;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0">3</div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--text)">eBook Lead Magnet — Reputation Playbook</div>
+        <div style="font-size:12.5px;color:var(--muted)">Format: 12–18 page PDF · Email-gated · Timeline: 30 days</div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div style="font-size:13px;color:var(--muted);line-height:1.7">
+        <p><strong style="color:var(--text)">Title:</strong> "The 2026 Local Business Reputation Playbook: How Home Service Contractors Get to 4.8 Stars (And Stay There)"</p>
+        <p>Gate it with an email on the blog posts targeting "reputation management software," "best reputation management tools," and "do Google reviews help SEO" — pages that already have 30,000+ combined impressions. Subscribers enter a 5-email drip sequence ending in a demo offer.</p>
+        <p>This directly monetizes the organic traffic that's arriving but bouncing without a next step.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px">Chapters:</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.8">
+          1. Why star rating math works against you after 3.5★<br>
+          2. The review velocity formula (how many per month you need)<br>
+          3. How to respond to every review in &lt;10 minutes/week<br>
+          4. The 5 review request templates that actually get responses<br>
+          5. What to do when a fake or unfair review appears<br>
+          6. Measuring reputation ROI (the 3 metrics that matter)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASSET 4: AGENCY PARTNER KIT -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #9333EA">
+      <div style="background:#9333EA;color:#fff;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0">4</div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--text)">Agency Partner Kit <span style="font-size:12px;font-weight:600;color:#9333EA;background:rgba(147,51,234,0.1);padding:2px 8px;border-radius:12px;margin-left:6px">17K impressions waiting</span></div>
+        <div style="font-size:12.5px;color:var(--muted)">Format: PDF + slide deck · Form-gated (agency-specific) · Timeline: 45 days</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7">
+      <p>The /reputation-management-software-for-agencies/ page gets 17,209 impressions and 2 clicks (0.0% CTR). Agencies land there and find no reason to stay. A downloadable Agency Partner Kit — pitch deck, pricing, client onboarding template, white-label options — gives them something concrete to take.</p>
+      <p><strong style="color:var(--text)">Kit contents:</strong> 5-slide client pitch deck · Unify360 agency pricing tiers · Sample client report (like this one) · Onboarding checklist · Case study on managing 50+ accounts</p>
+      <p>Gate with a short agency-specific form: company name, number of clients, current tools. Sales follows up within 24hrs. This is the highest-value lead segment on the site.</p>
+    </div>
+  </div>
+
+  <!-- ASSET 5: WHITE PAPER -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--teal)">
+      <div style="background:var(--teal);color:#fff;border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0">5</div>
+      <div>
+        <div style="font-size:16px;font-weight:800;color:var(--text)">White Paper — AI in Home Services Report</div>
+        <div style="font-size:12.5px;color:var(--muted)">Format: 8–12 page PDF · PR-ready · Timeline: 60 days</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7">
+      <p><strong style="color:var(--text)">Title:</strong> "State of AI in Home Service Contractor Marketing: 2026 Data Report"</p>
+      <p>This white paper does three things: generates backlinks when picked up by industry publications, positions Unify360 as the category authority (not just a product), and gives ChatGPT and Gemini a data-rich source to cite. The 88 AI sessions arriving today prove AI is already recommending Unify360 — a published data report gives those recommendations more credibility and specificity.</p>
+      <p><strong style="color:var(--text)">Sections:</strong> AI search adoption in B2B purchases · Contractor review benchmarks by industry vertical · Response time data · Star rating vs. conversion rate correlation · AI tools adoption curve for trades</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE SUMMARY -->
+  <div class="card" style="margin-top:4px">
+    <div class="card-title">30 / 60 / 90 Day Content Roadmap</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
-      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:8px">30 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Configure GA4 conversions<br>✔ Rewrite 3 title tags<br>✔ Add FAQ schema to AI pages</div></div>
-      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Publish 2 vertical AI guides<br>✔ Build /agency/ landing page<br>✔ Review/pause Ads with data</div></div>
-      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">90 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Refresh "incentivize reviews" post<br>✔ Review AI referral growth<br>✔ Set Q4 content calendar</div></div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:8px">30 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8">
+          ✔ Publish Case Study #1 (plumber star recovery)<br>
+          ✔ Draft Reputation Playbook eBook<br>
+          ✔ Set up 5-email drip sequence<br>
+          ✔ Configure GA4 conversion events
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8">
+          ✔ Launch ROI calculator on homepage<br>
+          ✔ Publish Case Study #2 (agency scale)<br>
+          ✔ Release Agency Partner Kit + form<br>
+          ✔ Rewrite 3 high-impression title tags
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">90 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8">
+          ✔ Publish AI State of Industry white paper<br>
+          ✔ Add FAQ schema to AI tool pages<br>
+          ✔ Publish Case Study #3 (lead recovery)<br>
+          ✔ Review AI referral growth (target: 150 sessions)
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
 </div>
 
@@ -888,13 +1028,13 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 <div id="tab-blog" class="tab-content">
 <div class="page">
   <div class="eyebrow">Content Strategy</div>
-  <div class="section-title">Blog Calendar — June through December 2026</div>
-  <div class="section-desc">56 posts · 8 per month · Jun–Dec 2026 · Keywords grounded in GSC data &amp; AI search intent</div>
+  <div class="section-title">Blog Calendar — July through December 2026</div>
+  <div class="section-desc">48 posts · 8 per month · Jul–Dec 2026 · Topics grounded in GSC data &amp; real search queries</div>
 
   <div class="kpi-grid" style="margin-bottom:20px">
-    <div class="kpi blue"><div class="kpi-val">56</div><div class="kpi-label">Total Blog Posts</div><div class="kpi-sub">Jun–Dec 2026</div></div>
+    <div class="kpi blue"><div class="kpi-val">48</div><div class="kpi-label">Total Blog Posts</div><div class="kpi-sub">Jul–Dec 2026</div></div>
     <div class="kpi green"><div class="kpi-val">8/mo</div><div class="kpi-label">Posting Cadence</div><div class="kpi-sub">2 posts per week</div></div>
-    <div class="kpi amber"><div class="kpi-val">7</div><div class="kpi-label">Monthly Themes</div><div class="kpi-sub">Each month has a focus</div></div>
+    <div class="kpi amber"><div class="kpi-val">6</div><div class="kpi-label">Monthly Themes</div><div class="kpi-sub">Each month has a focus</div></div>
     <div class="kpi teal"><div class="kpi-val">1,200–1,800</div><div class="kpi-label">Words per Post</div><div class="kpi-sub">Target length</div></div>
   </div>
 
@@ -926,88 +1066,6 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
   </style>
 
   <!-- ═══════════ JUNE ═══════════ -->
-  <div class="month-block">
-    <div class="month-header" style="background:linear-gradient(135deg,var(--brand-bg),var(--surface))">
-      <h3 style="color:var(--brand)">📅 June 2026 — AI Review Tools &amp; Reputation Foundations</h3>
-      <div class="month-meta"><span>8 posts</span><span>Jun 2 – Jun 27</span></div>
-    </div>
-    <div class="month-posts">
-      <div class="post-row">
-        <div class="post-num">1</div>
-        <div class="post-body">
-          <div class="post-title">⭐ 🤖 What Is an AI Review Response Generator? (And Why Every Contractor Needs One)</div>
-          <div class="post-kw">Keywords: <strong>ai review response generator</strong> (299 impr, pos 25.6) · review response generator (259 impr) · automated review replies</div>
-          <div class="post-outline">1. Definition paragraph (AI citation bait — answer in first sentence) · 2. How the AI generates contextual replies · 3. Before/after: manual vs. AI reply examples · 4. Speed stats: why 24hr response window matters · 5. Tone settings: professional, friendly, apologetic · 6. Unify360 walkthrough: generate reply in &lt;10 seconds · 7. FAQ: 5 common questions (schema-marked) · 8. CTA → Start free trial</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs blue">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">2</div>
-        <div class="post-body">
-          <div class="post-title">⭐ Business Reputation Management in 2026: The Complete Guide for Local Service Businesses</div>
-          <div class="post-kw">Keywords: <strong>business reputation management</strong> (1,640 impr, pos 28.9) · online reputation management small business · 24/7 brand reputation monitoring</div>
-          <div class="post-outline">1. What is business reputation management (define for AI) · 2. Why it matters more for contractors · 3. The 5 pillars: reviews, social, listings, messaging, monitoring · 4. Common mistakes (not responding, ignoring 1-stars) · 5. How to respond to negative reviews + templates · 6. Manual vs. Unify360 platform comparison · 7. 30-day reputation reset checklist · 8. CTA → Reputation audit or demo</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs purple">Pillar</span><span class="tag-xs green">1,800w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">3</div>
-        <div class="post-body">
-          <div class="post-title">How to Respond to Negative Google Reviews Without Making It Worse</div>
-          <div class="post-kw">Keywords: <strong>how to respond to negative reviews</strong> · negative review response templates · google review response examples</div>
-          <div class="post-outline">1. Why most negative review responses hurt more than help · 2. The 3 rules: acknowledge, apologize, act · 3. What NOT to say (with examples) · 4. Response templates: 1-star, 2-star, upset customer · 5. When to take the conversation offline · 6. How fast you need to respond (data) · 7. Using AI to draft responses while keeping a human tone · 8. CTA → Unify360 review response tool</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">4</div>
-        <div class="post-body">
-          <div class="post-title">⭐ Real-Time Review Monitoring: How to Respond Before It's Too Late</div>
-          <div class="post-kw">Keywords: <strong>real time reviews</strong> (742 impr, pos 18.2) · google review monitoring · review alert software · monitor google reviews</div>
-          <div class="post-outline">1. The problem: contractors responding days later (too slow) · 2. Research: response time impact on conversion and ranking · 3. How real-time monitoring works (push alerts) · 4. Setting up alerts: email, SMS, app · 5. Response templates by star rating · 6. Unify360 alert dashboard walkthrough · 7. Case study: before/after monitoring setup · 8. CTA → Try Unify360 alerts free</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">5</div>
-        <div class="post-body">
-          <div class="post-title">Best Online Reputation Management Tools for Local Businesses in 2026 (Honest Comparison)</div>
-          <div class="post-kw">Keywords: <strong>online review statistics 2026</strong> · contractor reputation statistics · google review impact on local business</div>
-          <div class="post-outline">1. Stat: 93% of consumers read reviews before choosing a local business · 2. Stat: businesses with 4.5+ stars get 35% more clicks · 3. Stat: 88% trust reviews as much as personal recommendations · 4. Stat: 53% won't use a business rated under 4 stars · 5. Stat: responding to reviews increases purchase likelihood 18% · 6. Stat: average contractor gets 1.3 reviews/month without a system · 7. What these stats mean for your marketing budget · 8. CTA → See how Unify360 addresses all 7 problems</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs amber">Listicle</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">6</div>
-        <div class="post-body">
-          <div class="post-title">Why Your Google Star Rating Is Costing You Leads (And How to Fix It)</div>
-          <div class="post-kw">Keywords: <strong>google star rating local business</strong> · improve google rating · increase google reviews contractor</div>
-          <div class="post-outline">1. The math: 3.9 vs 4.5 stars = 35% fewer clicks · 2. How Google calculates your rating · 3. The fastest way to raise your rating (without violating TOS) · 4. How many reviews you need to move the needle · 5. Responding to old 1-stars: does it help? · 6. The review velocity factor Google weights · 7. Step-by-step: raise your rating in 90 days · 8. CTA → Unify360 review generation</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">7</div>
-        <div class="post-body">
-          <div class="post-title">⭐ Review Response Software: How Automated Tools Work (And Which One to Use in 2026)</div>
-          <div class="post-kw">Keywords: <strong>automated google review responses</strong> · review response automation · unify360 reviews</div>
-          <div class="post-outline">1. The problem with manual review management at scale · 2. How Unify360's AI reads the review context and tone · 3. Customization: brand voice, tone presets, owner name · 4. 1-click approve or auto-publish workflow · 5. What happens when a review needs human attention · 6. Integration: Google, Yelp, Facebook, BBB · 7. Client case study: 100% response rate, avg 2-hour turnaround · 8. CTA → See it in action (demo)</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs teal">Product</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-      <div class="post-row">
-        <div class="post-num">8</div>
-        <div class="post-body">
-          <div class="post-title">Google Business Profile Optimization Checklist for Home Service Contractors</div>
-          <div class="post-kw">Keywords: <strong>google business profile optimization</strong> · gbp for contractors · google my business checklist home services</div>
-          <div class="post-outline">1. Why GBP is the most important local SEO asset for contractors · 2. Business info: NAP, categories, service areas, hours · 3. Photos: types, frequency, and how many you need · 4. Services and products section setup · 5. GBP Posts: schedule and content types that work · 6. Q&amp;A: how to seed and monitor · 7. GBP reviews strategy: getting and responding · 8. Monthly GBP maintenance checklist · 8. CTA → Unify360 review management</div>
-        </div>
-        <div class="post-meta"><span class="tag-xs amber">Checklist</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════ JULY ═══════════ -->
   <div class="month-block">
     <div class="month-header" style="background:linear-gradient(135deg,rgba(6,182,212,0.08),var(--surface))">
       <h3 style="color:#0891B2">🔧 July 2026 — AI Tools for the Trades</h3>
@@ -1937,6 +1995,7 @@ const months = [
   {label:"Oct '25",val:607},{label:"Nov '25",val:664},{label:"Dec '25",val:539},
   {label:"Jan '26",val:693},{label:"Feb '26",val:745},{label:"Mar '26",val:809},
   {label:"Apr '26",val:1061},{label:"May '26",val:1381},{label:"Jun '26",val:1071},
+  {label:"Jul '26*",val:448},
 ];
 const MAX = 1381;
 
