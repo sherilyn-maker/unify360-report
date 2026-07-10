@@ -351,6 +351,9 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
   <div class="tab" onclick="showTab('ai',this)">✦ AI Search</div>
   <div class="tab" onclick="showTab('callrail',this)">CallRail</div>
   <div class="tab" onclick="showTab('action',this)">Action Plan</div>
+  <div class="tab" onclick="showTab('blog',this)">📅 Blog Calendar</div>
+  <div class="tab" onclick="showTab('social',this)">📲 Social Calendar</div>
+
 </div>
 
 <!-- ══ OVERVIEW ══ -->
@@ -455,59 +458,191 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 <div id="tab-gsc" class="tab-content">
 <div class="page">
   <div class="eyebrow">Google Search Console</div>
-  <div class="section-title">Organic Rankings &amp; Keyword Opportunities</div>
-  <div class="section-desc">Jul 2025 – Jul 2026 · Site: https://unify360.com/</div>
+  <div class="section-title">Organic Rankings &amp; Keyword Data</div>
+  <div class="section-desc">Jul 2025 – Jul 2026 · Site: https://unify360.com/ · 100 keywords pulled</div>
 
   <div class="kpi-grid">
-    <div class="kpi blue"><div class="kpi-val">927</div><div class="kpi-label">Total Clicks</div><div class="kpi-sub">All queries</div></div>
-    <div class="kpi amber"><div class="kpi-val">97%</div><div class="kpi-label">Branded Click Share</div><div class="kpi-sub">Almost all from "unify360"</div></div>
-    <div class="kpi red"><div class="kpi-val">0.05%</div><div class="kpi-label">AI Page CTR</div><div class="kpi-sub">14K+ impressions, 7 clicks</div></div>
-    <div class="kpi teal"><div class="kpi-val">14,062</div><div class="kpi-label">AI Page Impressions</div><div class="kpi-sub">/ai-review-response-generator/</div></div>
+    <div class="kpi blue"><div class="kpi-val">927</div><div class="kpi-label">Total Clicks</div><div class="kpi-sub">All queries, 12 months</div></div>
+    <div class="kpi amber"><div class="kpi-val">97%</div><div class="kpi-label">Branded Click Share</div><div class="kpi-sub">893 of 927 clicks = brand</div></div>
+    <div class="kpi red"><div class="kpi-val">0.05%</div><div class="kpi-label">AI Page CTR</div><div class="kpi-sub">14K+ impr, 7 clicks</div></div>
+    <div class="kpi teal"><div class="kpi-val">1,640</div><div class="kpi-label">Top Non-Brand Impressions</div><div class="kpi-sub">"business reputation management"</div></div>
   </div>
 
-  <div class="alert warning"><strong>97% of organic clicks come from branded searches — people already looking for "Unify360."</strong>The platform is getting tens of thousands of impressions for high-value non-brand keywords (AI tools, review management, reputation software) but earning almost no clicks from them. This is a CTR/title-tag problem, not a ranking problem.</div>
+  <div class="alert warning"><strong>97% of organic clicks come from branded searches — people already looking for "Unify360."</strong>The platform appears in search results for high-value non-brand terms (AI tools, review management, reputation software) but earns almost no clicks from them. This is a CTR and positioning problem — pages are ranking but titles/descriptions aren't compelling enough to click.</div>
 
-  <div class="eyebrow" style="margin-top:20px">Top Pages by Impressions</div>
+  <!-- TOP PERFORMING -->
+  <div class="eyebrow" style="margin-top:20px">Top Performing Keywords</div>
+  <div class="section-desc" style="margin-bottom:10px">By total clicks — Jul 2025 to Jul 2026</div>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Page</th><th class="num">Impressions</th><th class="num">Clicks</th><th class="num">CTR</th><th class="num">Avg Position</th><th>Opportunity</th></tr></thead>
+      <thead><tr><th>Keyword</th><th class="num">Clicks</th><th class="num">Impressions</th><th class="num">CTR</th><th class="num">Avg Position</th><th>Type</th></tr></thead>
       <tbody>
-        <tr><td style="font-size:12px">/ai-review-response-generator/</td><td class="num" style="font-weight:700">14,062</td><td class="num">7</td><td class="num" style="color:var(--red);font-weight:700">0.05%</td><td class="num">18.9</td><td><span class="tag red">Fix Title Tag</span></td></tr>
-        <tr><td style="font-size:12px">/ (homepage)</td><td class="num">14,565</td><td class="num" style="color:var(--brand);font-weight:700">1,072</td><td class="num" style="color:var(--brand);font-weight:700">7.4%</td><td class="num">12.6</td><td><span class="tag green">Performing</span></td></tr>
-        <tr><td style="font-size:12px">/messaging/</td><td class="num" style="font-weight:700">12,500</td><td class="num">25</td><td class="num" style="color:var(--red);font-weight:700">0.20%</td><td class="num">16.1</td><td><span class="tag red">Fix Title Tag</span></td></tr>
-        <tr><td style="font-size:12px">/review-response-software/</td><td class="num" style="font-weight:700">11,667</td><td class="num">6</td><td class="num" style="color:var(--red);font-weight:700">0.05%</td><td class="num">22.7</td><td><span class="tag red">Fix Title Tag</span></td></tr>
-        <tr><td style="font-size:12px">/industries-we-serve/plumbing/</td><td class="num">9,202</td><td class="num">11</td><td class="num" style="color:var(--red)">0.12%</td><td class="num">26.6</td><td><span class="tag amber">Build Authority</span></td></tr>
-        <tr><td style="font-size:12px">/?utm_medium=gbp</td><td class="num">8,593</td><td class="num">57</td><td class="num" style="color:var(--brand)">0.66%</td><td class="num">5.8</td><td><span class="tag green">Maps is working</span></td></tr>
-        <tr><td style="font-size:12px">/reviews/</td><td class="num">8,443</td><td class="num">26</td><td class="num">0.31%</td><td class="num">16.2</td><td><span class="tag amber">Optimize meta</span></td></tr>
-        <tr><td style="font-size:12px">/4-best-ai-tools-for-small-business-owners/</td><td class="num">5,354</td><td class="num">7</td><td class="num" style="color:var(--red)">0.13%</td><td class="num">19.1</td><td><span class="tag amber">Refresh + optimize</span></td></tr>
-        <tr><td style="font-size:12px">/can-you-incentivize-google-reviews</td><td class="num">4,822</td><td class="num">16</td><td class="num">0.33%</td><td class="num">7.0</td><td><span class="tag blue">Close to page 1</span></td></tr>
+        <tr><td><strong>unify360</strong></td><td class="num" style="color:var(--brand);font-weight:800">583</td><td class="num">2,945</td><td class="num" style="color:var(--green)">19.8%</td><td class="num">1.6</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unify 360</strong></td><td class="num" style="color:var(--brand);font-weight:800">310</td><td class="num">1,245</td><td class="num" style="color:var(--green)">24.9%</td><td class="num">1.8</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unified 360</strong></td><td class="num">9</td><td class="num">40</td><td class="num">22.5%</td><td class="num">1.8</td><td><span class="tag blue">Brand variant</span></td></tr>
+        <tr><td><strong>unify</strong></td><td class="num">2</td><td class="num">624</td><td class="num" style="color:var(--red)">0.3%</td><td class="num">17.0</td><td><span class="tag amber">Mixed</span></td></tr>
+        <tr><td><strong>unify chat</strong></td><td class="num">2</td><td class="num">82</td><td class="num">2.4%</td><td class="num">7.7</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>ai review response generator</strong></td><td class="num">1</td><td class="num">299</td><td class="num" style="color:var(--red)">0.3%</td><td class="num">25.6</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>ai for electricians</strong></td><td class="num">1</td><td class="num">177</td><td class="num" style="color:var(--red)">0.6%</td><td class="num">41.0</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>best ai tools for plumbers</strong></td><td class="num">1</td><td class="num">176</td><td class="num" style="color:var(--red)">0.6%</td><td class="num">28.4</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>business reputation management</strong></td><td class="num">1</td><td class="num">1,640</td><td class="num" style="color:var(--red)">0.1%</td><td class="num">28.9</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>real time reviews</strong></td><td class="num">1</td><td class="num">742</td><td class="num" style="color:var(--red)">0.1%</td><td class="num">18.2</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>review response generator</strong></td><td class="num">1</td><td class="num">259</td><td class="num" style="color:var(--red)">0.4%</td><td class="num">31.0</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>review management software for agencies</strong></td><td class="num">1</td><td class="num">9</td><td class="num" style="color:var(--green)">11.1%</td><td class="num">14.6</td><td><span class="tag green">Non-brand ⭐</span></td></tr>
+        <tr><td><strong>unify messaging</strong></td><td class="num">1</td><td class="num">94</td><td class="num">1.1%</td><td class="num">12.0</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unify messaging app</strong></td><td class="num">1</td><td class="num">40</td><td class="num">2.5%</td><td class="num">8.6</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unify reviews</strong></td><td class="num">1</td><td class="num">237</td><td class="num" style="color:var(--red)">0.4%</td><td class="num">14.2</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unify social</strong></td><td class="num">1</td><td class="num">86</td><td class="num">1.2%</td><td class="num">9.5</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>electrician ai</strong></td><td class="num">1</td><td class="num">29</td><td class="num">3.4%</td><td class="num">67.3</td><td><span class="tag green">Non-brand</span></td></tr>
+        <tr><td><strong>local businesses near me</strong></td><td class="num">1</td><td class="num">13</td><td class="num" style="color:var(--green)">7.7%</td><td class="num">6.2</td><td><span class="tag amber">Mixed</span></td></tr>
+        <tr><td><strong>unify ai 360</strong></td><td class="num">1</td><td class="num">3</td><td class="num" style="color:var(--green)">33.3%</td><td class="num">4.3</td><td><span class="tag blue">Brand</span></td></tr>
+        <tr><td><strong>unify social media</strong></td><td class="num">1</td><td class="num">28</td><td class="num">3.6%</td><td class="num">10.8</td><td><span class="tag blue">Brand</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:20px">Non-Brand Keyword Opportunities</div>
-  <div class="section-desc" style="margin-bottom:12px">High impression volume with near-zero clicks — fix CTR to unlock free traffic</div>
+  <!-- HIGH IMPRESSION NON-BRAND OPPORTUNITIES -->
+  <div class="eyebrow" style="margin-top:24px">High-Impression Non-Brand Keywords</div>
+  <div class="section-desc" style="margin-bottom:10px">Ranked by impressions — these are the traffic opportunities. Fix CTR to unlock clicks.</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Keyword</th><th class="num">Impressions</th><th class="num">Clicks</th><th class="num">CTR</th><th class="num">Position</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td><strong>business reputation management</strong></td><td class="num" style="font-weight:700">1,640</td><td class="num">1</td><td class="num" style="color:var(--red)">0.06%</td><td class="num">28.9</td><td><span class="tag red">High — needs content</span></td></tr>
+        <tr><td><strong>real time reviews</strong></td><td class="num">742</td><td class="num">1</td><td class="num" style="color:var(--red)">0.13%</td><td class="num">18.2</td><td><span class="tag amber">Near page 1</span></td></tr>
+        <tr><td><strong>ai review response generator</strong></td><td class="num">299</td><td class="num">1</td><td class="num" style="color:var(--red)">0.33%</td><td class="num">25.6</td><td><span class="tag red">Fix title tag</span></td></tr>
+        <tr><td><strong>review response generator</strong></td><td class="num">259</td><td class="num">1</td><td class="num" style="color:var(--red)">0.39%</td><td class="num">31.0</td><td><span class="tag red">Fix title tag</span></td></tr>
+        <tr><td><strong>unify reviews</strong></td><td class="num">237</td><td class="num">1</td><td class="num" style="color:var(--red)">0.42%</td><td class="num">14.2</td><td><span class="tag amber">Brand — optimize</span></td></tr>
+        <tr><td><strong>ai for electricians</strong></td><td class="num">177</td><td class="num">1</td><td class="num" style="color:var(--red)">0.56%</td><td class="num">41.0</td><td><span class="tag red">Needs blog post</span></td></tr>
+        <tr><td><strong>best ai tools for plumbers</strong></td><td class="num">176</td><td class="num">1</td><td class="num" style="color:var(--red)">0.57%</td><td class="num">28.4</td><td><span class="tag red">Needs blog post</span></td></tr>
+        <tr><td><strong>unify social</strong></td><td class="num">86</td><td class="num">1</td><td class="num">1.16%</td><td class="num">9.5</td><td><span class="tag blue">Brand — near page 1</span></td></tr>
+        <tr><td><strong>unify messaging</strong></td><td class="num">94</td><td class="num">1</td><td class="num">1.06%</td><td class="num">12.0</td><td><span class="tag blue">Brand — optimize</span></td></tr>
+        <tr><td><strong>24/7 brand reputation monitoring</strong></td><td class="num">16</td><td class="num">0</td><td class="num">0%</td><td class="num">6.6</td><td><span class="tag green">Near page 1 — add content</span></td></tr>
+        <tr><td><strong>"best omnichannel software" 2026</strong></td><td class="num">38</td><td class="num">0</td><td class="num">0%</td><td class="num">8.1</td><td><span class="tag green">Near page 1</span></td></tr>
+        <tr><td><strong>review management software for agencies</strong></td><td class="num">9</td><td class="num">1</td><td class="num" style="color:var(--green)">11.1%</td><td class="num">14.6</td><td><span class="tag green">Build /agency/ page</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOP 100 KEYWORDS FULL TABLE -->
+  <div class="eyebrow" style="margin-top:24px">Full Keyword List — Top 100</div>
+  <div class="section-desc" style="margin-bottom:10px">All queries with impressions from the past 12 months. Sorted by impressions.</div>
+  <div class="table-wrap" style="max-height:480px;overflow-y:auto">
+    <table>
+      <thead style="position:sticky;top:0;z-index:1"><tr><th>#</th><th>Keyword</th><th class="num">Impr.</th><th class="num">Clicks</th><th class="num">CTR</th><th class="num">Pos.</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--muted)">1</td><td>unify360</td><td class="num">2,945</td><td class="num">583</td><td class="num" style="color:var(--green)">19.8%</td><td class="num">1.6</td></tr>
+        <tr><td style="color:var(--muted)">2</td><td>unify 360</td><td class="num">1,245</td><td class="num">310</td><td class="num" style="color:var(--green)">24.9%</td><td class="num">1.8</td></tr>
+        <tr><td style="color:var(--muted)">3</td><td><strong>business reputation management</strong> ⭐</td><td class="num" style="color:var(--brand)">1,640</td><td class="num">1</td><td class="num" style="color:var(--red)">0.1%</td><td class="num">28.9</td></tr>
+        <tr><td style="color:var(--muted)">4</td><td><strong>real time reviews</strong> ⭐</td><td class="num" style="color:var(--brand)">742</td><td class="num">1</td><td class="num" style="color:var(--red)">0.1%</td><td class="num">18.2</td></tr>
+        <tr><td style="color:var(--muted)">5</td><td>unify</td><td class="num">624</td><td class="num">2</td><td class="num" style="color:var(--red)">0.3%</td><td class="num">17.0</td></tr>
+        <tr><td style="color:var(--muted)">6</td><td><strong>ai review response generator</strong> ⭐</td><td class="num" style="color:var(--brand)">299</td><td class="num">1</td><td class="num" style="color:var(--red)">0.3%</td><td class="num">25.6</td></tr>
+        <tr><td style="color:var(--muted)">7</td><td><strong>review response generator</strong> ⭐</td><td class="num" style="color:var(--brand)">259</td><td class="num">1</td><td class="num" style="color:var(--red)">0.4%</td><td class="num">31.0</td></tr>
+        <tr><td style="color:var(--muted)">8</td><td>unify reviews</td><td class="num">237</td><td class="num">1</td><td class="num" style="color:var(--red)">0.4%</td><td class="num">14.2</td></tr>
+        <tr><td style="color:var(--muted)">9</td><td>unify messaging</td><td class="num">94</td><td class="num">1</td><td class="num">1.1%</td><td class="num">12.0</td></tr>
+        <tr><td style="color:var(--muted)">10</td><td>360 clientele</td><td class="num">133</td><td class="num">0</td><td class="num">0%</td><td class="num">71.4</td></tr>
+        <tr><td style="color:var(--muted)">11</td><td>unify social</td><td class="num">86</td><td class="num">1</td><td class="num">1.2%</td><td class="num">9.5</td></tr>
+        <tr><td style="color:var(--muted)">12</td><td>unify chat</td><td class="num">82</td><td class="num">2</td><td class="num">2.4%</td><td class="num">7.7</td></tr>
+        <tr><td style="color:var(--muted)">13</td><td>360 marketing reviews</td><td class="num">91</td><td class="num">0</td><td class="num">0%</td><td class="num">73.5</td></tr>
+        <tr><td style="color:var(--muted)">14</td><td><strong>ai for electricians</strong> ⭐</td><td class="num" style="color:var(--brand)">177</td><td class="num">1</td><td class="num" style="color:var(--red)">0.6%</td><td class="num">41.0</td></tr>
+        <tr><td style="color:var(--muted)">15</td><td><strong>best ai tools for plumbers</strong> ⭐</td><td class="num" style="color:var(--brand)">176</td><td class="num">1</td><td class="num" style="color:var(--red)">0.6%</td><td class="num">28.4</td></tr>
+        <tr><td style="color:var(--muted)">16</td><td>"omnichannel software"</td><td class="num">42</td><td class="num">0</td><td class="num">0%</td><td class="num">68.9</td></tr>
+        <tr><td style="color:var(--muted)">17</td><td>unify messaging app</td><td class="num">40</td><td class="num">1</td><td class="num">2.5%</td><td class="num">8.6</td></tr>
+        <tr><td style="color:var(--muted)">18</td><td>unified 360</td><td class="num">40</td><td class="num">9</td><td class="num" style="color:var(--green)">22.5%</td><td class="num">1.8</td></tr>
+        <tr><td style="color:var(--muted)">19</td><td>"best omnichannel customer service software" 2026</td><td class="num">38</td><td class="num">0</td><td class="num">0%</td><td class="num">8.1</td></tr>
+        <tr><td style="color:var(--muted)">20</td><td>"unify360" "34205"</td><td class="num">38</td><td class="num">0</td><td class="num">0%</td><td class="num">23.6</td></tr>
+        <tr><td style="color:var(--muted)">21</td><td>unify social media</td><td class="num">28</td><td class="num">1</td><td class="num">3.6%</td><td class="num">10.8</td></tr>
+        <tr><td style="color:var(--muted)">22</td><td>"unify360" "unify360.com"</td><td class="num">28</td><td class="num">0</td><td class="num">0%</td><td class="num">25.5</td></tr>
+        <tr><td style="color:var(--muted)">23</td><td>electrician ai</td><td class="num">29</td><td class="num">1</td><td class="num">3.4%</td><td class="num">67.3</td></tr>
+        <tr><td style="color:var(--muted)">24</td><td>"businesses respond to reviews" % 2024</td><td class="num">28</td><td class="num">0</td><td class="num">0%</td><td class="num">7.1</td></tr>
+        <tr><td style="color:var(--muted)">25</td><td>"less than 1% of our traffic comes from social media"</td><td class="num">24</td><td class="num">0</td><td class="num">0%</td><td class="num">7.6</td></tr>
+        <tr><td style="color:var(--muted)">26</td><td>"unify360" "bradenton"</td><td class="num">20</td><td class="num">0</td><td class="num">0%</td><td class="num">22.9</td></tr>
+        <tr><td style="color:var(--muted)">27</td><td>360 publish</td><td class="num">19</td><td class="num">0</td><td class="num">0%</td><td class="num">92.5</td></tr>
+        <tr><td style="color:var(--muted)">28</td><td>24/7 brand reputation monitoring services</td><td class="num">16</td><td class="num">0</td><td class="num">0%</td><td class="num">6.6</td></tr>
+        <tr><td style="color:var(--muted)">29</td><td>"reputation management"</td><td class="num">15</td><td class="num">0</td><td class="num">0%</td><td class="num">4.7</td></tr>
+        <tr><td style="color:var(--muted)">30</td><td>local businesses near me</td><td class="num">13</td><td class="num">1</td><td class="num" style="color:var(--green)">7.7%</td><td class="num">6.2</td></tr>
+        <tr><td style="color:var(--muted)">31</td><td>"132925.64 response feedback:correct"</td><td class="num">10</td><td class="num">0</td><td class="num">0%</td><td class="num">7.2</td></tr>
+        <tr><td style="color:var(--muted)">32</td><td>"businesses respond to reviews" % 2023</td><td class="num">11</td><td class="num">0</td><td class="num">0%</td><td class="num">10.5</td></tr>
+        <tr><td style="color:var(--muted)">33</td><td>"less than 1% of its traffic is from social media"</td><td class="num">11</td><td class="num">0</td><td class="num">0%</td><td class="num">6.8</td></tr>
+        <tr><td style="color:var(--muted)">34</td><td>1 star review reply generator</td><td class="num">9</td><td class="num">0</td><td class="num">0%</td><td class="num">1.9</td></tr>
+        <tr><td style="color:var(--muted)">35</td><td>review management software for agencies</td><td class="num">9</td><td class="num">1</td><td class="num" style="color:var(--green)">11.1%</td><td class="num">14.6</td></tr>
+        <tr><td style="color:var(--muted)">36</td><td>"unify360" "unify360.com"</td><td class="num">28</td><td class="num">0</td><td class="num">0%</td><td class="num">25.5</td></tr>
+        <tr><td style="color:var(--muted)">37</td><td>"best ai for business"</td><td class="num">14</td><td class="num">0</td><td class="num">0%</td><td class="num">37.0</td></tr>
+        <tr><td style="color:var(--muted)">38</td><td>"reputation manager" "brightlocal"</td><td class="num">3</td><td class="num">0</td><td class="num">0%</td><td class="num">8.0</td></tr>
+        <tr><td style="color:var(--muted)">39</td><td>360 electrician</td><td class="num">7</td><td class="num">0</td><td class="num">0%</td><td class="num">41.1</td></tr>
+        <tr><td style="color:var(--muted)">40</td><td>13675: get seo</td><td class="num">5</td><td class="num">0</td><td class="num">0%</td><td class="num">4.8</td></tr>
+        <tr><td style="color:var(--muted)">41</td><td>360 automation ai kansas city</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">11.3</td></tr>
+        <tr><td style="color:var(--muted)">42</td><td>360 .com</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">84.3</td></tr>
+        <tr><td style="color:var(--muted)">43</td><td>360 pest control</td><td class="num">5</td><td class="num">0</td><td class="num">0%</td><td class="num">32.4</td></tr>
+        <tr><td style="color:var(--muted)">44</td><td>360 manager</td><td class="num">5</td><td class="num">0</td><td class="num">0%</td><td class="num">63.4</td></tr>
+        <tr><td style="color:var(--muted)">45</td><td>"132925.64" "response feedback:correct"</td><td class="num">5</td><td class="num">0</td><td class="num">0%</td><td class="num">7.2</td></tr>
+        <tr><td style="color:var(--muted)">46</td><td>/overview compare top omnichannel customer service platforms</td><td class="num">5</td><td class="num">0</td><td class="num">0%</td><td class="num">7.0</td></tr>
+        <tr><td style="color:var(--muted)">47</td><td>360 inc</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">37.0</td></tr>
+        <tr><td style="color:var(--muted)">48</td><td>360 integrated</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">48.5</td></tr>
+        <tr><td style="color:var(--muted)">49</td><td>360 managed</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">52.0</td></tr>
+        <tr><td style="color:var(--muted)">50</td><td>360 reviews online</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">46.5</td></tr>
+        <tr><td style="color:var(--muted)">51</td><td>360 connect reviews</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">80.5</td></tr>
+        <tr><td style="color:var(--muted)">52</td><td>360 house cleaning</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">6.5</td></tr>
+        <tr><td style="color:var(--muted)">53</td><td>360 inc.</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">42.0</td></tr>
+        <tr><td style="color:var(--muted)">54</td><td>360 integration</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">62.0</td></tr>
+        <tr><td style="color:var(--muted)">55</td><td>360 review online</td><td class="num">11</td><td class="num">0</td><td class="num">0%</td><td class="num">85.9</td></tr>
+        <tr><td style="color:var(--muted)">56</td><td>"ai marketing"</td><td class="num">3</td><td class="num">0</td><td class="num">0%</td><td class="num">8.0</td></tr>
+        <tr><td style="color:var(--muted)">57</td><td>"ai visibility software"</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">7.5</td></tr>
+        <tr><td style="color:var(--muted)">58</td><td>"less than 1% of its traffic from social media"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">6.0</td></tr>
+        <tr><td style="color:var(--muted)">59</td><td>"less than 1% of its traffic comes from social media"</td><td class="num">8</td><td class="num">0</td><td class="num">0%</td><td class="num">5.4</td></tr>
+        <tr><td style="color:var(--muted)">60</td><td>"reputation management small business" (query variant)</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">1.0</td></tr>
+        <tr><td style="color:var(--muted)">61</td><td>#1 online review management platform</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">59.3</td></tr>
+        <tr><td style="color:var(--muted)">62</td><td>360 search seo</td><td class="num">3</td><td class="num">0</td><td class="num">0%</td><td class="num">23.7</td></tr>
+        <tr><td style="color:var(--muted)">63</td><td>360 septic solutions</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">13.0</td></tr>
+        <tr><td style="color:var(--muted)">64</td><td>360 review service</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">44.0</td></tr>
+        <tr><td style="color:var(--muted)">65</td><td>360 inbox</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">28.0</td></tr>
+        <tr><td style="color:var(--muted)">66</td><td>360 customer inc</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">60.0</td></tr>
+        <tr><td style="color:var(--muted)">67</td><td>360 pest and weed management</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">43.0</td></tr>
+        <tr><td style="color:var(--muted)">68</td><td>360 chatbot</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">97.0</td></tr>
+        <tr><td style="color:var(--muted)">69</td><td>10dlc for landscapers</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">88.0</td></tr>
+        <tr><td style="color:var(--muted)">70</td><td>2026 business ideas</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">2.0</td></tr>
+        <tr><td style="color:var(--muted)">71</td><td>"ai marketing automations"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">3.0</td></tr>
+        <tr><td style="color:var(--muted)">72</td><td>"omnichannel customer service"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">100.0</td></tr>
+        <tr><td style="color:var(--muted)">73</td><td>"social ai tools"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">7.0</td></tr>
+        <tr><td style="color:var(--muted)">74</td><td>"ai share of voice agent experience"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">10.0</td></tr>
+        <tr><td style="color:var(--muted)">75</td><td>"96% of homeowners" online search roofing</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">10.0</td></tr>
+        <tr><td style="color:var(--muted)">76</td><td>"brightlocal"</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">53.0</td></tr>
+        <tr><td style="color:var(--muted)">77</td><td>360 com</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">90.0</td></tr>
+        <tr><td style="color:var(--muted)">78</td><td>360 automation ai in kansas city</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">11.0</td></tr>
+        <tr><td style="color:var(--muted)">79</td><td>360 elevated marketing reviews</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">92.3</td></tr>
+        <tr><td style="color:var(--muted)">80</td><td>360 plumbing reviews</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">51.0</td></tr>
+        <tr><td style="color:var(--muted)">81</td><td>unify ai 360</td><td class="num">3</td><td class="num">1</td><td class="num" style="color:var(--green)">33.3%</td><td class="num">4.3</td></tr>
+        <tr><td style="color:var(--muted)">82</td><td>"platform"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">2.0</td></tr>
+        <tr><td style="color:var(--muted)">83</td><td>"reputation management"</td><td class="num">15</td><td class="num">0</td><td class="num">0%</td><td class="num">4.7</td></tr>
+        <tr><td style="color:var(--muted)">84</td><td>what should i answer</td><td class="num">1</td><td class="num">1</td><td class="num" style="color:var(--green)">100%</td><td class="num">4.0</td></tr>
+        <tr><td style="color:var(--muted)">85</td><td>"sprout social"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">10.0</td></tr>
+        <tr><td style="color:var(--muted)">86</td><td>/overview what is the best omnichannel chat software</td><td class="num">6</td><td class="num">0</td><td class="num">0%</td><td class="num">11.0</td></tr>
+        <tr><td style="color:var(--muted)">87</td><td>360 marketing reviews (variant)</td><td class="num">91</td><td class="num">0</td><td class="num">0%</td><td class="num">73.5</td></tr>
+        <tr><td style="color:var(--muted)">88</td><td>more</td><td class="num">2</td><td class="num">1</td><td class="num" style="color:var(--green)">50%</td><td class="num">11.0</td></tr>
+        <tr><td style="color:var(--muted)">89</td><td>"small business" ai automation news</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">11.0</td></tr>
+        <tr><td style="color:var(--muted)">90</td><td>"brightlocal" -"casino"</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">7.0</td></tr>
+        <tr><td style="color:var(--muted)">91</td><td>360 inc total</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">37.0</td></tr>
+        <tr><td style="color:var(--muted)">92</td><td>360 clientele (variant)</td><td class="num">133</td><td class="num">0</td><td class="num">0%</td><td class="num">71.4</td></tr>
+        <tr><td style="color:var(--muted)">93</td><td>"unify360" "3110 manatee ave w"</td><td class="num">7</td><td class="num">0</td><td class="num">0%</td><td class="num">13.9</td></tr>
+        <tr><td style="color:var(--muted)">94</td><td>"less than 1% of our traffic comes from social"</td><td class="num">24</td><td class="num">0</td><td class="num">0%</td><td class="num">7.6</td></tr>
+        <tr><td style="color:var(--muted)">95</td><td>360 inc. (variant)</td><td class="num">2</td><td class="num">0</td><td class="num">0%</td><td class="num">42.0</td></tr>
+        <tr><td style="color:var(--muted)">96</td><td>(inurl:review) aggressive</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">8.0</td></tr>
+        <tr><td style="color:var(--muted)">97</td><td>(inurl:review) destroyed</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">18.0</td></tr>
+        <tr><td style="color:var(--muted)">98</td><td>"omnichannel software" (variant)</td><td class="num">42</td><td class="num">0</td><td class="num">0%</td><td class="num">68.9</td></tr>
+        <tr><td style="color:var(--muted)">99</td><td>360 elevated marketing (variant)</td><td class="num">4</td><td class="num">0</td><td class="num">0%</td><td class="num">92.3</td></tr>
+        <tr><td style="color:var(--muted)">100</td><td>"ai marketing automations" (variant)</td><td class="num">1</td><td class="num">0</td><td class="num">0%</td><td class="num">3.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:11px;color:var(--muted);margin-top:8px">⭐ = high-value non-brand opportunity. Scroll the table to see all 100 rows.</div>
+
+  <div class="eyebrow" style="margin-top:24px">Top Non-Brand Opportunities</div>
   <div class="opp-list">
-    <div class="opp-item">
-      <div><div class="opp-query">"ai review response generator"</div><div class="opp-meta">14,062 page impressions · Only 7 clicks · Title tag not matching intent</div></div>
-      <div class="opp-chips"><div class="chip neutral">299 query impr.</div><div class="chip mid">pos 25.6</div><div class="chip bad">1 click</div></div>
-    </div>
-    <div class="opp-item">
-      <div><div class="opp-query">"business reputation management"</div><div class="opp-meta">Highest non-brand impression volume. Position 28.9 = page 3. Needs dedicated content.</div></div>
-      <div class="opp-chips"><div class="chip neutral">1,640 impr.</div><div class="chip bad">pos 28.9</div><div class="chip bad">1 click</div></div>
-    </div>
-    <div class="opp-item">
-      <div><div class="opp-query">"real time reviews"</div><div class="opp-meta">Position 18.2 — just off page 1. A content refresh could push this into the top 10.</div></div>
-      <div class="opp-chips"><div class="chip neutral">742 impr.</div><div class="chip mid">pos 18.2</div><div class="chip bad">1 click</div></div>
-    </div>
-    <div class="opp-item">
-      <div><div class="opp-query">"best ai tools for plumbers"</div><div class="opp-meta">Vertical-specific AI term. Perfect fit for Unify360's target customer. Needs a dedicated post.</div></div>
-      <div class="opp-chips"><div class="chip neutral">176 impr.</div><div class="chip bad">pos 28.4</div><div class="chip bad">1 click</div></div>
-    </div>
-    <div class="opp-item">
-      <div><div class="opp-query">"review management software for agencies"</div><div class="opp-meta">Only 9 impressions but position 14.6 — nearly page 1 with no dedicated page. High-value agency term.</div></div>
-      <div class="opp-chips"><div class="chip neutral">9 impr.</div><div class="chip good">pos 14.6 — near pg 1</div></div>
-    </div>
+    <div class="opp-item"><div><div class="opp-query">"business reputation management"</div><div class="opp-meta">1,640 impressions — top non-brand term. Position 28.9 = page 3. Needs a long-form pillar guide.</div></div><div class="opp-chips"><div class="chip neutral">1,640 impr.</div><div class="chip bad">pos 28.9</div><div class="chip bad">1 click</div></div></div>
+    <div class="opp-item"><div><div class="opp-query">"real time reviews"</div><div class="opp-meta">742 impressions at position 18.2 — just off page 1. A content refresh could push it into top 10.</div></div><div class="opp-chips"><div class="chip neutral">742 impr.</div><div class="chip mid">pos 18.2</div><div class="chip bad">1 click</div></div></div>
+    <div class="opp-item"><div><div class="opp-query">"ai review response generator"</div><div class="opp-meta">14,062 page impressions but 0.05% CTR. Title tag doesn't match intent — fix it for immediate click lift.</div></div><div class="opp-chips"><div class="chip neutral">299 q. impr.</div><div class="chip bad">pos 25.6</div><div class="chip bad">1 click</div></div></div>
+    <div class="opp-item"><div><div class="opp-query">"best ai tools for plumbers"</div><div class="opp-meta">176 impressions, position 28.4. Dedicated blog post will move this toward page 1 and feed AI citations.</div></div><div class="opp-chips"><div class="chip neutral">176 impr.</div><div class="chip bad">pos 28.4</div><div class="chip bad">1 click</div></div></div>
+    <div class="opp-item"><div><div class="opp-query">"review management software for agencies"</div><div class="opp-meta">Only 9 impressions but already at position 14.6 with no dedicated page. Huge agency lead opportunity.</div></div><div class="opp-chips"><div class="chip neutral">9 impr.</div><div class="chip good">pos 14.6</div><div class="chip good">11.1% CTR</div></div></div>
   </div>
 </div>
 </div>
@@ -666,6 +801,567 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
       <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:8px">30 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Configure GA4 conversions<br>✔ Rewrite 3 title tags<br>✔ Add FAQ schema to AI pages</div></div>
       <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Publish 2 vertical AI guides<br>✔ Build /agency/ landing page<br>✔ Review/pause Ads with data</div></div>
       <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">90 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Refresh "incentivize reviews" post<br>✔ Review AI referral growth<br>✔ Set Q4 content calendar</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ BLOG CALENDAR ══ -->
+<div id="tab-blog" class="tab-content">
+<div class="page">
+  <div class="eyebrow">Content Strategy</div>
+  <div class="section-title">Blog Calendar — Jun through Sep 2026</div>
+  <div class="section-desc">8 posts. Each topic is grounded in GSC keyword signals and AI search intent. Target 1,200–1,800 words per post. All posts include a Unify360 CTA tied to the specific feature discussed.</div>
+
+  <div class="alert info" style="margin-bottom:24px"><strong>Strategy: convert high-impression GSC terms into traffic.</strong> Every post below targets a keyword where Unify360 already appears in search results but earns almost no clicks — these are the fastest wins. Posts 3, 4, and 7 are also structured for ChatGPT/Gemini citation (FAQ format, structured answer in paragraph one).</div>
+
+  <!-- POST 1 -->
+  <div class="card" style="border-left:4px solid var(--brand);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:4px">Post 1 · June 2026 · Week 1</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"What Is an AI Review Response Generator? (And Why Every Contractor Needs One)"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag green">AI Search Target</span>
+        <span style="font-size:11px;color:var(--muted)">1,400 words · How-to format</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">ai review response generator</span>
+          <span class="chip good">review response generator</span>
+          <span class="chip neutral">ai for contractors</span>
+          <span class="chip neutral">automated review replies</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">14,062 page impressions at pos 18.9 · 0.05% CTR — the page ranks but doesn't get clicked</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. Opening: Definition in first sentence (for AI citation)<br>
+          2. How it works — the AI logic behind response generation<br>
+          3. Why speed matters: stats on review response rates<br>
+          4. Before/after: manual vs. AI-generated reply examples<br>
+          5. Tone customization — professional, friendly, formal<br>
+          6. Unify360 demo: how to generate a reply in &lt;10 seconds<br>
+          7. FAQ section (schema-ready): 5 common questions<br>
+          8. CTA → Free trial or demo of AI Reply Generator
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /ai-review-response-generator/ · /industries-we-serve/plumbing/ · /industries-we-serve/home-services/electricians/</div>
+  </div>
+
+  <!-- POST 2 -->
+  <div class="card" style="border-left:4px solid #9333EA;margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9333EA;margin-bottom:4px">Post 2 · June 2026 · Week 3</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Business Reputation Management in 2026: The Complete Guide for Local Service Businesses"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Pillar Post</span>
+        <span style="font-size:11px;color:var(--muted)">1,800 words · Guide format</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">business reputation management</span>
+          <span class="chip neutral">online reputation management for small business</span>
+          <span class="chip neutral">24/7 brand reputation monitoring</span>
+          <span class="chip neutral">reputation management software</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">1,640 impressions — highest non-brand term by volume · pos 28.9 = currently page 3</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. What is business reputation management (define for AI)<br>
+          2. Why it matters more for local contractors than any other business<br>
+          3. The 5 pillars: reviews, social, listings, messaging, monitoring<br>
+          4. Common mistakes contractors make with their reputation<br>
+          5. How to respond to negative reviews (with templates)<br>
+          6. Tools comparison: manual vs. Unify360 platform<br>
+          7. Checklist: 30-day reputation reset for local businesses<br>
+          8. CTA → Reputation audit or platform demo
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /social/ · /messaging/ · /google-review-strategy/ · /when-negative-reviews-cross-the-line/</div>
+  </div>
+
+  <!-- POST 3 -->
+  <div class="card" style="border-left:4px solid var(--teal);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Post 3 · July 2026 · Week 1</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Best AI Tools for Plumbers, Electricians &amp; HVAC Contractors (2026 Edition)"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag green">AI Search Target</span>
+        <span style="font-size:11px;color:var(--muted)">1,600 words · Listicle + FAQ</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">best ai tools for plumbers</span>
+          <span class="chip good">ai for electricians</span>
+          <span class="chip good">electrician ai</span>
+          <span class="chip neutral">best ai tools for hvac</span>
+          <span class="chip neutral">ai tools for home service businesses</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">"best ai tools for plumbers": 176 impr., pos 28.4 · "ai for electricians": 177 impr., pos 41 — both already in search index</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. Opening FAQ answer (ChatGPT citation bait): "The best AI tools for plumbers in 2026 are…"<br>
+          2. Why contractors are adopting AI tools faster than other industries<br>
+          3. Tool #1: AI review management (Unify360)<br>
+          4. Tool #2: AI scheduling &amp; dispatch<br>
+          5. Tool #3: AI-powered chatbots for lead capture<br>
+          6. Tool #4: AI social media scheduling<br>
+          7. Tool #5: AI messaging &amp; follow-up<br>
+          8. Comparison table: tools by price, features, and trade type<br>
+          9. FAQ: 6 questions plumbers ask about AI<br>
+          10. CTA → Start free with Unify360
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /industries-we-serve/plumbing/ · /industries-we-serve/home-services/electricians/ · /ai-review-response-generator/ · /4-best-ai-tools-for-small-business-owners/</div>
+  </div>
+
+  <!-- POST 4 -->
+  <div class="card" style="border-left:4px solid var(--green);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px">Post 4 · July 2026 · Week 3</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Real-Time Review Management: How to Respond to Google Reviews Before It's Too Late"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag green">Near Page 1</span>
+        <span style="font-size:11px;color:var(--muted)">1,300 words · How-to</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">real time reviews</span>
+          <span class="chip neutral">google review monitoring</span>
+          <span class="chip neutral">review alert software</span>
+          <span class="chip neutral">monitor google reviews</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">"real time reviews": 742 impressions, pos 18.2 — a single content push could move this onto page 1</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. The problem: most contractors respond to reviews days later (too slow)<br>
+          2. Research: response time impact on star rating and conversion<br>
+          3. How real-time review monitoring works<br>
+          4. Setting up alerts: email, SMS, app notifications<br>
+          5. Response templates for 1-star, 3-star, and 5-star reviews<br>
+          6. Unify360 alert dashboard walkthrough<br>
+          7. Case study: before and after implementing real-time monitoring<br>
+          8. CTA → Try Unify360 review alerts free
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /google-review-strategy/ · /ai-review-response-generator/ · /ai-google-review-response</div>
+  </div>
+
+  <!-- POST 5 -->
+  <div class="card" style="border-left:4px solid var(--amber);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:4px">Post 5 · August 2026 · Week 1</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Review Response Software vs. Doing It Manually: Time, Cost &amp; Results Compared"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag amber">Decision Stage</span>
+        <span style="font-size:11px;color:var(--muted)">1,500 words · Comparison</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">review response software</span>
+          <span class="chip good">review response generator</span>
+          <span class="chip neutral">google review management tool</span>
+          <span class="chip neutral">best review management software</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">/review-response-software/ has 11,667 impressions at pos 22.7 · CTR only 0.05% — fix the title + add comparison content</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. The manual approach: how most businesses currently respond<br>
+          2. Time cost: avg 8 min per response × 50 reviews/mo = X hrs<br>
+          3. Consistency problem: quality varies by who writes the response<br>
+          4. What review response software does differently<br>
+          5. Cost comparison table: manual vs. software (time + $$)<br>
+          6. Quality: AI-assisted vs. purely manual examples side by side<br>
+          7. When manual is still the right choice<br>
+          8. CTA → Try Unify360 review response for 14 days free
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /review-response-software/ · /ai-review-response-generator/ · /reviews/ · /ai-google-review-response</div>
+  </div>
+
+  <!-- POST 6 -->
+  <div class="card" style="border-left:4px solid var(--teal);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Post 6 · August 2026 · Week 3</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Omnichannel Messaging for Contractors: Manage SMS, Email &amp; Chat in One Dashboard"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag" style="background:rgba(6,182,212,0.1);color:#0891B2">Feature Focus</span>
+        <span style="font-size:11px;color:var(--muted)">1,400 words · How-to</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">unify messaging</span>
+          <span class="chip good">unify messaging app</span>
+          <span class="chip neutral">omnichannel messaging for small business</span>
+          <span class="chip neutral">unified inbox for contractors</span>
+          <span class="chip neutral">business text messaging software</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">/messaging/ has 12,500 impressions at pos 16.1 · "unify messaging": 94 impr. at pos 12 — very close to page 1</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. The missed lead problem: customers expect instant responses<br>
+          2. Where messages get lost: phone, email, Facebook, Yelp, text<br>
+          3. What omnichannel messaging actually means (plain language)<br>
+          4. The 4 channels every contractor should unify: SMS, email, GBP chat, web chat<br>
+          5. Setting up a unified inbox: step-by-step with Unify360<br>
+          6. Auto-reply templates for after-hours and weekends<br>
+          7. Tracking response time and lead response rates<br>
+          8. CTA → Try Unify360 Messaging free
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /messaging/ · /reviews/ · /industries-we-serve/ · /social/</div>
+  </div>
+
+  <!-- POST 7 -->
+  <div class="card" style="border-left:4px solid var(--green);margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px">Post 7 · September 2026 · Week 1</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"How to Get More Google Reviews for Your Plumbing or HVAC Business (The Right Way)"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag green">Near Page 1</span>
+        <span style="font-size:11px;color:var(--muted)">1,500 words · FAQ format</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">can you incentivize google reviews</span>
+          <span class="chip neutral">how to get more google reviews</span>
+          <span class="chip neutral">google review request automation</span>
+          <span class="chip neutral">review generation for plumbers</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">/can-you-incentivize-google-reviews: 4,822 impressions, pos 7.0 · Sits just off the top 5 — refresh will push it to page 1</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. Opening FAQ: "Can you incentivize Google reviews?" (define clearly for AI)<br>
+          2. Google's policy on review incentives — what's allowed and what isn't<br>
+          3. Legal ways to ask for reviews (timing, channels, templates)<br>
+          4. Automating review requests: text, email, QR codes<br>
+          5. How to handle the awkward ask in person<br>
+          6. Why some businesses get 10× more reviews than competitors<br>
+          7. Responding to reviews to trigger more review activity<br>
+          8. Unify360 review request automation walkthrough<br>
+          9. CTA → Automate your review requests with Unify360
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /can-you-incentivize-google-reviews/ · /reviews/ · /google-review-strategy/ · /ai-review-response-generator/</div>
+  </div>
+
+  <!-- POST 8 -->
+  <div class="card" style="border-left:4px solid #9333EA;margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9333EA;margin-bottom:4px">Post 8 · September 2026 · Week 3</div>
+        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Review Management for Marketing Agencies: How to Scale to 50+ Clients Without Chaos"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
+        <span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Agency Audience</span>
+        <span style="font-size:11px;color:var(--muted)">1,600 words · B2B guide</span>
+      </div>
+    </div>
+    <div class="two-col" style="margin-bottom:12px">
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px">
+          <span class="chip good">review management software for agencies</span>
+          <span class="chip neutral">white label review management</span>
+          <span class="chip neutral">agency reputation management platform</span>
+          <span class="chip neutral">manage client google reviews</span>
+        </div>
+        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
+        <div style="font-size:12px;color:var(--muted)">"review management software for agencies": pos 14.6 with 9 impressions — no dedicated page exists. This post becomes that page.</div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          1. The agency problem: managing reviews for 20+ clients manually doesn't scale<br>
+          2. What agencies actually need: multi-client dashboard, white-label reporting<br>
+          3. Key features to look for in agency review management software<br>
+          4. Setting up a client review workflow in Unify360<br>
+          5. Reporting: what to show clients monthly<br>
+          6. Pricing models: per-client vs. flat-rate agency seat<br>
+          7. Client onboarding template (downloadable)<br>
+          8. CTA → Unify360 Agency Plan — schedule a demo
+        </div>
+      </div>
+    </div>
+    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /review-response-software/ · /industries-we-serve/ · /about-us/</div>
+  </div>
+
+  <!-- QUICK REFERENCE TABLE -->
+  <div class="eyebrow" style="margin-top:8px">Blog Calendar at a Glance</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Post</th><th>Month</th><th>Title (Short)</th><th>Primary Keyword</th><th class="num">GSC Impr.</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Jun W1</td><td>What Is an AI Review Response Generator?</td><td>ai review response generator</td><td class="num">299</td><td><span class="tag green">AI Search</span></td></tr>
+        <tr><td>2</td><td>Jun W3</td><td>Business Reputation Management 2026 Guide</td><td>business reputation management</td><td class="num" style="color:var(--brand)">1,640</td><td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Pillar</span></td></tr>
+        <tr><td>3</td><td>Jul W1</td><td>Best AI Tools for Plumbers &amp; Electricians</td><td>best ai tools for plumbers</td><td class="num">176</td><td><span class="tag green">AI Search</span></td></tr>
+        <tr><td>4</td><td>Jul W3</td><td>Real-Time Review Management</td><td>real time reviews</td><td class="num" style="color:var(--brand)">742</td><td><span class="tag green">Near Pg 1</span></td></tr>
+        <tr><td>5</td><td>Aug W1</td><td>Review Response Software vs. Manual</td><td>review response software</td><td class="num">259</td><td><span class="tag amber">Decision</span></td></tr>
+        <tr><td>6</td><td>Aug W3</td><td>Omnichannel Messaging for Contractors</td><td>unify messaging</td><td class="num">94</td><td><span class="tag" style="background:rgba(6,182,212,0.1);color:#0891B2">Feature</span></td></tr>
+        <tr><td>7</td><td>Sep W1</td><td>How to Get More Google Reviews</td><td>can you incentivize google reviews</td><td class="num" style="color:var(--brand)">4,822</td><td><span class="tag green">Near Pg 1</span></td></tr>
+        <tr><td>8</td><td>Sep W3</td><td>Review Management for Agencies</td><td>review management software for agencies</td><td class="num">9</td><td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Agency</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- ══ SOCIAL CALENDAR ══ -->
+<div id="tab-social" class="tab-content">
+<div class="page">
+  <div class="eyebrow">Content Strategy</div>
+  <div class="section-title">Social Media Calendar — Jun through Sep 2026</div>
+  <div class="section-desc">4 posts per week across Facebook, Instagram, LinkedIn, and Google Business Profile. Content pillars: Education · Product Demo · Social Proof · Industry Trend · Behind the Brand.</div>
+
+  <div class="two-col" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-title">Platform Strategy</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="background:#1877F2;color:#fff;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;flex-shrink:0">FB</div>
+          <div style="color:var(--muted)"><strong style="color:var(--text)">Facebook</strong> — Community building, longer-form tips, video demos, boosted posts targeting local businesses</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);color:#fff;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;flex-shrink:0">IG</div>
+          <div style="color:var(--muted)"><strong style="color:var(--text)">Instagram</strong> — Visual stats, before/after carousels, short reels showing the platform in action</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="background:#0A66C2;color:#fff;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;flex-shrink:0">LI</div>
+          <div style="color:var(--muted)"><strong style="color:var(--text)">LinkedIn</strong> — Agency/B2B audience, thought leadership, case studies, platform updates</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <div style="background:#34A853;color:#fff;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:700;flex-shrink:0">GBP</div>
+          <div style="color:var(--muted)"><strong style="color:var(--text)">Google Business Profile</strong> — Weekly offer/update posts, tied to services and feature launches</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">5 Content Pillars</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:10px;height:10px;border-radius:50%;background:var(--brand);flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)"><strong style="color:var(--text)">Education (40%)</strong> — Tips, stats, how-to snippets. Builds credibility.</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)"><strong style="color:var(--text)">Product Demo (25%)</strong> — Screen recordings, feature spotlights, GIFs of the platform.</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:10px;height:10px;border-radius:50%;background:#9333EA;flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)"><strong style="color:var(--text)">Social Proof (20%)</strong> — Client wins, review screenshots, before/after metrics.</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:10px;height:10px;border-radius:50%;background:var(--amber);flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)"><strong style="color:var(--text)">Industry Trend (10%)</strong> — AI news, Google updates, local marketing stats.</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:10px;height:10px;border-radius:50%;background:var(--teal);flex-shrink:0"></div><div style="font-size:13px;color:var(--muted)"><strong style="color:var(--text)">Behind the Brand (5%)</strong> — Team, product updates, company milestones.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUNE -->
+  <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--brand)">June 2026 — Theme: <span style="color:var(--brand)">AI Tools for Local Business</span></div>
+
+  <div class="table-wrap" style="margin-bottom:24px">
+    <table>
+      <thead><tr><th>Week</th><th>Platform</th><th>Pillar</th><th>Post Caption / Concept</th><th>Hashtags</th></tr></thead>
+      <tbody>
+        <tr>
+          <td rowspan="4" style="font-weight:700;vertical-align:top;padding-top:14px">Week 1<br><span style="font-size:11px;color:var(--muted);font-weight:400">Jun 2–6</span></td>
+          <td><span style="background:#1877F2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">FB</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">🤖 Did you know AI can respond to your Google reviews in seconds? Here's how Unify360's AI review response tool works — and why contractors are switching from manual replies. [Link to Post 1]</td>
+          <td style="font-size:11px;color:var(--muted)">#AItools #GoogleReviews #LocalBusiness #ReviewManagement</td>
+        </tr>
+        <tr>
+          <td><span style="background:linear-gradient(135deg,#F58529,#DD2A7B);color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">IG</span></td>
+          <td><span class="tag green">Demo</span></td>
+          <td style="font-size:12.5px">📱 Carousel: "Before Unify360 vs. After" — Slide 1: Screenshot of 47 unread reviews. Slide 2: Unify360 dashboard. Slide 3: AI reply drafted in 3 seconds. Slide 4: Stats on response rate improvement.</td>
+          <td style="font-size:11px;color:var(--muted)">#ReviewManagement #Plumber #Electrician #SmallBusiness</td>
+        </tr>
+        <tr>
+          <td><span style="background:#0A66C2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">LI</span></td>
+          <td><span class="tag amber">Trend</span></td>
+          <td style="font-size:12.5px">Thought leadership: "AI is reshaping how home service businesses manage their reputation. Here are 3 ways we're seeing contractors use AI to respond faster, rank higher, and win more leads in 2026." [3-point post, no link]</td>
+          <td style="font-size:11px;color:var(--muted)">#MarketingAgency #LocalMarketing #AIMarketing #Reputation</td>
+        </tr>
+        <tr>
+          <td><span style="background:#34A853;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">GBP</span></td>
+          <td><span class="tag green">Demo</span></td>
+          <td style="font-size:12.5px">GBP Post: "Now offering AI-powered review management for plumbers, electricians, and HVAC companies in [area]. Respond to every Google review in seconds. Book a free demo →"</td>
+          <td style="font-size:11px;color:var(--muted)">CTA: Book a Demo</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td rowspan="4" style="font-weight:700;vertical-align:top;padding-top:14px">Week 2<br><span style="font-size:11px;color:var(--muted);font-weight:400">Jun 9–13</span></td>
+          <td><span style="background:#1877F2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">FB</span></td>
+          <td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Proof</span></td>
+          <td style="font-size:12.5px">💬 "We went from 3.8 stars to 4.7 stars in 90 days." — how one home service client used Unify360 to monitor and respond to every review. [Client story format, no name if confidential]</td>
+          <td style="font-size:11px;color:var(--muted)">#ClientWin #GoogleReviews #HomeServices #Reputation</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:linear-gradient(135deg,#F58529,#DD2A7B);color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">IG</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">📊 Stat graphic: "88% of consumers trust online reviews as much as personal recommendations. Is your business responding to all of yours?" — Clean branded stat card with Unify360 watermark.</td>
+          <td style="font-size:11px;color:var(--muted)">#OnlineReviews #LocalSEO #ContractorMarketing</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:#0A66C2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">LI</span></td>
+          <td><span class="tag green">Demo</span></td>
+          <td style="font-size:12.5px">Platform spotlight: "Here's what happens when a new Google review comes in for a Unify360 client: [screen recording or GIF of alert → AI draft → 1-click publish]. Total time: 12 seconds."</td>
+          <td style="font-size:11px;color:var(--muted)">#SaaS #ReviewManagement #LocalMarketing #ProductDemo</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:#34A853;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">GBP</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">GBP Post: "Tip: businesses that respond to 100% of their Google reviews get 35% more clicks than those that don't. Unify360 makes it automatic. Try free for 14 days →"</td>
+          <td style="font-size:11px;color:var(--muted)">CTA: Learn More</td>
+        </tr>
+        <tr>
+          <td rowspan="4" style="font-weight:700;vertical-align:top;padding-top:14px">Week 3<br><span style="font-size:11px;color:var(--muted);font-weight:400">Jun 16–20</span></td>
+          <td><span style="background:#1877F2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">FB</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">📖 New blog: "Business Reputation Management in 2026 — the complete guide for contractors." What to track, what to respond to, and how to stop losing customers to 1-star reviews. [Link to Post 2]</td>
+          <td style="font-size:11px;color:var(--muted)">#ReputationManagement #Plumber #HVAC #LocalBusiness</td>
+        </tr>
+        <tr>
+          <td><span style="background:linear-gradient(135deg,#F58529,#DD2A7B);color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">IG</span></td>
+          <td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Proof</span></td>
+          <td style="font-size:12.5px">🌟 Review spotlight: Share a great 5-star review from a client's business (with permission). "This is what good reputation management looks like. Unify360 helped them get here."</td>
+          <td style="font-size:11px;color:var(--muted)">#5StarReview #GoogleReviews #Contractor #HomeServices</td>
+        </tr>
+        <tr>
+          <td><span style="background:#0A66C2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">LI</span></td>
+          <td><span class="tag amber">Trend</span></td>
+          <td style="font-size:12.5px">Industry data: "Google's local ranking algorithm now weighs review response rate. Here's what that means for your contractor clients and how agencies should be advising on review strategy in 2026."</td>
+          <td style="font-size:11px;color:var(--muted)">#LocalSEO #Agency #GoogleBusiness #Reputation</td>
+        </tr>
+        <tr>
+          <td><span style="background:#34A853;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">GBP</span></td>
+          <td><span class="tag green">Demo</span></td>
+          <td style="font-size:12.5px">GBP Post: "What's your Google review response rate? Unify360 clients average 100% response within 24 hours — automatically. Book a free demo to see how it works."</td>
+          <td style="font-size:11px;color:var(--muted)">CTA: Book a Demo</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td rowspan="4" style="font-weight:700;vertical-align:top;padding-top:14px">Week 4<br><span style="font-size:11px;color:var(--muted);font-weight:400">Jun 23–27</span></td>
+          <td><span style="background:#1877F2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">FB</span></td>
+          <td><span class="tag green">Demo</span></td>
+          <td style="font-size:12.5px">🎥 Short video (60s): "Watch me respond to 5 different Google reviews in under 2 minutes using Unify360's AI." Screen recording walkthrough — great for boosting to local business owners.</td>
+          <td style="font-size:11px;color:var(--muted)">#AIMarketing #GoogleReviews #TimeHack #LocalBusiness</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:linear-gradient(135deg,#F58529,#DD2A7B);color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">IG</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">📋 Carousel: "5 signs your reputation management isn't working" — Slide per warning sign, each with a Unify360 fix. Strong swipe-through format for saves and shares.</td>
+          <td style="font-size:11px;color:var(--muted)">#ReputationManagement #PlumberMarketing #ElectricianMarketing</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:#0A66C2;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">LI</span></td>
+          <td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Proof</span></td>
+          <td style="font-size:12.5px">Agency case study: "How one home services agency manages reputation for 23 contractor clients without a dedicated team." Metrics-driven post showing Unify360's multi-client dashboard value.</td>
+          <td style="font-size:11px;color:var(--muted)">#AgencyGrowth #WhiteLabel #ReviewManagement #MarketingAgency</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td><span style="background:#34A853;color:#fff;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:700">GBP</span></td>
+          <td><span class="tag blue">Education</span></td>
+          <td style="font-size:12.5px">GBP Post: "June promo: New Unify360 clients get their first month free. The #1 local marketing platform for home service businesses. Limited spots available."</td>
+          <td style="font-size:11px;color:var(--muted)">CTA: Sign Up Free</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- JULY SUMMARY GRID -->
+  <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--teal)">July 2026 — Theme: <span style="color:var(--teal)">AI Tools for Trades</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:24px">
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:6px">Week 1 · FB + IG</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">📝 Blog launch: "Best AI Tools for Plumbers &amp; Electricians 2026" — Facebook link share + Instagram carousel breaking down the top 5 tools from the post. Target: contractor owners aged 35–55.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:6px">Week 1 · LI + GBP</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">LinkedIn thought leadership: "AI is not replacing tradespeople — it's doing the admin work they hate." GBP post: "New: AI-powered messaging for plumbers and HVAC contractors. Try Unify360 free."</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:6px">Week 2 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Social proof week: Share client review counts, rating improvements, and response time stats. IG: graphic showing "from 3.9 → 4.8 stars in 60 days." LI: full case study post.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:6px">Week 3 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Blog launch: "Real-Time Review Management" post. FB: video or animated demo. IG: "How fast do you respond to reviews?" poll sticker + tips carousel. LI: stat-led article post.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);margin-bottom:6px">Week 4 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Feature spotlight: Unify360 Social Media Scheduler. IG Reel: 30-sec demo scheduling a post. FB: "Did you know Unify360 also handles your social media?" post with link to /social/. GBP: monthly update post.</div></div>
+  </div>
+
+  <!-- AUGUST SUMMARY GRID -->
+  <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--amber)">August 2026 — Theme: <span style="color:var(--amber)">Messaging &amp; Lead Capture</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:24px">
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:6px">Week 1 · FB + IG</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Blog launch: "Review Response Software vs. Manual." FB: decision-stage ad copy targeted to local business owners. IG: cost comparison graphic — "Hours spent per week on reviews: Manual vs. Unify360."</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:6px">Week 1 · LI + GBP</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">LI: "Here's the math: if you spend 8 minutes per review reply and get 50 reviews/month, that's 6.7 hours/month. What could you do with that time back?" GBP: "New feature: SMS follow-up automation."</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:6px">Week 2 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Messaging feature week. FB + IG: "How many leads are slipping through the cracks?" — missed call + unanswered text stat graphic. LI: "Unified inbox for service businesses" demo post.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:6px">Week 3 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Blog launch: "Omnichannel Messaging for Contractors." FB: 60-sec walkthrough video. IG: "What channels are you missing?" interactive story poll. LI: B2B angle — "How agencies set up messaging for clients."</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);margin-bottom:6px">Week 4 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">End of summer promo. FB/IG: limited-time offer creative. LI: "As Q3 closes, are your clients' reviews and messaging set up for fall rush?" GBP: September special offer post.</div></div>
+  </div>
+
+  <!-- SEPTEMBER SUMMARY GRID -->
+  <div style="font-size:16px;font-weight:800;color:var(--text);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #9333EA">September 2026 — Theme: <span style="color:#9333EA">Reviews &amp; Agency Growth</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:24px">
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#9333EA;margin-bottom:6px">Week 1 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Blog launch: "How to Get More Google Reviews." FB: "How many reviews did your business get this month?" engagement post. IG: "The review ask formula" — 3-slide carousel on timing + wording. LI: stat-led post on review volume and ranking.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#9333EA;margin-bottom:6px">Week 2 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Q3 results week. Share aggregate client stats (anonymized): total reviews managed, avg response time, star rating improvements. IG: infographic. LI: detailed breakdown post for agency audience.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#9333EA;margin-bottom:6px">Week 3 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Blog launch: "Review Management for Agencies." LI: primary platform — full article cross-post targeting marketing agency owners. FB: "Do you manage multiple clients' reputations?" targeted post. GBP: Agency plan announcement.</div></div>
+    <div class="card" style="margin-bottom:0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#9333EA;margin-bottom:6px">Week 4 · All Platforms</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Q4 preview content. "Heading into fall — is your reputation ready for the busy season?" FB/IG: checklist carousel. LI: agency planning guide snippet. GBP: Q4 offer post with promo code.</div></div>
+  </div>
+
+  <!-- Posting schedule -->
+  <div class="card">
+    <div class="card-title">Posting Schedule &amp; Best Times</div>
+    <div class="table-wrap" style="margin-bottom:0">
+      <table>
+        <thead><tr><th>Platform</th><th>Posts/Week</th><th>Best Days</th><th>Best Time</th><th>Content Format Mix</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Facebook</strong></td><td class="num">1–2</td><td>Tue, Thu</td><td>10am–12pm local</td><td>Link share (40%), Video (35%), Image (25%)</td></tr>
+          <tr><td><strong>Instagram</strong></td><td class="num">2–3</td><td>Mon, Wed, Fri</td><td>11am–1pm, 7–9pm</td><td>Carousel (50%), Reel (35%), Static (15%)</td></tr>
+          <tr><td><strong>LinkedIn</strong></td><td class="num">1</td><td>Tue, Wed</td><td>8–10am</td><td>Text post (50%), Document/article (30%), Video (20%)</td></tr>
+          <tr><td><strong>Google Business Profile</strong></td><td class="num">1</td><td>Mon or Wed</td><td>Morning</td><td>Offer post (50%), Update (30%), Product (20%)</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
