@@ -810,363 +810,695 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 <div id="tab-blog" class="tab-content">
 <div class="page">
   <div class="eyebrow">Content Strategy</div>
-  <div class="section-title">Blog Calendar — Jun through Sep 2026</div>
-  <div class="section-desc">8 posts. Each topic is grounded in GSC keyword signals and AI search intent. Target 1,200–1,800 words per post. All posts include a Unify360 CTA tied to the specific feature discussed.</div>
+  <div class="section-title">Blog Calendar — June through December 2026</div>
+  <div class="section-desc">56 posts · 8 per month · Jun–Dec 2026 · Keywords grounded in GSC data &amp; AI search intent</div>
 
-  <div class="alert info" style="margin-bottom:24px"><strong>Strategy: convert high-impression GSC terms into traffic.</strong> Every post below targets a keyword where Unify360 already appears in search results but earns almost no clicks — these are the fastest wins. Posts 3, 4, and 7 are also structured for ChatGPT/Gemini citation (FAQ format, structured answer in paragraph one).</div>
-
-  <!-- POST 1 -->
-  <div class="card" style="border-left:4px solid var(--brand);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:4px">Post 1 · June 2026 · Week 1</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"What Is an AI Review Response Generator? (And Why Every Contractor Needs One)"</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag green">AI Search Target</span>
-        <span style="font-size:11px;color:var(--muted)">1,400 words · How-to format</span>
-      </div>
-    </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">ai review response generator</span>
-          <span class="chip good">review response generator</span>
-          <span class="chip neutral">ai for contractors</span>
-          <span class="chip neutral">automated review replies</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">14,062 page impressions at pos 18.9 · 0.05% CTR — the page ranks but doesn't get clicked</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. Opening: Definition in first sentence (for AI citation)<br>
-          2. How it works — the AI logic behind response generation<br>
-          3. Why speed matters: stats on review response rates<br>
-          4. Before/after: manual vs. AI-generated reply examples<br>
-          5. Tone customization — professional, friendly, formal<br>
-          6. Unify360 demo: how to generate a reply in &lt;10 seconds<br>
-          7. FAQ section (schema-ready): 5 common questions<br>
-          8. CTA → Free trial or demo of AI Reply Generator
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /ai-review-response-generator/ · /industries-we-serve/plumbing/ · /industries-we-serve/home-services/electricians/</div>
+  <div class="kpi-grid" style="margin-bottom:20px">
+    <div class="kpi blue"><div class="kpi-val">56</div><div class="kpi-label">Total Blog Posts</div><div class="kpi-sub">Jun–Dec 2026</div></div>
+    <div class="kpi green"><div class="kpi-val">8/mo</div><div class="kpi-label">Posting Cadence</div><div class="kpi-sub">2 posts per week</div></div>
+    <div class="kpi amber"><div class="kpi-val">7</div><div class="kpi-label">Monthly Themes</div><div class="kpi-sub">Each month has a focus</div></div>
+    <div class="kpi teal"><div class="kpi-val">1,200–1,800</div><div class="kpi-label">Words per Post</div><div class="kpi-sub">Target length</div></div>
   </div>
 
-  <!-- POST 2 -->
-  <div class="card" style="border-left:4px solid #9333EA;margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9333EA;margin-bottom:4px">Post 2 · June 2026 · Week 3</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Business Reputation Management in 2026: The Complete Guide for Local Service Businesses"</div>
+  <div class="alert info" style="margin-bottom:24px"><strong>Strategy:</strong> 2 posts per week, published Tuesday &amp; Thursday. Each post targets a keyword where Unify360 already appears in search results. Posts marked ⭐ are highest priority — they address GSC terms with 100+ impressions at sub-30% CTR. Posts marked 🤖 are structured for ChatGPT/Gemini citation (FAQ paragraph in first 150 words).</div>
+
+  <style>
+    .month-block { margin-bottom: 28px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .month-header { padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+    .month-header h3 { margin: 0; font-size: 15px; font-weight: 800; letter-spacing: -0.2px; }
+    .month-header .month-meta { font-size: 12px; color: var(--muted); display: flex; gap: 12px; align-items: center; }
+    .month-posts { padding: 0 0 4px; }
+    .post-row { display: grid; grid-template-columns: 28px 1fr auto; gap: 0; border-top: 1px solid var(--border); }
+    .post-row:hover { background: var(--surface2); }
+    .post-num { padding: 12px 0 12px 16px; font-size: 12px; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.5; padding-top: 14px; }
+    .post-body { padding: 12px 12px 12px 10px; }
+    .post-title { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 3px; line-height: 1.4; }
+    .post-kw { font-size: 11.5px; color: var(--muted); margin-bottom: 4px; }
+    .post-kw strong { color: var(--brand); }
+    .post-outline { font-size: 11.5px; color: var(--muted); line-height: 1.7; display: none; margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border); }
+    .post-row.expanded .post-outline { display: block; }
+    .post-meta { padding: 12px 14px 12px 4px; display: flex; flex-direction: column; gap: 4px; align-items: flex-end; min-width: 100px; }
+    .post-toggle { font-size: 11px; color: var(--brand); cursor: pointer; background: none; border: none; padding: 0; cursor: pointer; white-space: nowrap; }
+    .tag-xs { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
+    .tag-xs.blue { background: var(--brand-bg); color: var(--brand); }
+    .tag-xs.green { background: var(--green-bg); color: var(--green); }
+    .tag-xs.amber { background: var(--amber-bg); color: var(--amber); }
+    .tag-xs.purple { background: rgba(147,51,234,0.1); color: #9333EA; }
+    .tag-xs.teal { background: rgba(6,182,212,0.1); color: #0891B2; }
+  </style>
+
+  <!-- ═══════════ JUNE ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,var(--brand-bg),var(--surface))">
+      <h3 style="color:var(--brand)">📅 June 2026 — AI Review Tools &amp; Reputation Foundations</h3>
+      <div class="month-meta"><span>8 posts</span><span>Jun 2 – Jun 27</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">1</div>
+        <div class="post-body">
+          <div class="post-title">⭐ 🤖 What Is an AI Review Response Generator? (And Why Every Contractor Needs One)</div>
+          <div class="post-kw">Keywords: <strong>ai review response generator</strong> (299 impr, pos 25.6) · review response generator (259 impr) · automated review replies</div>
+          <div class="post-outline">1. Definition paragraph (AI citation bait — answer in first sentence) · 2. How the AI generates contextual replies · 3. Before/after: manual vs. AI reply examples · 4. Speed stats: why 24hr response window matters · 5. Tone settings: professional, friendly, apologetic · 6. Unify360 walkthrough: generate reply in &lt;10 seconds · 7. FAQ: 5 common questions (schema-marked) · 8. CTA → Start free trial</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Pillar Post</span>
-        <span style="font-size:11px;color:var(--muted)">1,800 words · Guide format</span>
+      <div class="post-row">
+        <div class="post-num">2</div>
+        <div class="post-body">
+          <div class="post-title">⭐ Business Reputation Management in 2026: The Complete Guide for Local Service Businesses</div>
+          <div class="post-kw">Keywords: <strong>business reputation management</strong> (1,640 impr, pos 28.9) · online reputation management small business · 24/7 brand reputation monitoring</div>
+          <div class="post-outline">1. What is business reputation management (define for AI) · 2. Why it matters more for contractors · 3. The 5 pillars: reviews, social, listings, messaging, monitoring · 4. Common mistakes (not responding, ignoring 1-stars) · 5. How to respond to negative reviews + templates · 6. Manual vs. Unify360 platform comparison · 7. 30-day reputation reset checklist · 8. CTA → Reputation audit or demo</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Pillar</span><span class="tag-xs green">1,800w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">3</div>
+        <div class="post-body">
+          <div class="post-title">How to Respond to Negative Google Reviews Without Making It Worse</div>
+          <div class="post-kw">Keywords: <strong>how to respond to negative reviews</strong> · negative review response templates · google review response examples</div>
+          <div class="post-outline">1. Why most negative review responses hurt more than help · 2. The 3 rules: acknowledge, apologize, act · 3. What NOT to say (with examples) · 4. Response templates: 1-star, 2-star, upset customer · 5. When to take the conversation offline · 6. How fast you need to respond (data) · 7. Using AI to draft responses while keeping a human tone · 8. CTA → Unify360 review response tool</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">4</div>
+        <div class="post-body">
+          <div class="post-title">⭐ Real-Time Review Monitoring: How to Respond Before It's Too Late</div>
+          <div class="post-kw">Keywords: <strong>real time reviews</strong> (742 impr, pos 18.2) · google review monitoring · review alert software · monitor google reviews</div>
+          <div class="post-outline">1. The problem: contractors responding days later (too slow) · 2. Research: response time impact on conversion and ranking · 3. How real-time monitoring works (push alerts) · 4. Setting up alerts: email, SMS, app · 5. Response templates by star rating · 6. Unify360 alert dashboard walkthrough · 7. Case study: before/after monitoring setup · 8. CTA → Try Unify360 alerts free</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">5</div>
+        <div class="post-body">
+          <div class="post-title">10 Online Review Stats Every Contractor Must Know in 2026</div>
+          <div class="post-kw">Keywords: <strong>online review statistics 2026</strong> · contractor reputation statistics · google review impact on local business</div>
+          <div class="post-outline">1. Stat: 93% of consumers read reviews before choosing a local business · 2. Stat: businesses with 4.5+ stars get 35% more clicks · 3. Stat: 88% trust reviews as much as personal recommendations · 4. Stat: 53% won't use a business rated under 4 stars · 5. Stat: responding to reviews increases purchase likelihood 18% · 6. Stat: average contractor gets 1.3 reviews/month without a system · 7. What these stats mean for your marketing budget · 8. CTA → See how Unify360 addresses all 7 problems</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Listicle</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">6</div>
+        <div class="post-body">
+          <div class="post-title">Why Your Google Star Rating Is Costing You Leads (And How to Fix It)</div>
+          <div class="post-kw">Keywords: <strong>google star rating local business</strong> · improve google rating · increase google reviews contractor</div>
+          <div class="post-outline">1. The math: 3.9 vs 4.5 stars = 35% fewer clicks · 2. How Google calculates your rating · 3. The fastest way to raise your rating (without violating TOS) · 4. How many reviews you need to move the needle · 5. Responding to old 1-stars: does it help? · 6. The review velocity factor Google weights · 7. Step-by-step: raise your rating in 90 days · 8. CTA → Unify360 review generation</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">7</div>
+        <div class="post-body">
+          <div class="post-title">How Unify360 Automatically Responds to Every Google Review</div>
+          <div class="post-kw">Keywords: <strong>automated google review responses</strong> · review response automation · unify360 reviews</div>
+          <div class="post-outline">1. The problem with manual review management at scale · 2. How Unify360's AI reads the review context and tone · 3. Customization: brand voice, tone presets, owner name · 4. 1-click approve or auto-publish workflow · 5. What happens when a review needs human attention · 6. Integration: Google, Yelp, Facebook, BBB · 7. Client case study: 100% response rate, avg 2-hour turnaround · 8. CTA → See it in action (demo)</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">Product</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">8</div>
+        <div class="post-body">
+          <div class="post-title">Google Business Profile Optimization Checklist for Home Service Contractors</div>
+          <div class="post-kw">Keywords: <strong>google business profile optimization</strong> · gbp for contractors · google my business checklist home services</div>
+          <div class="post-outline">1. Why GBP is the most important local SEO asset for contractors · 2. Business info: NAP, categories, service areas, hours · 3. Photos: types, frequency, and how many you need · 4. Services and products section setup · 5. GBP Posts: schedule and content types that work · 6. Q&amp;A: how to seed and monitor · 7. GBP reviews strategy: getting and responding · 8. Monthly GBP maintenance checklist · 8. CTA → Unify360 review management</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Checklist</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">business reputation management</span>
-          <span class="chip neutral">online reputation management for small business</span>
-          <span class="chip neutral">24/7 brand reputation monitoring</span>
-          <span class="chip neutral">reputation management software</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">1,640 impressions — highest non-brand term by volume · pos 28.9 = currently page 3</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. What is business reputation management (define for AI)<br>
-          2. Why it matters more for local contractors than any other business<br>
-          3. The 5 pillars: reviews, social, listings, messaging, monitoring<br>
-          4. Common mistakes contractors make with their reputation<br>
-          5. How to respond to negative reviews (with templates)<br>
-          6. Tools comparison: manual vs. Unify360 platform<br>
-          7. Checklist: 30-day reputation reset for local businesses<br>
-          8. CTA → Reputation audit or platform demo
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /social/ · /messaging/ · /google-review-strategy/ · /when-negative-reviews-cross-the-line/</div>
   </div>
 
-  <!-- POST 3 -->
-  <div class="card" style="border-left:4px solid var(--teal);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Post 3 · July 2026 · Week 1</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Best AI Tools for Plumbers, Electricians &amp; HVAC Contractors (2026 Edition)"</div>
+  <!-- ═══════════ JULY ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(6,182,212,0.08),var(--surface))">
+      <h3 style="color:#0891B2">🔧 July 2026 — AI Tools for the Trades</h3>
+      <div class="month-meta"><span>8 posts</span><span>Jul 1 – Jul 29</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">9</div>
+        <div class="post-body">
+          <div class="post-title">⭐ 🤖 Best AI Tools for Plumbers, Electricians &amp; HVAC Contractors (2026 Edition)</div>
+          <div class="post-kw">Keywords: <strong>best ai tools for plumbers</strong> (176 impr, pos 28.4) · ai for electricians (177 impr, pos 41) · best ai tools for hvac</div>
+          <div class="post-outline">1. Opening FAQ answer (ChatGPT citation bait) · 2. Why trades are adopting AI faster than other industries · 3. Tool #1: AI review management · 4. Tool #2: AI scheduling &amp; dispatch · 5. Tool #3: AI chatbots for lead capture · 6. Tool #4: AI social media scheduling · 7. Tool #5: AI messaging &amp; follow-up · 8. Comparison table by price, features, trade type · 9. FAQ: 6 questions contractors ask about AI · 10. CTA → Start free with Unify360</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">🤖 AI bait</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag green">AI Search Target</span>
-        <span style="font-size:11px;color:var(--muted)">1,600 words · Listicle + FAQ</span>
+      <div class="post-row">
+        <div class="post-num">10</div>
+        <div class="post-body">
+          <div class="post-title">AI for Electricians: Save Hours on Admin and Win More Jobs</div>
+          <div class="post-kw">Keywords: <strong>ai for electricians</strong> (177 impr, pos 41) · electrician ai (29 impr) · electrician business software 2026</div>
+          <div class="post-outline">1. The admin burden electricians face (estimates, reviews, follow-ups) · 2. How AI tools address each pain point · 3. AI review management for electrical contractors · 4. AI for quote follow-up sequences · 5. Scheduling and dispatch AI tools · 6. How to evaluate AI tools (what to look for) · 7. ROI: hours saved per month · 8. CTA → Unify360 for electricians</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">Industry</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">11</div>
+        <div class="post-body">
+          <div class="post-title">Best AI Tools for HVAC Contractors: Reviews, Messaging &amp; More</div>
+          <div class="post-kw">Keywords: <strong>best ai tools for hvac</strong> · hvac marketing software · hvac business automation 2026</div>
+          <div class="post-outline">1. Unique challenges HVAC businesses face (seasonal swings, repeat service) · 2. AI tools for seasonal campaign management · 3. Review management during peak and off-peak · 4. Automated service reminder sequences · 5. AI-powered customer messaging · 6. Tools comparison table: pricing and features · 7. What HVAC contractors say after switching · 8. CTA → Unify360 for HVAC</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">Industry</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">12</div>
+        <div class="post-body">
+          <div class="post-title">How AI Is Changing the Home Services Industry (2026 Report)</div>
+          <div class="post-kw">Keywords: <strong>ai home services industry</strong> · artificial intelligence contractor marketing · home services technology trends 2026</div>
+          <div class="post-outline">1. Where AI is currently being used in home services · 2. Lead response automation (the first-to-respond wins stat) · 3. AI for reviews and reputation · 4. AI in scheduling and field ops · 5. AI-generated social media content · 6. What won't change: relationship and trust · 7. How to start with AI without overwhelming your team · 8. CTA → Unify360 as the entry point</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Report</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">13</div>
+        <div class="post-body">
+          <div class="post-title">AI vs. Manual: Which Approach Wins for Contractor Marketing?</div>
+          <div class="post-kw">Keywords: <strong>ai vs manual marketing contractors</strong> · automation vs manual marketing · when to use ai in marketing</div>
+          <div class="post-outline">1. The case for manual: relationship, nuance, trust · 2. The case for AI: speed, consistency, scale · 3. Head-to-head: response time, cost, quality, scalability · 4. What AI does better (reviews, follow-up, social scheduling) · 5. What humans do better (strategy, complex complaints, sales) · 6. The hybrid model: how top contractors combine both · 7. Decision matrix: when to automate what · 8. CTA → Unify360 as the hybrid platform</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Comparison</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">14</div>
+        <div class="post-body">
+          <div class="post-title">How to Use AI to Get More 5-Star Reviews (Step-by-Step)</div>
+          <div class="post-kw">Keywords: <strong>ai review generation</strong> · automated review requests · how to get more reviews with ai</div>
+          <div class="post-outline">1. The review request timing problem (most businesses ask too late) · 2. How AI identifies the right moment to ask · 3. SMS vs. email vs. in-app review request — which converts best · 4. Writing the perfect review request message · 5. Setting up automated post-job review sequences · 6. How AI personalizes each request using job data · 7. Tracking review request conversion rate · 8. CTA → Unify360 automated review requests</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">15</div>
+        <div class="post-body">
+          <div class="post-title">The Best Plumbing Marketing Tools in 2026: A Contractor's Guide</div>
+          <div class="post-kw">Keywords: <strong>best plumbing marketing tools</strong> · plumber marketing software · plumbing business growth tools 2026</div>
+          <div class="post-outline">1. Why plumbers need different tools than other businesses · 2. Category 1: Lead generation (LSA, PPC, SEO) · 3. Category 2: Review &amp; reputation management · 4. Category 3: Scheduling &amp; dispatch software · 5. Category 4: Customer messaging &amp; follow-up · 6. Category 5: Social media · 7. The all-in-one vs. best-of-breed debate · 8. Recommended stack for a 1–5 truck plumbing company · 9. CTA → Unify360 as the reputation layer</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Listicle</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">16</div>
+        <div class="post-body">
+          <div class="post-title">AI Chatbots for Home Service Contractors: Are They Worth It in 2026?</div>
+          <div class="post-kw">Keywords: <strong>ai chatbot for contractors</strong> · contractor website chatbot · ai chat for home services</div>
+          <div class="post-outline">1. What AI chatbots actually do for service businesses · 2. Lead capture: how chatbots beat contact forms · 3. After-hours coverage: never miss a 10pm emergency call · 4. Chatbot vs. live chat: pros, cons, and when each fits · 5. What questions to have your chatbot answer · 6. How to set up a chatbot without it annoying visitors · 7. Real results: lead capture rate with and without chatbot · 8. CTA → Unify360 chat feature</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Analysis</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">best ai tools for plumbers</span>
-          <span class="chip good">ai for electricians</span>
-          <span class="chip good">electrician ai</span>
-          <span class="chip neutral">best ai tools for hvac</span>
-          <span class="chip neutral">ai tools for home service businesses</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">"best ai tools for plumbers": 176 impr., pos 28.4 · "ai for electricians": 177 impr., pos 41 — both already in search index</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. Opening FAQ answer (ChatGPT citation bait): "The best AI tools for plumbers in 2026 are…"<br>
-          2. Why contractors are adopting AI tools faster than other industries<br>
-          3. Tool #1: AI review management (Unify360)<br>
-          4. Tool #2: AI scheduling &amp; dispatch<br>
-          5. Tool #3: AI-powered chatbots for lead capture<br>
-          6. Tool #4: AI social media scheduling<br>
-          7. Tool #5: AI messaging &amp; follow-up<br>
-          8. Comparison table: tools by price, features, and trade type<br>
-          9. FAQ: 6 questions plumbers ask about AI<br>
-          10. CTA → Start free with Unify360
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /industries-we-serve/plumbing/ · /industries-we-serve/home-services/electricians/ · /ai-review-response-generator/ · /4-best-ai-tools-for-small-business-owners/</div>
   </div>
 
-  <!-- POST 4 -->
-  <div class="card" style="border-left:4px solid var(--green);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px">Post 4 · July 2026 · Week 3</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Real-Time Review Management: How to Respond to Google Reviews Before It's Too Late"</div>
+  <!-- ═══════════ AUGUST ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(245,158,11,0.08),var(--surface))">
+      <h3 style="color:var(--amber)">💬 August 2026 — Messaging, Leads &amp; Unified Inbox</h3>
+      <div class="month-meta"><span>8 posts</span><span>Aug 4 – Aug 29</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">17</div>
+        <div class="post-body">
+          <div class="post-title">⭐ Review Response Software vs. Doing It Manually: Time, Cost &amp; Results Compared</div>
+          <div class="post-kw">Keywords: <strong>review response software</strong> (11,667 page impr, pos 22.7) · review response generator (259 impr) · best review management software</div>
+          <div class="post-outline">1. The manual approach: how most contractors respond today · 2. Time cost: 8 min/response × 50 reviews/month = X hrs · 3. Consistency problem: quality varies by who writes the response · 4. What review response software does differently · 5. Cost comparison table: manual vs. software · 6. Quality side-by-side: AI-assisted vs. manual examples · 7. When manual is still the right choice · 8. CTA → Try Unify360 review response 14 days free</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Comparison</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag green">Near Page 1</span>
-        <span style="font-size:11px;color:var(--muted)">1,300 words · How-to</span>
+      <div class="post-row">
+        <div class="post-num">18</div>
+        <div class="post-body">
+          <div class="post-title">⭐ Omnichannel Messaging for Contractors: Manage SMS, Email &amp; Chat in One Dashboard</div>
+          <div class="post-kw">Keywords: <strong>unify messaging</strong> (94 impr, pos 12) · unify messaging app (40 impr) · omnichannel messaging small business</div>
+          <div class="post-outline">1. The missed lead problem: customers expect instant responses · 2. Where messages get lost: phone, email, Facebook, Yelp, text · 3. What omnichannel messaging means in plain language · 4. The 4 channels every contractor should unify · 5. Setting up a unified inbox step-by-step · 6. Auto-reply templates for after-hours · 7. Tracking response time and lead response rates · 8. CTA → Try Unify360 Messaging free</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">Feature</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">19</div>
+        <div class="post-body">
+          <div class="post-title">How to Never Miss a Lead Again: The Unified Inbox Guide for Service Businesses</div>
+          <div class="post-kw">Keywords: <strong>unified inbox for contractors</strong> · contractor lead management · missed lead prevention home services</div>
+          <div class="post-outline">1. The leak: where leads disappear in a typical service business · 2. The 5-minute rule: response time and win rate correlation · 3. What a unified inbox is and how it works · 4. Connecting all channels: web chat, SMS, Facebook, Google · 5. Setting up instant notification alerts · 6. Assigning conversations to the right team member · 7. Follow-up sequences for unresponsive leads · 8. CTA → Unify360 unified inbox</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">20</div>
+        <div class="post-body">
+          <div class="post-title">SMS Marketing for Plumbers: A Complete Setup Guide (With Templates)</div>
+          <div class="post-kw">Keywords: <strong>sms marketing for plumbers</strong> · text message marketing contractors · plumber sms campaign</div>
+          <div class="post-outline">1. Why SMS gets 98% open rates vs. 20% for email · 2. Legal requirements: TCPA, 10DLC registration for contractors · 3. The 3 SMS campaigns every plumber should run · 4. Campaign #1: job confirmation &amp; review request · 5. Campaign #2: seasonal maintenance reminders · 6. Campaign #3: win-back for past customers · 7. SMS templates for each campaign (copy/paste ready) · 8. CTA → Unify360 SMS campaigns</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Listicle</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">21</div>
+        <div class="post-body">
+          <div class="post-title">How to Set Up Auto-Reply for After-Hours Calls &amp; Texts (Contractor's Guide)</div>
+          <div class="post-kw">Keywords: <strong>auto reply after hours contractor</strong> · after hours text response plumber · automated text reply business</div>
+          <div class="post-outline">1. Why after-hours leads are your most valuable (and most wasted) · 2. What customers expect when they contact a contractor at 9pm · 3. Setting up SMS auto-reply: what to say and what not to say · 4. Emergency vs. non-emergency routing · 5. How to use auto-reply to qualify leads before morning · 6. Follow-up sequence to convert after-hours leads next day · 7. Scripts and templates (emergency, non-emergency, quote request) · 8. CTA → Unify360 auto-reply setup</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">22</div>
+        <div class="post-body">
+          <div class="post-title">The Best Business Texting Apps for Contractors in 2026</div>
+          <div class="post-kw">Keywords: <strong>best business texting app 2026</strong> · contractor texting software · sms app for home services</div>
+          <div class="post-outline">1. Why standard texting from personal phones doesn't scale · 2. Must-have features in a contractor texting platform · 3. Tool #1: Unify360 Messaging · 4. Tool #2–4: comparison of other platforms · 5. Compliance features: opt-in, opt-out, 10DLC · 6. Price comparison table · 7. What to look for based on business size (1-truck vs. 10-truck) · 8. CTA → Try Unify360 Messaging</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Roundup</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">23</div>
+        <div class="post-body">
+          <div class="post-title">Why Contractors Lose Leads Before They Even Call Back (And How to Stop It)</div>
+          <div class="post-kw">Keywords: <strong>contractor lead response time</strong> · speed to lead home services · why contractors lose leads</div>
+          <div class="post-outline">1. The stat: 78% of customers buy from whoever responds first · 2. Average contractor response time: 2–3 hours (too slow) · 3. The 5-minute window: what the data shows · 4. Where leads go when you don't respond fast (your competitor) · 5. The missed-call text-back strategy · 6. How to close leads before the follow-up call · 7. Setting up a speed-to-lead system · 8. CTA → Unify360 lead response automation</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Problem/Solution</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">24</div>
+        <div class="post-body">
+          <div class="post-title">Web Chat vs. Facebook Messenger vs. SMS: Which Converts Best for Contractors?</div>
+          <div class="post-kw">Keywords: <strong>web chat for contractors</strong> · facebook messenger vs sms business · best lead capture channel contractor</div>
+          <div class="post-outline">1. The channel problem: where customers prefer to contact you in 2026 · 2. Web chat: setup, conversion data, best practices · 3. Facebook Messenger: reach, engagement, limitations · 4. SMS: open rates, speed, compliance requirements · 5. Data: conversion rates by channel (based on industry averages) · 6. How to handle all three without adding staff · 7. The unified inbox solution · 8. CTA → Unify360 multi-channel inbox</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Comparison</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">real time reviews</span>
-          <span class="chip neutral">google review monitoring</span>
-          <span class="chip neutral">review alert software</span>
-          <span class="chip neutral">monitor google reviews</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">"real time reviews": 742 impressions, pos 18.2 — a single content push could move this onto page 1</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. The problem: most contractors respond to reviews days later (too slow)<br>
-          2. Research: response time impact on star rating and conversion<br>
-          3. How real-time review monitoring works<br>
-          4. Setting up alerts: email, SMS, app notifications<br>
-          5. Response templates for 1-star, 3-star, and 5-star reviews<br>
-          6. Unify360 alert dashboard walkthrough<br>
-          7. Case study: before and after implementing real-time monitoring<br>
-          8. CTA → Try Unify360 review alerts free
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /google-review-strategy/ · /ai-review-response-generator/ · /ai-google-review-response</div>
   </div>
 
-  <!-- POST 5 -->
-  <div class="card" style="border-left:4px solid var(--amber);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:4px">Post 5 · August 2026 · Week 1</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Review Response Software vs. Doing It Manually: Time, Cost &amp; Results Compared"</div>
+  <!-- ═══════════ SEPTEMBER ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(34,197,94,0.08),var(--surface))">
+      <h3 style="color:var(--green)">⭐ September 2026 — Reviews, Trust &amp; Agency Growth</h3>
+      <div class="month-meta"><span>8 posts</span><span>Sep 1 – Sep 30</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">25</div>
+        <div class="post-body">
+          <div class="post-title">⭐ 🤖 How to Get More Google Reviews for Your Plumbing or HVAC Business (The Right Way)</div>
+          <div class="post-kw">Keywords: <strong>can you incentivize google reviews</strong> (4,822 page impr, pos 7.0) · how to get more google reviews · review request automation</div>
+          <div class="post-outline">1. FAQ opener: "Can you incentivize Google reviews?" (policy-clear, AI citation) · 2. Google's rules: what's allowed and what isn't · 3. Legal ways to ask (timing, channels, templates) · 4. Automating review requests: text, email, QR codes · 5. How to handle the awkward in-person ask · 6. Why some businesses get 10× more reviews · 7. Responding to reviews to trigger more review activity · 8. Unify360 review request automation walkthrough · 9. CTA → Automate review requests with Unify360</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">🤖 Near Pg 1</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag amber">Decision Stage</span>
-        <span style="font-size:11px;color:var(--muted)">1,500 words · Comparison</span>
+      <div class="post-row">
+        <div class="post-num">26</div>
+        <div class="post-body">
+          <div class="post-title">⭐ Review Management for Marketing Agencies: Scale to 50+ Clients Without Chaos</div>
+          <div class="post-kw">Keywords: <strong>review management software for agencies</strong> (9 impr, pos 14.6 — no dedicated page) · white label review management · agency reputation platform</div>
+          <div class="post-outline">1. The agency problem: managing reviews for 20+ clients manually doesn't scale · 2. What agencies actually need: multi-client dashboard, white-label reporting · 3. Key features to look for · 4. Setting up a client review workflow in Unify360 · 5. Monthly reporting: what to show clients · 6. Pricing models: per-client vs. flat agency seat · 7. Client onboarding template · 8. CTA → Unify360 Agency Plan — schedule a demo</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">B2B/Agency</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">27</div>
+        <div class="post-body">
+          <div class="post-title">How to Build a 5-Star Online Reputation in 90 Days</div>
+          <div class="post-kw">Keywords: <strong>build online reputation contractor</strong> · 5 star reputation strategy · improve business reputation fast</div>
+          <div class="post-outline">1. Reputation baseline: how to audit where you are today · 2. Week 1–2: fix the foundational issues (listings, old reviews) · 3. Week 3–4: launch review request campaign · 4. Month 2: respond to every review, build response templates · 5. Month 2: publish GBP posts weekly · 6. Month 3: social proof amplification (screenshots, case studies) · 7. What metrics to track (star rating, review velocity, response rate) · 8. CTA → Unify360 reputation platform</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">How-to</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">28</div>
+        <div class="post-body">
+          <div class="post-title">The Ultimate Google Business Profile Reviews Guide for Contractors</div>
+          <div class="post-kw">Keywords: <strong>google business profile reviews</strong> · gbp review strategy · google reviews for home services</div>
+          <div class="post-outline">1. How GBP reviews affect local map pack rankings (Google confirms this) · 2. The review signals Google uses: volume, velocity, recency, response rate · 3. Getting reviews: timing the ask after service completion · 4. Review request channels: SMS, email, QR code at job site · 5. Responding to GBP reviews: the right structure · 6. Flagging fake or defamatory reviews · 7. GBP Q&amp;A: the hidden reviews that matter · 8. CTA → Unify360 GBP review management</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">Guide</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">29</div>
+        <div class="post-body">
+          <div class="post-title">Does Responding to Google Reviews Improve Your Ranking? (The Data)</div>
+          <div class="post-kw">Keywords: <strong>responding to reviews seo ranking</strong> · does review response help google ranking · review response local seo</div>
+          <div class="post-outline">1. What Google says officially about review responses · 2. What the data shows (correlation studies) · 3. Why review responses improve engagement metrics · 4. Keyword signals in responses: what to include naturally · 5. Response rate benchmarks by industry · 6. How fast you need to respond for maximum SEO impact · 7. The compound effect: reviews + responses + recency · 8. CTA → Unify360 automated response tool</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Data</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">30</div>
+        <div class="post-body">
+          <div class="post-title">How to Handle Fake Google Reviews (And Get Them Removed)</div>
+          <div class="post-kw">Keywords: <strong>fake google reviews</strong> · remove fake google review · report fake review google business</div>
+          <div class="post-outline">1. How to identify a fake review (signs and patterns) · 2. Google's review policy on fake and spam reviews · 3. How to report a review for removal (step-by-step) · 4. What to do when Google won't remove it · 5. How to respond publicly to a fake review · 6. Legal options for defamatory reviews · 7. Prevention: why a strong review volume protects you · 8. CTA → Unify360 review monitoring (alerts you the moment a review appears)</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">31</div>
+        <div class="post-body">
+          <div class="post-title">Review Gating: What It Is and Why It Can Get You Penalized</div>
+          <div class="post-kw">Keywords: <strong>review gating</strong> · what is review gating · google review gating policy</div>
+          <div class="post-outline">1. What review gating is (definition, examples) · 2. Why businesses do it (and why it seems logical) · 3. Google's official policy on review gating · 4. The FTC's stance: deceptive review practices · 5. Real cases: businesses penalized for gating · 6. Compliant alternatives: how to get more positive reviews without gating · 7. How to audit your current review request flow for compliance · 8. CTA → Unify360 compliant review request system</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Education</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">32</div>
+        <div class="post-body">
+          <div class="post-title">How to Ask Customers for Reviews Without Being Pushy (Scripts + Timing)</div>
+          <div class="post-kw">Keywords: <strong>how to ask for google reviews</strong> · review request script · ask for review without being pushy</div>
+          <div class="post-outline">1. Why most contractors ask the wrong way at the wrong time · 2. The best moment to ask (right after job completion) · 3. In-person ask: natural language that works · 4. SMS scripts: 3 templates that get responses · 5. Email scripts: subject line + body · 6. What not to say (pressure language, incentive hints) · 7. Follow-up: 1 reminder maximum · 8. Automating the ask without losing the human touch · 9. CTA → Unify360 review request automation</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">Scripts</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">review response software</span>
-          <span class="chip good">review response generator</span>
-          <span class="chip neutral">google review management tool</span>
-          <span class="chip neutral">best review management software</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">/review-response-software/ has 11,667 impressions at pos 22.7 · CTR only 0.05% — fix the title + add comparison content</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. The manual approach: how most businesses currently respond<br>
-          2. Time cost: avg 8 min per response × 50 reviews/mo = X hrs<br>
-          3. Consistency problem: quality varies by who writes the response<br>
-          4. What review response software does differently<br>
-          5. Cost comparison table: manual vs. software (time + $$)<br>
-          6. Quality: AI-assisted vs. purely manual examples side by side<br>
-          7. When manual is still the right choice<br>
-          8. CTA → Try Unify360 review response for 14 days free
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /review-response-software/ · /ai-review-response-generator/ · /reviews/ · /ai-google-review-response</div>
   </div>
 
-  <!-- POST 6 -->
-  <div class="card" style="border-left:4px solid var(--teal);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Post 6 · August 2026 · Week 3</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Omnichannel Messaging for Contractors: Manage SMS, Email &amp; Chat in One Dashboard"</div>
+  <!-- ═══════════ OCTOBER ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(239,68,68,0.07),var(--surface))">
+      <h3 style="color:var(--red)">📍 October 2026 — Local SEO &amp; Google Rankings</h3>
+      <div class="month-meta"><span>8 posts</span><span>Oct 1 – Oct 31</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">33</div>
+        <div class="post-body">
+          <div class="post-title">🤖 Local SEO for Contractors: The 2026 Complete Guide</div>
+          <div class="post-kw">Keywords: <strong>local seo for contractors</strong> · local seo home services · contractor google ranking</div>
+          <div class="post-outline">1. What local SEO is and why it's different from regular SEO · 2. The 3 ranking factors for the map pack (relevance, distance, prominence) · 3. Google Business Profile optimization · 4. Citation building: directories that matter for contractors · 5. On-site local SEO: city pages, service pages · 6. Reviews as a local ranking signal · 7. Link building for local businesses · 8. Measuring local SEO performance · 9. CTA → Unify360 handles the reputation layer</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">🤖 Pillar</span><span class="tag-xs green">1,800w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag" style="background:rgba(6,182,212,0.1);color:#0891B2">Feature Focus</span>
-        <span style="font-size:11px;color:var(--muted)">1,400 words · How-to</span>
+      <div class="post-row">
+        <div class="post-num">34</div>
+        <div class="post-body">
+          <div class="post-title">Google Business Profile Optimization Checklist: 25 Things to Do Right Now</div>
+          <div class="post-kw">Keywords: <strong>google business profile checklist</strong> · gbp optimization 2026 · google my business optimization home services</div>
+          <div class="post-outline">1. Complete your NAP — name, address, phone · 2. Choose the right primary and secondary categories · 3. Set accurate service areas · 4. Upload 10+ photos (types and frequency) · 5. Enable booking / messaging · 6. Write your business description (with keywords naturally) · 7. Add services with descriptions · 8. Enable GBP Posts — minimum 1/week · 9. Seed and respond to Q&amp;A · 10–25. Remaining checklist items: attributes, accessibility, etc. · CTA → Unify360 for review management</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Checklist</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">35</div>
+        <div class="post-body">
+          <div class="post-title">How to Rank #1 on Google Maps in Your City (Contractor Edition)</div>
+          <div class="post-kw">Keywords: <strong>rank higher google maps contractor</strong> · google maps ranking plumber · map pack seo 2026</div>
+          <div class="post-outline">1. How the Google Map Pack actually works · 2. Proximity: what to do when you're not near the searcher · 3. Prominence signals: reviews, citations, links, domain authority · 4. Relevance: category, keywords in GBP, service match · 5. The review velocity factor (frequency matters) · 6. How to use GBP Posts to build topical relevance · 7. Local link building: where to get links as a contractor · 8. Tracking your map pack position (tools and metrics) · 9. CTA → Unify360 review management for prominence</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">How-to</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">36</div>
+        <div class="post-body">
+          <div class="post-title">Local Business Citations for Contractors: The 2026 Directory Playbook</div>
+          <div class="post-kw">Keywords: <strong>local citations for contractors</strong> · citation building home services · local seo directories plumber</div>
+          <div class="post-outline">1. What citations are and why they still matter · 2. The top 10 citations every contractor needs · 3. Industry-specific directories (Angi, HomeAdvisor, Houzz, Thumbtack) · 4. NAP consistency: why even small differences hurt · 5. How to audit your existing citations · 6. How to build new citations (manual vs. automated) · 7. Monitoring citations for changes · 8. CTA → Unify360 for managing the reputation side</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Playbook</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">37</div>
+        <div class="post-body">
+          <div class="post-title">How to Use Google Business Profile Posts to Drive More Traffic (With Examples)</div>
+          <div class="post-kw">Keywords: <strong>google business profile posts</strong> · gbp posts strategy · google business posts for contractors</div>
+          <div class="post-outline">1. What GBP Posts are and how they show in search · 2. Types of posts: offer, event, update, product · 3. Best performing post formats (with examples) · 4. How often to post (frequency data) · 5. Writing posts that rank: keyword tips without over-optimizing · 6. Photo and CTA best practices · 7. Scheduling GBP Posts in advance · 8. Tracking clicks and engagement from posts · 9. CTA → Unify360 social publishing (includes GBP)</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">Feature</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">38</div>
+        <div class="post-body">
+          <div class="post-title">Local SEO vs. Google Ads: Which Gets More Leads for Contractors in 2026?</div>
+          <div class="post-kw">Keywords: <strong>local seo vs google ads contractor</strong> · seo vs ppc home services · should contractors invest in seo or ads</div>
+          <div class="post-outline">1. The core difference: renting vs. owning traffic · 2. Google Ads: cost, speed, and who it's right for · 3. Local SEO: timeline, compounding return, and who it's right for · 4. Data: average cost per lead from ads vs. organic for contractors · 5. The hybrid approach: use ads while SEO builds · 6. Scenarios: when to invest more in each · 7. How reviews factor into both channels · 8. CTA → Unify360 reputation management (supports both)</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Comparison</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">39</div>
+        <div class="post-body">
+          <div class="post-title">How to Track Your Local SEO Performance (Tools, Metrics &amp; Reports)</div>
+          <div class="post-kw">Keywords: <strong>track local seo performance</strong> · local seo reporting contractor · how to measure local seo</div>
+          <div class="post-outline">1. Why most contractors don't track SEO (and what they're missing) · 2. Metric #1: Google Business Profile views and actions · 3. Metric #2: Map pack position by keyword · 4. Metric #3: Organic traffic from Google Search Console · 5. Metric #4: Review velocity and response rate · 6. Metric #5: Citation consistency score · 7. Tools: free vs. paid (GSC, BrightLocal, Semrush) · 8. How to report local SEO to a client or boss · 9. CTA → Unify360 for the reputation metrics layer</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">How-to</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">40</div>
+        <div class="post-body">
+          <div class="post-title">NAP Consistency: Why Small Address Differences Hurt Your Google Rankings</div>
+          <div class="post-kw">Keywords: <strong>nap consistency local seo</strong> · name address phone local seo · nap citation consistency contractor</div>
+          <div class="post-outline">1. What NAP is and why Google uses it as a trust signal · 2. Examples of inconsistency that hurt rankings ("St." vs "Street", suite vs #) · 3. How to audit your NAP across all platforms · 4. The top 20 places where NAP needs to match · 5. How to fix inconsistent citations · 6. Monitoring NAP over time · 7. What to do after a business address change · 8. CTA → Unify360 for reputation + review consistency</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Education</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">unify messaging</span>
-          <span class="chip good">unify messaging app</span>
-          <span class="chip neutral">omnichannel messaging for small business</span>
-          <span class="chip neutral">unified inbox for contractors</span>
-          <span class="chip neutral">business text messaging software</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">/messaging/ has 12,500 impressions at pos 16.1 · "unify messaging": 94 impr. at pos 12 — very close to page 1</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. The missed lead problem: customers expect instant responses<br>
-          2. Where messages get lost: phone, email, Facebook, Yelp, text<br>
-          3. What omnichannel messaging actually means (plain language)<br>
-          4. The 4 channels every contractor should unify: SMS, email, GBP chat, web chat<br>
-          5. Setting up a unified inbox: step-by-step with Unify360<br>
-          6. Auto-reply templates for after-hours and weekends<br>
-          7. Tracking response time and lead response rates<br>
-          8. CTA → Try Unify360 Messaging free
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /messaging/ · /reviews/ · /industries-we-serve/ · /social/</div>
   </div>
 
-  <!-- POST 7 -->
-  <div class="card" style="border-left:4px solid var(--green);margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px">Post 7 · September 2026 · Week 1</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"How to Get More Google Reviews for Your Plumbing or HVAC Business (The Right Way)"</div>
+  <!-- ═══════════ NOVEMBER ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(147,51,234,0.08),var(--surface))">
+      <h3 style="color:#9333EA">🍂 November 2026 — Year-End, Holiday &amp; Retention</h3>
+      <div class="month-meta"><span>8 posts</span><span>Nov 3 – Nov 28</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">41</div>
+        <div class="post-body">
+          <div class="post-title">Holiday Marketing for Home Service Contractors: A Playbook That Works</div>
+          <div class="post-kw">Keywords: <strong>holiday marketing home services</strong> · contractor marketing november december · year end marketing plumber</div>
+          <div class="post-outline">1. Why November–December is actually a strong month for plumbers and HVAC · 2. Holiday marketing calendar: what to promote and when · 3. Black Friday / year-end service promotions that don't feel forced · 4. Email and SMS campaigns for existing customers · 5. Holiday-themed GBP posts and photos · 6. Social media content for the holidays · 7. Gift card and referral programs for the season · 8. CTA → Unify360 for automated holiday follow-up</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Seasonal</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag green">Near Page 1</span>
-        <span style="font-size:11px;color:var(--muted)">1,500 words · FAQ format</span>
+      <div class="post-row">
+        <div class="post-num">42</div>
+        <div class="post-body">
+          <div class="post-title">How to Get More Reviews During the Holiday Season (Templates Included)</div>
+          <div class="post-kw">Keywords: <strong>get more reviews holiday season</strong> · holiday review strategy · increase google reviews november december</div>
+          <div class="post-outline">1. Why the holidays are a golden opportunity for reviews (increased sentiment) · 2. Holiday review request templates: SMS and email · 3. Timing: when to send during November and December · 4. Personalizing your ask with holiday language · 5. Responding to holiday-period reviews with seasonal flair · 6. Using the surge to outpace competitors · 7. Thank-you review card to include with every job · 8. CTA → Unify360 automated holiday review campaigns</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Seasonal</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">43</div>
+        <div class="post-body">
+          <div class="post-title">End-of-Year Reputation Audit: 10-Point Checklist for Contractors</div>
+          <div class="post-kw">Keywords: <strong>reputation audit checklist</strong> · year end business reputation review · online reputation audit small business</div>
+          <div class="post-outline">1. Why a year-end reputation audit is worth doing · 2. Point 1: Review total and year-over-year comparison · 3. Point 2: Star rating trajectory · 4. Point 3: Response rate audit · 5. Point 4: Platform coverage (Google, Yelp, Facebook, BBB) · 6. Point 5: Citation consistency scan · 7. Points 6–10: Social presence, GBP completeness, messaging setup, AI mention check, competitor gap · 8. CTA → Unify360 for the ongoing layer after the audit</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Checklist</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">44</div>
+        <div class="post-body">
+          <div class="post-title">How to Prepare Your Google Business Profile for the Holiday Rush</div>
+          <div class="post-kw">Keywords: <strong>google business profile holiday hours</strong> · gbp holiday preparation · update google business profile for holidays</div>
+          <div class="post-outline">1. Update holiday hours before November 1 (Google shows them prominently) · 2. Holiday photo uploads: seasonal photos boost views · 3. Holiday offer posts: what to say and how to say it · 4. Enabling special holiday messaging auto-reply · 5. Q&amp;A: pre-answer common holiday questions · 6. Emergency service callout for holiday plumbing/HVAC issues · 7. Post-holiday: resetting GBP hours and removing seasonal content · 8. CTA → Unify360 for managing GBP posts and reviews</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs teal">How-to</span><span class="tag-xs green">1,200w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">45</div>
+        <div class="post-body">
+          <div class="post-title">Year-End Client Outreach: Templates That Win Repeat Business</div>
+          <div class="post-kw">Keywords: <strong>year end client outreach contractor</strong> · customer retention email contractor · win back customers year end</div>
+          <div class="post-outline">1. The math on repeat business: retaining customers costs 5× less than acquiring · 2. Who to contact: segmenting your past customer list · 3. Message #1: the gratitude message (no ask, just value) · 4. Message #2: the maintenance reminder · 5. Message #3: the year-end exclusive offer · 6. Message #4: the referral ask · 7. Timing calendar: November–December sequence · 8. CTA → Unify360 automated outreach sequences</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Templates</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">46</div>
+        <div class="post-body">
+          <div class="post-title">How to Win Back Lapsed Customers Using Automated Messaging</div>
+          <div class="post-kw">Keywords: <strong>win back lapsed customers contractor</strong> · customer re-engagement contractor · reactivation campaign home services</div>
+          <div class="post-outline">1. Defining "lapsed": customers who haven't called in 12+ months · 2. Why lapsed customers convert better than cold leads · 3. Building your lapsed customer list · 4. The win-back message sequence: 3 touchpoints · 5. Message timing and channel (SMS performs best) · 6. Offer ideas that re-engage without discounting too deep · 7. Tracking re-engagement: what good looks like · 8. CTA → Unify360 customer messaging automation</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">How-to</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">47</div>
+        <div class="post-body">
+          <div class="post-title">Social Media Content Ideas for Contractors This Holiday Season</div>
+          <div class="post-kw">Keywords: <strong>holiday social media ideas for contractors</strong> · contractor social media november · christmas social media home services</div>
+          <div class="post-outline">1. Why holiday social media is different for home service businesses · 2. Content idea #1: "We're grateful for our customers" featuring review screenshots · 3. Content idea #2: Team holiday photo · 4. Content idea #3: Holiday home maintenance tip · 5. Content idea #4: Year in numbers (jobs, reviews, cities served) · 6. Content idea #5: Emergency service availability notice · 7. Content ideas #6–10: Countdown, giveaway, gift guide, GBP post, community spotlight · 8. CTA → Unify360 social media scheduling</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Social</span><span class="tag-xs green">1,300w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">48</div>
+        <div class="post-body">
+          <div class="post-title">Year-End Promotions for Service Businesses: How to Promote Without Discounting</div>
+          <div class="post-kw">Keywords: <strong>year end promotion home services</strong> · contractor holiday offer ideas · black friday service business promo</div>
+          <div class="post-outline">1. Why discounting is a trap for service businesses · 2. Promotion Type 1: prepaid maintenance packages (value > discount) · 3. Promotion Type 2: bundled services at one rate · 4. Promotion Type 3: priority scheduling for existing customers · 5. Promotion Type 4: referral bonuses · 6. Promotion Type 5: donation tie-in (local charity + goodwill) · 7. How to promote the promo: email, SMS, GBP, social · 8. CTA → Unify360 for promotion distribution</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Strategy</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">can you incentivize google reviews</span>
-          <span class="chip neutral">how to get more google reviews</span>
-          <span class="chip neutral">google review request automation</span>
-          <span class="chip neutral">review generation for plumbers</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">/can-you-incentivize-google-reviews: 4,822 impressions, pos 7.0 · Sits just off the top 5 — refresh will push it to page 1</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. Opening FAQ: "Can you incentivize Google reviews?" (define clearly for AI)<br>
-          2. Google's policy on review incentives — what's allowed and what isn't<br>
-          3. Legal ways to ask for reviews (timing, channels, templates)<br>
-          4. Automating review requests: text, email, QR codes<br>
-          5. How to handle the awkward ask in person<br>
-          6. Why some businesses get 10× more reviews than competitors<br>
-          7. Responding to reviews to trigger more review activity<br>
-          8. Unify360 review request automation walkthrough<br>
-          9. CTA → Automate your review requests with Unify360
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /can-you-incentivize-google-reviews/ · /reviews/ · /google-review-strategy/ · /ai-review-response-generator/</div>
   </div>
 
-  <!-- POST 8 -->
-  <div class="card" style="border-left:4px solid #9333EA;margin-bottom:20px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9333EA;margin-bottom:4px">Post 8 · September 2026 · Week 3</div>
-        <div style="font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px">"Review Management for Marketing Agencies: How to Scale to 50+ Clients Without Chaos"</div>
+  <!-- ═══════════ DECEMBER ═══════════ -->
+  <div class="month-block">
+    <div class="month-header" style="background:linear-gradient(135deg,rgba(6,147,227,0.08),var(--surface))">
+      <h3 style="color:var(--brand)">🚀 December 2026 — 2027 Planning &amp; Year in Review</h3>
+      <div class="month-meta"><span>8 posts</span><span>Dec 1 – Dec 30</span></div>
+    </div>
+    <div class="month-posts">
+      <div class="post-row">
+        <div class="post-num">49</div>
+        <div class="post-body">
+          <div class="post-title">🤖 2027 Digital Marketing Predictions for Home Service Businesses</div>
+          <div class="post-kw">Keywords: <strong>2027 marketing predictions contractors</strong> · home services digital marketing 2027 · contractor marketing trends 2027</div>
+          <div class="post-outline">1. Prediction #1: AI search referrals will surpass social media for service businesses · 2. Prediction #2: GBP becomes more important than your website for local traffic · 3. Prediction #3: Review volume becomes a hard competitive moat · 4. Prediction #4: SMS replaces email for first-contact lead response · 5. Prediction #5: Omnichannel inbox is table stakes, not a differentiator · 6. Prediction #6: AI review response becomes standard · 7. How to position now before these trends peak · 8. CTA → Unify360 — built for 2027 already</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">🤖 Trend</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end">
-        <span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Agency Audience</span>
-        <span style="font-size:11px;color:var(--muted)">1,600 words · B2B guide</span>
+      <div class="post-row">
+        <div class="post-num">50</div>
+        <div class="post-body">
+          <div class="post-title">The State of AI in Contractor Marketing: 2026 Year in Review</div>
+          <div class="post-kw">Keywords: <strong>ai contractor marketing 2026 review</strong> · artificial intelligence home services 2026 · ai local business marketing recap</div>
+          <div class="post-outline">1. How AI adoption grew in home services in 2026 · 2. The tools that gained traction · 3. What worked: AI review response, automated follow-up, chatbots · 4. What didn't work: over-automated social, generic content · 5. The ChatGPT / AI search traffic story · 6. Case studies: contractors who leaned in vs. those who didn't · 7. What this means going into 2027 · 8. CTA → Unify360 2027 ready platform</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">Report</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">51</div>
+        <div class="post-body">
+          <div class="post-title">How to Set Your Digital Marketing Budget for 2027 (Contractor's Framework)</div>
+          <div class="post-kw">Keywords: <strong>contractor marketing budget 2027</strong> · home services marketing spend · how much to spend on marketing contractor</div>
+          <div class="post-outline">1. The 5–15% of revenue rule and what it means for contractors · 2. How to audit what 2026 spending actually produced · 3. Channel-by-channel ROI breakdown: SEO, ads, reviews, social · 4. Budget framework by business size (under $500k, $500k–$2M, $2M+) · 5. What to cut: channels producing zero attribution · 6. What to increase: reviews, GBP, messaging · 7. The "unfair advantage" plays for 2027 · 8. CTA → Unify360 for the highest-ROI layer (reviews + messaging)</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Planning</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">52</div>
+        <div class="post-body">
+          <div class="post-title">Top 10 Local Marketing Tools for Home Service Businesses in 2027</div>
+          <div class="post-kw">Keywords: <strong>best local marketing tools 2027</strong> · contractor marketing software 2027 · home services tools list 2027</div>
+          <div class="post-outline">1. How the local marketing tool landscape shifted in 2026 · 2. Tool #1: Reputation management (Unify360) · 3. Tool #2: Local SEO tracking · 4. Tool #3: Review request automation · 5. Tool #4: Unified messaging/inbox · 6. Tool #5: GBP management · 7. Tools #6–10: scheduling, dispatch, invoicing, social, analytics · 8. How to build the right stack for your business size · 9. CTA → Start with Unify360</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs amber">Roundup</span><span class="tag-xs green">1,600w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">53</div>
+        <div class="post-body">
+          <div class="post-title">Google Algorithm Updates in 2026 &amp; What Contractors Need to Know for 2027</div>
+          <div class="post-kw">Keywords: <strong>google algorithm update 2026 local</strong> · google core update home services · local seo google changes 2026</div>
+          <div class="post-outline">1. Major 2026 updates that affected local and service businesses · 2. What changed in the local pack (reviews, authority, content) · 3. How AI Overviews changed the first page landscape · 4. Content signals Google rewarded in 2026 · 5. What got demoted: thin pages, review-gating, low engagement · 6. How to prepare for 2027 algo behavior · 7. The review signal: why it grew stronger in every update · 8. CTA → Unify360 review management</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">News</span><span class="tag-xs green">1,500w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">54</div>
+        <div class="post-body">
+          <div class="post-title">How to Build a Year-Round Google Review Strategy (That Runs on Autopilot)</div>
+          <div class="post-kw">Keywords: <strong>year round review strategy</strong> · systematic review generation contractor · always-on review campaigns</div>
+          <div class="post-outline">1. The problem with "campaign-based" review getting (peaks and valleys) · 2. The always-on model: triggering review requests from job completion · 3. Setting velocity targets: reviews per week, not per campaign · 4. Handling seasonal spikes (busy season = more reviews, slow season = automation keeps running) · 5. Responding to reviews year-round: building a routine · 6. Monthly review health check (5-minute audit) · 7. Reporting: what to track monthly · 8. CTA → Unify360 always-on review automation</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs green">Strategy</span><span class="tag-xs green">1,400w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">55</div>
+        <div class="post-body">
+          <div class="post-title">The Marketing Agency's 2027 Planning Guide for Contractor Clients</div>
+          <div class="post-kw">Keywords: <strong>agency 2027 planning guide contractor clients</strong> · marketing agency contractor services plan · agency local marketing plan 2027</div>
+          <div class="post-outline">1. What your contractor clients will expect from their agency in 2027 · 2. The services that will be table stakes: reviews, GBP, messaging · 3. What will differentiate top agencies: AI-powered reporting, proactive insights · 4. Staffing: how to serve more clients without hiring more · 5. White-label tools to add to your service stack · 6. Client reporting: what to show and what cadence · 7. Pricing: how to productize reputation services · 8. CTA → Unify360 Agency Plan</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs purple">B2B/Agency</span><span class="tag-xs green">1,700w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
+      </div>
+      <div class="post-row">
+        <div class="post-num">56</div>
+        <div class="post-body">
+          <div class="post-title">How to Scale Your Home Services Business with AI in 2027 (From 1 Truck to 10)</div>
+          <div class="post-kw">Keywords: <strong>scale home services business ai 2027</strong> · grow plumbing company with ai · home services business growth ai</div>
+          <div class="post-outline">1. The growth bottleneck: most contractors plateau at 3–5 trucks because of admin load · 2. How AI removes that ceiling (reviews, messaging, follow-up all automated) · 3. Stage 1 (1–2 trucks): what to automate first · 4. Stage 2 (3–5 trucks): systems that scale the team · 5. Stage 3 (6–10 trucks): AI across the full customer journey · 6. Real operator examples: what they automated at each stage · 7. The compound effect: how reputation drives growth at every stage · 8. CTA → Unify360 — start at stage 1, built to scale to stage 3</div>
+        </div>
+        <div class="post-meta"><span class="tag-xs blue">Strategy</span><span class="tag-xs green">1,800w</span><button class="post-toggle" onclick="togglePost(this)">+ Outline</button></div>
       </div>
     </div>
-    <div class="two-col" style="margin-bottom:12px">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Target Keywords</div>
-        <div style="display:flex;flex-wrap:wrap;gap:5px">
-          <span class="chip good">review management software for agencies</span>
-          <span class="chip neutral">white label review management</span>
-          <span class="chip neutral">agency reputation management platform</span>
-          <span class="chip neutral">manage client google reviews</span>
-        </div>
-        <div style="margin-top:8px;font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:4px">GSC Signal</div>
-        <div style="font-size:12px;color:var(--muted)">"review management software for agencies": pos 14.6 with 9 impressions — no dedicated page exists. This post becomes that page.</div>
-      </div>
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:6px">Post Outline</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          1. The agency problem: managing reviews for 20+ clients manually doesn't scale<br>
-          2. What agencies actually need: multi-client dashboard, white-label reporting<br>
-          3. Key features to look for in agency review management software<br>
-          4. Setting up a client review workflow in Unify360<br>
-          5. Reporting: what to show clients monthly<br>
-          6. Pricing models: per-client vs. flat-rate agency seat<br>
-          7. Client onboarding template (downloadable)<br>
-          8. CTA → Unify360 Agency Plan — schedule a demo
-        </div>
-      </div>
-    </div>
-    <div style="font-size:12px;background:var(--surface2);border-radius:6px;padding:10px 12px;color:var(--muted)"><strong style="color:var(--text)">Internal links:</strong> /reviews/ · /review-response-software/ · /industries-we-serve/ · /about-us/</div>
   </div>
 
-  <!-- QUICK REFERENCE TABLE -->
-  <div class="eyebrow" style="margin-top:8px">Blog Calendar at a Glance</div>
-  <div class="table-wrap">
+  <!-- Quick reference table -->
+  <div class="eyebrow" style="margin-top:8px">56-Post Calendar at a Glance</div>
+  <div class="table-wrap" style="max-height:420px;overflow-y:auto">
     <table>
-      <thead><tr><th>Post</th><th>Month</th><th>Title (Short)</th><th>Primary Keyword</th><th class="num">GSC Impr.</th><th>Type</th></tr></thead>
+      <thead style="position:sticky;top:0;z-index:1"><tr><th>#</th><th>Month</th><th>Title (Short)</th><th>Primary Keyword</th><th class="num">GSC Impr.</th><th>Type</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Jun W1</td><td>What Is an AI Review Response Generator?</td><td>ai review response generator</td><td class="num">299</td><td><span class="tag green">AI Search</span></td></tr>
-        <tr><td>2</td><td>Jun W3</td><td>Business Reputation Management 2026 Guide</td><td>business reputation management</td><td class="num" style="color:var(--brand)">1,640</td><td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Pillar</span></td></tr>
-        <tr><td>3</td><td>Jul W1</td><td>Best AI Tools for Plumbers &amp; Electricians</td><td>best ai tools for plumbers</td><td class="num">176</td><td><span class="tag green">AI Search</span></td></tr>
-        <tr><td>4</td><td>Jul W3</td><td>Real-Time Review Management</td><td>real time reviews</td><td class="num" style="color:var(--brand)">742</td><td><span class="tag green">Near Pg 1</span></td></tr>
-        <tr><td>5</td><td>Aug W1</td><td>Review Response Software vs. Manual</td><td>review response software</td><td class="num">259</td><td><span class="tag amber">Decision</span></td></tr>
-        <tr><td>6</td><td>Aug W3</td><td>Omnichannel Messaging for Contractors</td><td>unify messaging</td><td class="num">94</td><td><span class="tag" style="background:rgba(6,182,212,0.1);color:#0891B2">Feature</span></td></tr>
-        <tr><td>7</td><td>Sep W1</td><td>How to Get More Google Reviews</td><td>can you incentivize google reviews</td><td class="num" style="color:var(--brand)">4,822</td><td><span class="tag green">Near Pg 1</span></td></tr>
-        <tr><td>8</td><td>Sep W3</td><td>Review Management for Agencies</td><td>review management software for agencies</td><td class="num">9</td><td><span class="tag" style="background:rgba(147,51,234,0.1);color:#9333EA">Agency</span></td></tr>
+        <tr><td>1</td><td style="white-space:nowrap">Jun W1</td><td>What Is an AI Review Response Generator?</td><td>ai review response generator</td><td class="num">299</td><td><span class="tag-xs green">AI bait ⭐</span></td></tr>
+        <tr><td>2</td><td style="white-space:nowrap">Jun W1</td><td>Business Reputation Management 2026 Guide</td><td>business reputation management</td><td class="num" style="color:var(--brand)">1,640</td><td><span class="tag-xs purple">Pillar ⭐</span></td></tr>
+        <tr><td>3</td><td style="white-space:nowrap">Jun W2</td><td>How to Respond to Negative Google Reviews</td><td>how to respond to negative reviews</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>4</td><td style="white-space:nowrap">Jun W2</td><td>Real-Time Review Monitoring</td><td>real time reviews</td><td class="num" style="color:var(--brand)">742</td><td><span class="tag-xs green">Near Pg 1 ⭐</span></td></tr>
+        <tr><td>5</td><td style="white-space:nowrap">Jun W3</td><td>10 Online Review Stats Contractors Must Know</td><td>online review statistics 2026</td><td class="num">—</td><td><span class="tag-xs amber">Listicle</span></td></tr>
+        <tr><td>6</td><td style="white-space:nowrap">Jun W3</td><td>Why Your Google Star Rating Is Costing You Leads</td><td>google star rating local business</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>7</td><td style="white-space:nowrap">Jun W4</td><td>How Unify360 Automatically Responds to Reviews</td><td>automated google review responses</td><td class="num">—</td><td><span class="tag-xs teal">Product</span></td></tr>
+        <tr><td>8</td><td style="white-space:nowrap">Jun W4</td><td>GBP Optimization Checklist for Contractors</td><td>google business profile optimization</td><td class="num">—</td><td><span class="tag-xs amber">Checklist</span></td></tr>
+        <tr><td>9</td><td style="white-space:nowrap">Jul W1</td><td>Best AI Tools for Plumbers, Electricians &amp; HVAC</td><td>best ai tools for plumbers</td><td class="num">176</td><td><span class="tag-xs blue">AI bait ⭐</span></td></tr>
+        <tr><td>10</td><td style="white-space:nowrap">Jul W1</td><td>AI for Electricians: Save Hours on Admin</td><td>ai for electricians</td><td class="num">177</td><td><span class="tag-xs teal">Industry ⭐</span></td></tr>
+        <tr><td>11</td><td style="white-space:nowrap">Jul W2</td><td>Best AI Tools for HVAC Contractors</td><td>best ai tools for hvac</td><td class="num">—</td><td><span class="tag-xs teal">Industry</span></td></tr>
+        <tr><td>12</td><td style="white-space:nowrap">Jul W2</td><td>How AI Is Changing Home Services (2026 Report)</td><td>ai home services industry</td><td class="num">—</td><td><span class="tag-xs amber">Report</span></td></tr>
+        <tr><td>13</td><td style="white-space:nowrap">Jul W3</td><td>AI vs. Manual: Which Wins for Contractor Marketing?</td><td>ai vs manual marketing contractors</td><td class="num">—</td><td><span class="tag-xs amber">Comparison</span></td></tr>
+        <tr><td>14</td><td style="white-space:nowrap">Jul W3</td><td>How to Use AI to Get More 5-Star Reviews</td><td>ai review generation</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>15</td><td style="white-space:nowrap">Jul W4</td><td>Best Plumbing Marketing Tools 2026</td><td>best plumbing marketing tools</td><td class="num">—</td><td><span class="tag-xs amber">Roundup</span></td></tr>
+        <tr><td>16</td><td style="white-space:nowrap">Jul W4</td><td>AI Chatbots for Contractors: Are They Worth It?</td><td>ai chatbot for contractors</td><td class="num">—</td><td><span class="tag-xs blue">Analysis</span></td></tr>
+        <tr><td>17</td><td style="white-space:nowrap">Aug W1</td><td>Review Response Software vs. Manual</td><td>review response software</td><td class="num" style="color:var(--brand)">11,667 pg</td><td><span class="tag-xs amber">Comparison ⭐</span></td></tr>
+        <tr><td>18</td><td style="white-space:nowrap">Aug W1</td><td>Omnichannel Messaging for Contractors</td><td>unify messaging</td><td class="num">94</td><td><span class="tag-xs teal">Feature ⭐</span></td></tr>
+        <tr><td>19</td><td style="white-space:nowrap">Aug W2</td><td>How to Never Miss a Lead: Unified Inbox Guide</td><td>unified inbox for contractors</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>20</td><td style="white-space:nowrap">Aug W2</td><td>SMS Marketing for Plumbers: Setup Guide</td><td>sms marketing for plumbers</td><td class="num">—</td><td><span class="tag-xs amber">Listicle</span></td></tr>
+        <tr><td>21</td><td style="white-space:nowrap">Aug W3</td><td>How to Set Up After-Hours Auto-Reply</td><td>auto reply after hours contractor</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>22</td><td style="white-space:nowrap">Aug W3</td><td>Best Business Texting Apps for Contractors 2026</td><td>best business texting app 2026</td><td class="num">—</td><td><span class="tag-xs amber">Roundup</span></td></tr>
+        <tr><td>23</td><td style="white-space:nowrap">Aug W4</td><td>Why Contractors Lose Leads Before Calling Back</td><td>contractor lead response time</td><td class="num">—</td><td><span class="tag-xs blue">Problem/Sol</span></td></tr>
+        <tr><td>24</td><td style="white-space:nowrap">Aug W4</td><td>Web Chat vs. Facebook vs. SMS: Which Converts Best?</td><td>web chat for contractors</td><td class="num">—</td><td><span class="tag-xs amber">Comparison</span></td></tr>
+        <tr><td>25</td><td style="white-space:nowrap">Sep W1</td><td>How to Get More Google Reviews (The Right Way)</td><td>can you incentivize google reviews</td><td class="num" style="color:var(--brand)">4,822 pg</td><td><span class="tag-xs green">Near Pg 1 ⭐</span></td></tr>
+        <tr><td>26</td><td style="white-space:nowrap">Sep W1</td><td>Review Management for Marketing Agencies</td><td>review management software for agencies</td><td class="num">9</td><td><span class="tag-xs purple">Agency ⭐</span></td></tr>
+        <tr><td>27</td><td style="white-space:nowrap">Sep W2</td><td>How to Build a 5-Star Reputation in 90 Days</td><td>build online reputation contractor</td><td class="num">—</td><td><span class="tag-xs green">How-to</span></td></tr>
+        <tr><td>28</td><td style="white-space:nowrap">Sep W2</td><td>Ultimate GBP Reviews Guide for Contractors</td><td>google business profile reviews</td><td class="num">—</td><td><span class="tag-xs green">Guide</span></td></tr>
+        <tr><td>29</td><td style="white-space:nowrap">Sep W3</td><td>Does Responding to Reviews Improve Rankings?</td><td>responding to reviews seo ranking</td><td class="num">—</td><td><span class="tag-xs blue">Data</span></td></tr>
+        <tr><td>30</td><td style="white-space:nowrap">Sep W3</td><td>How to Handle Fake Google Reviews</td><td>fake google reviews</td><td class="num">—</td><td><span class="tag-xs amber">How-to</span></td></tr>
+        <tr><td>31</td><td style="white-space:nowrap">Sep W4</td><td>Review Gating: What It Is &amp; Why to Avoid It</td><td>review gating</td><td class="num">—</td><td><span class="tag-xs blue">Education</span></td></tr>
+        <tr><td>32</td><td style="white-space:nowrap">Sep W4</td><td>How to Ask for Reviews Without Being Pushy</td><td>how to ask for google reviews</td><td class="num">—</td><td><span class="tag-xs green">Scripts</span></td></tr>
+        <tr><td>33</td><td style="white-space:nowrap">Oct W1</td><td>Local SEO for Contractors: 2026 Complete Guide</td><td>local seo for contractors</td><td class="num">—</td><td><span class="tag-xs blue">Pillar 🤖</span></td></tr>
+        <tr><td>34</td><td style="white-space:nowrap">Oct W1</td><td>GBP Optimization: 25-Point Checklist</td><td>google business profile checklist</td><td class="num">—</td><td><span class="tag-xs amber">Checklist</span></td></tr>
+        <tr><td>35</td><td style="white-space:nowrap">Oct W2</td><td>How to Rank #1 on Google Maps in Your City</td><td>rank higher google maps contractor</td><td class="num">—</td><td><span class="tag-xs blue">How-to</span></td></tr>
+        <tr><td>36</td><td style="white-space:nowrap">Oct W2</td><td>Local Citations for Contractors: The Playbook</td><td>local citations for contractors</td><td class="num">—</td><td><span class="tag-xs amber">Playbook</span></td></tr>
+        <tr><td>37</td><td style="white-space:nowrap">Oct W3</td><td>How to Use GBP Posts to Drive More Traffic</td><td>google business profile posts</td><td class="num">—</td><td><span class="tag-xs teal">Feature</span></td></tr>
+        <tr><td>38</td><td style="white-space:nowrap">Oct W3</td><td>Local SEO vs. Google Ads: Which Gets More Leads?</td><td>local seo vs google ads contractor</td><td class="num">—</td><td><span class="tag-xs amber">Comparison</span></td></tr>
+        <tr><td>39</td><td style="white-space:nowrap">Oct W4</td><td>How to Track Your Local SEO Performance</td><td>track local seo performance</td><td class="num">—</td><td><span class="tag-xs blue">How-to</span></td></tr>
+        <tr><td>40</td><td style="white-space:nowrap">Oct W4</td><td>NAP Consistency: Why Small Differences Hurt Rankings</td><td>nap consistency local seo</td><td class="num">—</td><td><span class="tag-xs blue">Education</span></td></tr>
+        <tr><td>41</td><td style="white-space:nowrap">Nov W1</td><td>Holiday Marketing for Home Service Contractors</td><td>holiday marketing home services</td><td class="num">—</td><td><span class="tag-xs purple">Seasonal</span></td></tr>
+        <tr><td>42</td><td style="white-space:nowrap">Nov W1</td><td>How to Get More Reviews During the Holidays</td><td>get more reviews holiday season</td><td class="num">—</td><td><span class="tag-xs purple">Seasonal</span></td></tr>
+        <tr><td>43</td><td style="white-space:nowrap">Nov W2</td><td>Year-End Reputation Audit: 10-Point Checklist</td><td>reputation audit checklist</td><td class="num">—</td><td><span class="tag-xs amber">Checklist</span></td></tr>
+        <tr><td>44</td><td style="white-space:nowrap">Nov W2</td><td>Prepare Your GBP for the Holiday Rush</td><td>google business profile holiday hours</td><td class="num">—</td><td><span class="tag-xs teal">How-to</span></td></tr>
+        <tr><td>45</td><td style="white-space:nowrap">Nov W3</td><td>Year-End Client Outreach Templates</td><td>year end client outreach contractor</td><td class="num">—</td><td><span class="tag-xs purple">Templates</span></td></tr>
+        <tr><td>46</td><td style="white-space:nowrap">Nov W3</td><td>How to Win Back Lapsed Customers</td><td>win back lapsed customers contractor</td><td class="num">—</td><td><span class="tag-xs amber">How-to</span></td></tr>
+        <tr><td>47</td><td style="white-space:nowrap">Nov W4</td><td>Holiday Social Media Ideas for Contractors</td><td>holiday social media ideas for contractors</td><td class="num">—</td><td><span class="tag-xs purple">Social</span></td></tr>
+        <tr><td>48</td><td style="white-space:nowrap">Nov W4</td><td>Year-End Promotions Without Discounting</td><td>year end promotion home services</td><td class="num">—</td><td><span class="tag-xs amber">Strategy</span></td></tr>
+        <tr><td>49</td><td style="white-space:nowrap">Dec W1</td><td>2027 Digital Marketing Predictions</td><td>2027 marketing predictions contractors</td><td class="num">—</td><td><span class="tag-xs blue">Trend 🤖</span></td></tr>
+        <tr><td>50</td><td style="white-space:nowrap">Dec W1</td><td>AI in Contractor Marketing: 2026 Year in Review</td><td>ai contractor marketing 2026 review</td><td class="num">—</td><td><span class="tag-xs purple">Report</span></td></tr>
+        <tr><td>51</td><td style="white-space:nowrap">Dec W2</td><td>How to Set Your Marketing Budget for 2027</td><td>contractor marketing budget 2027</td><td class="num">—</td><td><span class="tag-xs amber">Planning</span></td></tr>
+        <tr><td>52</td><td style="white-space:nowrap">Dec W2</td><td>Top 10 Local Marketing Tools for 2027</td><td>best local marketing tools 2027</td><td class="num">—</td><td><span class="tag-xs amber">Roundup</span></td></tr>
+        <tr><td>53</td><td style="white-space:nowrap">Dec W3</td><td>Google Algorithm Updates 2026: What Contractors Need to Know</td><td>google algorithm update 2026 local</td><td class="num">—</td><td><span class="tag-xs blue">News</span></td></tr>
+        <tr><td>54</td><td style="white-space:nowrap">Dec W3</td><td>Build a Year-Round Review Strategy on Autopilot</td><td>year round review strategy</td><td class="num">—</td><td><span class="tag-xs green">Strategy</span></td></tr>
+        <tr><td>55</td><td style="white-space:nowrap">Dec W4</td><td>Agency 2027 Planning Guide for Contractor Clients</td><td>agency 2027 planning guide</td><td class="num">—</td><td><span class="tag-xs purple">Agency</span></td></tr>
+        <tr><td>56</td><td style="white-space:nowrap">Dec W4</td><td>Scale Home Services with AI: 1 Truck to 10</td><td>scale home services business ai 2027</td><td class="num">—</td><td><span class="tag-xs blue">Strategy</span></td></tr>
       </tbody>
     </table>
   </div>
+  <div style="font-size:11px;color:var(--muted);margin-top:8px">⭐ = GSC-grounded keyword with 100+ impressions or strong near-page-1 signal · 🤖 = structured for ChatGPT/Gemini citation · Click "+ Outline" on any row to expand the full post outline.</div>
+
+  <script>
+  function togglePost(btn) {
+    const row = btn.closest('.post-row');
+    const isOpen = row.classList.contains('expanded');
+    row.classList.toggle('expanded', !isOpen);
+    btn.textContent = isOpen ? '+ Outline' : '− Outline';
+  }
+  </script>
 </div>
 </div>
+
 
 <!-- ══ SOCIAL CALENDAR ══ -->
 <div id="tab-social" class="tab-content">
