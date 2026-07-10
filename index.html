@@ -345,8 +345,7 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 
 <!-- ── TABS ── -->
 <div class="tabs">
-  <div class="tab active" onclick="showTab('overview',this)">Overview</div>
-  <div class="tab" onclick="showTab('traffic',this)">Traffic</div>
+  <div class="tab active" onclick="showTab('traffic',this)">Traffic</div>
   <div class="tab" onclick="showTab('gsc',this)">Search Console</div>
   <div class="tab" onclick="showTab('ai',this)">✦ AI Search</div>
   <div class="tab" onclick="showTab('callrail',this)">CallRail</div>
@@ -356,55 +355,8 @@ tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(
 
 </div>
 
-<!-- ══ OVERVIEW ══ -->
-<div id="tab-overview" class="tab-content active">
-<div class="page">
-  <div class="overview-hero">
-    <div class="hero-title">12-Month Performance Summary</div>
-    <div class="hero-sub">GA4 · Google Search Console · CallRail · Jul 2025 – Jul 9, 2026</div>
-    <div class="hero-kpis">
-      <div class="hero-kpi"><div class="hero-kpi-val">10,359</div><div class="hero-kpi-label">Total Sessions</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val brand">2,670</div><div class="hero-kpi-label">Organic Sessions (25.5%)</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val green">+156%</div><div class="hero-kpi-label">Session Growth Dec→May</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val teal">88</div><div class="hero-kpi-label">AI-Referred Sessions ✦</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val">927</div><div class="hero-kpi-label">GSC Clicks</div></div>
-      <div class="hero-kpi"><div class="hero-kpi-val red">0</div><div class="hero-kpi-label">Conversions Tracked ⚠</div></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Monthly Sessions — Jul 2025 through Jul 2026</div>
-    <div class="monthly-chart" id="monthlyChart"></div>
-    <div style="font-size:11px;color:var(--muted);margin-top:44px">Peak: May 2026 (1,381 sessions). Dec 2025 was the low point (539). +156% growth Dec→May. Jul 2026 is partial — 9 days, 448 sessions.</div>
-  </div>
-
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title">Traffic by Channel</div>
-      <div class="channel-bars">
-        <div class="channel-row"><div class="channel-label">Direct / Dark Social</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:46.6%;background:#64748B"></div></div><div class="channel-val">4,895</div></div>
-        <div class="channel-row"><div class="channel-label">Organic Search</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:25.4%;background:#0693e3"></div></div><div class="channel-val">2,670</div></div>
-        <div class="channel-row"><div class="channel-label">Referral</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:14.1%;background:#9333EA"></div></div><div class="channel-val">1,483</div></div>
-        <div class="channel-row"><div class="channel-label">Google Ads</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:8.9%;background:#F59E0B"></div></div><div class="channel-val">930</div></div>
-        <div class="channel-row"><div class="channel-label">GBP / Maps</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.6%;background:#22C55E"></div></div><div class="channel-val">170</div></div>
-        <div class="channel-row"><div class="channel-label">Email</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.7%;background:#EC4899"></div></div><div class="channel-val">175</div></div>
-        <div class="channel-row"><div class="channel-label">AI (ChatGPT / Gemini)</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.85%;background:#06B6D4"></div></div><div class="channel-val" style="color:var(--teal);font-weight:800">88 ✦</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Key Signals</div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="alert success"><strong>ChatGPT &amp; Gemini are sending qualified visitors</strong>ChatGPT: 57 sessions, peaking May '26 (23 sessions, 65 pageviews, 72.7% engagement). Gemini: 31 sessions, strongest Sep–Oct '25. Total 88 AI sessions — all landing on the homepage.</div>
-        <div class="alert warning"><strong>Conversion tracking gap is the #1 blocker</strong>Zero conversions tracked across all 10,496 sessions. No channel — including Google Ads — can show ROI until GA4 goals are configured.</div>
-        <div class="alert info"><strong>Strong growth trajectory</strong>Sessions climbed from 539 (Dec 2025) to 1,381 (May 2026) — +156% in 5 months — driven by organic and referral channels.</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
 <!-- ══ TRAFFIC ══ -->
-<div id="tab-traffic" class="tab-content">
+<div id="tab-traffic" class="tab-content active">
 <div class="page">
   <div class="eyebrow">Google Analytics 4</div>
   <div class="section-title">Traffic &amp; Engagement Analysis</div>
