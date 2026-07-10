@@ -1,603 +1,345 @@
 <title>Unify360 — SEO & Performance Report</title>
 <style>
-/* ── TOKEN LAYER ── */
+/* ── BRAND TOKENS: #0693e3 primary, derived from logo palette ── */
 :root {
-  --bg:        #F4F7FC;
-  --surface:   #FFFFFF;
-  --surface2:  #EEF2F9;
-  --border:    #D8E0ED;
-  --text:      #101828;
-  --muted:     #5A6A84;
-  --accent:    #05C690;
-  --accent-hi: #03A87A;
-  --accent-bg: #E6FBF4;
-  --amber:     #FFAB00;
-  --amber-bg:  #FFF8E6;
-  --red:       #EF476F;
-  --red-bg:    #FEF0F4;
-  --blue:      #3B82F6;
-  --blue-bg:   #EFF6FF;
-  --navy:      #080F1E;
-  --tab-bg:    #0C1527;
-  --tab-text:  #8EA4C4;
-  --tab-active:#FFFFFF;
-  --header-bg: #0A1830;
+  --bg:         #F2F6FB;
+  --surface:    #FFFFFF;
+  --surface2:   #E8F1FA;
+  --border:     #D0DEF0;
+  --text:       #0D1F35;
+  --muted:      #5B7490;
+  --brand:      #0693e3;
+  --brand-dk:   #0578c1;
+  --brand-bg:   #E7F4FD;
+  --green:      #22C55E;
+  --green-bg:   #EDFAF3;
+  --amber:      #F59E0B;
+  --amber-bg:   #FEF9EC;
+  --red:        #EF4444;
+  --red-bg:     #FEF2F2;
+  --purple:     #9333EA;
+  --teal:       #06B6D4;
+  --header-bg:  #041832;
+  --tab-bg:     #031425;
+  --tab-text:   #6A90B8;
+  --tab-active: #FFFFFF;
+  --shadow:     0 1px 4px rgba(6,147,227,0.08), 0 4px 16px rgba(4,24,50,0.07);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:        #080F1E;
-    --surface:   #0E1B30;
-    --surface2:  #132040;
-    --border:    #1E3358;
-    --text:      #E4EBF7;
-    --muted:     #6B849E;
-    --accent:    #05E2A4;
-    --accent-hi: #04C490;
-    --accent-bg: #03291E;
-    --amber:     #FFBB33;
-    --amber-bg:  #2A2000;
-    --red:       #F0476F;
-    --red-bg:    #2A0010;
-    --blue:      #60A5FA;
-    --blue-bg:   #0E1E40;
-    --tab-bg:    #060D1C;
-    --tab-text:  #7A90B0;
-    --tab-active:#FFFFFF;
-    --header-bg: #060D1C;
+    --bg:#071525;--surface:#0C1E34;--surface2:#102540;--border:#1A3558;
+    --text:#DEE9F5;--muted:#607E9E;--brand:#1EA8F5;--brand-dk:#0693e3;
+    --brand-bg:#062040;--green:#34D399;--green-bg:#042516;
+    --amber:#FBB03B;--amber-bg:#251A04;--red:#F87171;--red-bg:#250808;
+    --purple:#A855F7;--teal:#22D3EE;
+    --header-bg:#020D1A;--tab-bg:#020D1A;--tab-text:#5A7EA0;--tab-active:#FFFFFF;
+    --shadow:0 1px 4px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.4);
   }
 }
 :root[data-theme="dark"] {
-  --bg:#080F1E;--surface:#0E1B30;--surface2:#132040;--border:#1E3358;
-  --text:#E4EBF7;--muted:#6B849E;--accent:#05E2A4;--accent-hi:#04C490;
-  --accent-bg:#03291E;--amber:#FFBB33;--amber-bg:#2A2000;--red:#F0476F;
-  --red-bg:#2A0010;--blue:#60A5FA;--blue-bg:#0E1E40;
-  --tab-bg:#060D1C;--tab-text:#7A90B0;--tab-active:#FFFFFF;--header-bg:#060D1C;
+  --bg:#071525;--surface:#0C1E34;--surface2:#102540;--border:#1A3558;
+  --text:#DEE9F5;--muted:#607E9E;--brand:#1EA8F5;--brand-dk:#0693e3;
+  --brand-bg:#062040;--green:#34D399;--green-bg:#042516;
+  --amber:#FBB03B;--amber-bg:#251A04;--red:#F87171;--red-bg:#250808;
+  --purple:#A855F7;--teal:#22D3EE;
+  --header-bg:#020D1A;--tab-bg:#020D1A;--tab-text:#5A7EA0;--tab-active:#FFFFFF;
+  --shadow:0 1px 4px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.4);
 }
 :root[data-theme="light"] {
-  --bg:#F4F7FC;--surface:#FFFFFF;--surface2:#EEF2F9;--border:#D8E0ED;
-  --text:#101828;--muted:#5A6A84;--accent:#05C690;--accent-hi:#03A87A;
-  --accent-bg:#E6FBF4;--amber:#FFAB00;--amber-bg:#FFF8E6;--red:#EF476F;
-  --red-bg:#FEF0F4;--blue:#3B82F6;--blue-bg:#EFF6FF;
-  --tab-bg:#0C1527;--tab-text:#8EA4C4;--tab-active:#FFFFFF;--header-bg:#0A1830;
+  --bg:#F2F6FB;--surface:#FFFFFF;--surface2:#E8F1FA;--border:#D0DEF0;
+  --text:#0D1F35;--muted:#5B7490;--brand:#0693e3;--brand-dk:#0578c1;
+  --brand-bg:#E7F4FD;--green:#22C55E;--green-bg:#EDFAF3;
+  --amber:#F59E0B;--amber-bg:#FEF9EC;--red:#EF4444;--red-bg:#FEF2F2;
+  --purple:#9333EA;--teal:#06B6D4;
+  --header-bg:#041832;--tab-bg:#031425;--tab-text:#6A90B8;--tab-active:#FFFFFF;
+  --shadow:0 1px 4px rgba(6,147,227,0.08),0 4px 16px rgba(4,24,50,0.07);
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 15px; }
-body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  min-height: 100vh;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px}
+body{
+  font-family:system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 /* ── HEADER ── */
-.header {
-  background: var(--header-bg);
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.header{
+  background:var(--header-bg);
+  padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  border-bottom:1px solid rgba(6,147,227,0.15);
+  position:sticky;top:0;z-index:100;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 0;
-  flex-shrink: 0;
-}
-.logo-mark {
-  width: 34px;
-  height: 34px;
-  background: linear-gradient(135deg, #05E2A4 0%, #00A3FF 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 800;
-  color: #06121F;
-  letter-spacing: -0.5px;
-}
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-.logo-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: #FFFFFF;
-  letter-spacing: -0.3px;
-}
-.logo-sub {
-  font-size: 11px;
-  color: #5A7EA0;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.header-meta {
-  font-size: 11.5px;
-  color: #4A6A8A;
-  text-align: right;
-  line-height: 1.5;
-}
+.logo-img{height:44px;width:auto;display:block}
+.header-meta{font-size:11.5px;color:#5A7EA0;text-align:right;line-height:1.5}
+.header-meta strong{color:#8AAFD4;font-weight:600}
 
 /* ── TABS ── */
-.tabs {
-  background: var(--tab-bg);
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 0 20px;
+.tabs{
+  background:var(--tab-bg);
+  display:flex;overflow-x:auto;scrollbar-width:none;
+  border-bottom:3px solid rgba(6,147,227,0.12);
+  padding:0 24px;
 }
-.tabs::-webkit-scrollbar { display: none; }
-.tab {
-  padding: 14px 18px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--tab-text);
-  cursor: pointer;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
-  letter-spacing: 0.01em;
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  padding:13px 20px;font-size:13px;font-weight:500;
+  color:var(--tab-text);cursor:pointer;white-space:nowrap;
+  border-bottom:3px solid transparent;margin-bottom:-3px;
+  transition:color 0.15s,border-color 0.15s;letter-spacing:0.01em;
 }
-.tab:hover { color: #c8d8ea; }
-.tab.active {
-  color: var(--tab-active);
-  border-bottom-color: var(--accent);
-}
+.tab:hover{color:#B8D4EE}
+.tab.active{color:var(--tab-active);border-bottom-color:#0693e3}
 
-/* ── TAB PANELS ── */
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+.tab-content{display:none}
+.tab-content.active{display:block}
 
 /* ── LAYOUT ── */
-.page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+.page{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
 
 /* ── SECTION LABELS ── */
-.section-eyebrow {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 6px;
+.eyebrow{
+  font-size:10.5px;font-weight:700;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:6px;
 }
-.section-title {
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 4px;
-  text-wrap: balance;
-  letter-spacing: -0.3px;
+.section-title{
+  font-size:20px;font-weight:800;color:var(--text);
+  margin-bottom:4px;letter-spacing:-0.3px;text-wrap:balance;
 }
-.section-desc {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 20px;
-  max-width: 68ch;
-}
+.section-desc{font-size:13px;color:var(--muted);margin-bottom:22px;max-width:68ch}
 
 /* ── KPI GRID ── */
-.kpi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px;margin-bottom:28px}
+.kpi{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;box-shadow:var(--shadow);
 }
-.kpi {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 18px;
+.kpi-val{
+  font-size:27px;font-weight:800;font-variant-numeric:tabular-nums;
+  letter-spacing:-0.8px;line-height:1.1;margin-bottom:4px;
 }
-.kpi-val {
-  font-size: 26px;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.8px;
-  line-height: 1.1;
-  margin-bottom: 4px;
-}
-.kpi-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-.kpi-sub {
-  font-size: 11px;
-  color: var(--muted);
-}
-.kpi.green { border-left: 3px solid var(--accent); }
-.kpi.green .kpi-val { color: var(--accent-hi); }
-.kpi.amber { border-left: 3px solid var(--amber); }
-.kpi.amber .kpi-val { color: var(--amber); }
-.kpi.red { border-left: 3px solid var(--red); }
-.kpi.red .kpi-val { color: var(--red); }
-.kpi.blue { border-left: 3px solid var(--blue); }
-.kpi.blue .kpi-val { color: var(--blue); }
+.kpi-label{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px}
+.kpi-sub{font-size:11px;color:var(--muted)}
+.kpi.blue{border-left:3px solid var(--brand)}.kpi.blue .kpi-val{color:var(--brand)}
+.kpi.green{border-left:3px solid var(--green)}.kpi.green .kpi-val{color:var(--green)}
+.kpi.amber{border-left:3px solid var(--amber)}.kpi.amber .kpi-val{color:var(--amber)}
+.kpi.red{border-left:3px solid var(--red)}.kpi.red .kpi-val{color:var(--red)}
+.kpi.teal{border-left:3px solid var(--teal)}.kpi.teal .kpi-val{color:var(--teal)}
+.kpi.purple{border-left:3px solid var(--purple)}.kpi.purple .kpi-val{color:var(--purple)}
 
 /* ── CARDS ── */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 22px;
-  margin-bottom: 16px;
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;padding:20px 22px;margin-bottom:16px;
+  box-shadow:var(--shadow);
 }
-.card-title {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--text);
-}
+.card-title{font-size:14px;font-weight:700;margin-bottom:14px;color:var(--text)}
 
-/* ── AI SECTION SPECIAL CARD ── */
-.ai-hero {
-  background: var(--surface);
-  border: 1px solid rgba(5, 200, 144, 0.25);
-  border-radius: 14px;
-  padding: 24px 26px;
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
+/* ── HERO STRIP ── */
+.overview-hero{
+  background:var(--header-bg);border-radius:14px;
+  padding:28px;margin-bottom:28px;position:relative;overflow:hidden;
+  border:1px solid rgba(6,147,227,0.18);
 }
-.ai-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #05E2A4 0%, #00A3FF 50%, #05E2A4 100%);
-  background-size: 200% 100%;
-  animation: shimmer 3s linear infinite;
+.overview-hero::after{
+  content:'';position:absolute;bottom:-60px;right:-60px;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(6,147,227,0.14) 0%,transparent 70%);
+  pointer-events:none;
 }
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+.hero-title{
+  font-size:21px;font-weight:800;letter-spacing:-0.4px;
+  color:#FFFFFF;margin-bottom:5px;text-wrap:balance;
 }
-.ai-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--accent-bg);
-  border: 1px solid rgba(5, 200, 144, 0.3);
-  border-radius: 6px;
-  padding: 3px 10px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
+.hero-sub{font-size:12.5px;color:#5A7EA0;margin-bottom:22px}
+.hero-kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px}
+.hero-kpi{
+  background:rgba(6,147,227,0.06);border:1px solid rgba(6,147,227,0.15);
+  border-radius:10px;padding:14px 16px;
 }
-.ai-pulse {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulse 2s ease-in-out infinite;
+.hero-kpi-val{
+  font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;
+  letter-spacing:-0.5px;color:#FFFFFF;margin-bottom:3px;
 }
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.7); }
-}
-.ai-headline {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--text);
-  text-wrap: balance;
-  margin-bottom: 8px;
-}
-.ai-desc {
-  font-size: 13.5px;
-  color: var(--muted);
-  max-width: 62ch;
-  line-height: 1.65;
-}
-.ai-sources {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  margin-top: 18px;
-}
-.ai-source {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-.ai-source-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.ai-source-icon {
-  width: 20px; height: 20px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-.ai-stat { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
-.ai-stat-label { font-size: 11.5px; color: var(--muted); }
-.ai-stat-val { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); }
-.ai-stat-val.green { color: var(--accent-hi); }
+.hero-kpi-val.brand{color:#0693e3}
+.hero-kpi-val.green{color:#34D399}
+.hero-kpi-val.amber{color:#FBB03B}
+.hero-kpi-val.red{color:#F87171}
+.hero-kpi-val.teal{color:#22D3EE}
+.hero-kpi-label{font-size:11px;color:#5A7EA0}
 
 /* ── ALERTS ── */
-.alert {
-  border-radius: 10px;
-  padding: 14px 16px;
-  font-size: 13px;
-  margin-bottom: 16px;
-  border-left: 3px solid;
-  line-height: 1.55;
+.alert{
+  border-radius:10px;padding:14px 16px;font-size:13px;
+  margin-bottom:16px;border-left:3px solid;line-height:1.55;
 }
-.alert strong { display: block; font-size: 13.5px; margin-bottom: 3px; }
-.alert.info { background: var(--blue-bg); border-color: var(--blue); color: var(--text); }
-.alert.warning { background: var(--amber-bg); border-color: var(--amber); color: var(--text); }
-.alert.danger { background: var(--red-bg); border-color: var(--red); color: var(--text); }
-.alert.success { background: var(--accent-bg); border-color: var(--accent); color: var(--text); }
+.alert strong{display:block;font-size:13.5px;margin-bottom:3px}
+.alert.info{background:var(--brand-bg);border-color:var(--brand);color:var(--text)}
+.alert.success{background:var(--green-bg);border-color:var(--green);color:var(--text)}
+.alert.warning{background:var(--amber-bg);border-color:var(--amber);color:var(--text)}
+.alert.danger{background:var(--red-bg);border-color:var(--red);color:var(--text)}
 
-/* ── DATA TABLE ── */
-.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  font-variant-numeric: tabular-nums;
+/* ── TABLE ── */
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border);margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+thead{background:var(--surface2)}
+th{
+  padding:10px 14px;text-align:left;font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
 }
-thead { background: var(--surface2); }
-th {
-  padding: 10px 14px;
-  text-align: left;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
-}
-th.num, td.num { text-align: right; }
-td {
-  padding: 10px 14px;
-  border-top: 1px solid var(--border);
-  color: var(--text);
-  vertical-align: middle;
-}
-tr:hover td { background: var(--surface2); }
-tr.total td { background: var(--surface2); font-weight: 700; border-top: 2px solid var(--border); }
-.tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-.tag.green { background: var(--accent-bg); color: var(--accent-hi); }
-.tag.amber { background: var(--amber-bg); color: var(--amber); }
-.tag.red { background: var(--red-bg); color: var(--red); }
-.tag.blue { background: var(--blue-bg); color: var(--blue); }
+th.num,td.num{text-align:right}
+td{padding:10px 14px;border-top:1px solid var(--border);color:var(--text);vertical-align:middle}
+tr:hover td{background:var(--surface2)}
+tr.total td{background:var(--surface2);font-weight:700;border-top:2px solid var(--border)}
 
-/* ── CHANNEL BAR CHART ── */
-.channel-bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-.channel-row { display: flex; align-items: center; gap: 12px; }
-.channel-label { font-size: 12px; font-weight: 600; color: var(--text); width: 120px; flex-shrink: 0; }
-.channel-bar-track {
-  flex: 1;
-  height: 9px;
-  background: var(--surface2);
-  border-radius: 5px;
-  overflow: hidden;
+/* ── TAGS ── */
+.tag{
+  display:inline-block;padding:2px 8px;border-radius:4px;
+  font-size:10.5px;font-weight:700;letter-spacing:0.04em;
 }
-.channel-bar-fill {
-  height: 100%;
-  border-radius: 5px;
-  transition: width 0.6s ease;
-}
-.channel-val { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--muted); width: 60px; text-align: right; }
+.tag.blue{background:var(--brand-bg);color:var(--brand-dk)}
+.tag.green{background:var(--green-bg);color:#16A34A}
+.tag.amber{background:var(--amber-bg);color:#B45309}
+.tag.red{background:var(--red-bg);color:#DC2626}
+.tag.teal{background:#E0F9FF;color:#0891B2}
+
+/* ── CHANNEL BARS ── */
+.channel-bars{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+.channel-row{display:flex;align-items:center;gap:12px}
+.channel-label{font-size:12px;font-weight:600;color:var(--text);width:130px;flex-shrink:0}
+.channel-bar-track{flex:1;height:9px;background:var(--surface2);border-radius:5px;overflow:hidden}
+.channel-bar-fill{height:100%;border-radius:5px}
+.channel-val{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);width:60px;text-align:right}
 
 /* ── MONTHLY CHART ── */
-.monthly-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 6px;
-  height: 140px;
-  padding: 8px 0 0;
-  margin-bottom: 6px;
+.monthly-chart{
+  display:flex;align-items:flex-end;gap:6px;
+  height:140px;padding:8px 0 0;margin-bottom:6px;
 }
-.month-bar-wrap {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  height: 100%;
-  justify-content: flex-end;
+.month-bar-wrap{
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;gap:4px;height:100%;justify-content:flex-end;
 }
-.month-bar {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-  min-height: 4px;
-  cursor: default;
-  position: relative;
-  transition: opacity 0.15s;
+.month-bar{
+  width:100%;border-radius:5px 5px 0 0;min-height:4px;
+  position:relative;transition:opacity 0.15s;cursor:default;
 }
-.month-bar:hover { opacity: 0.8; }
-.month-bar-label {
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  transform: rotate(-40deg) translateX(-4px);
-  transform-origin: center top;
-  margin-top: 8px;
+.month-bar:hover{opacity:0.8}
+.month-bar-label{
+  font-size:10px;color:var(--muted);letter-spacing:0.02em;
+  white-space:nowrap;transform:rotate(-40deg) translateX(-4px);
+  transform-origin:center top;margin-top:8px;
 }
-.month-bar-val {
-  font-size: 10px;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  color: var(--muted);
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+.month-bar-val{
+  font-size:10px;font-variant-numeric:tabular-nums;font-weight:700;
+  color:var(--brand);position:absolute;top:-18px;
+  left:50%;transform:translateX(-50%);white-space:nowrap;
 }
 
 /* ── TWO-COL ── */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-@media (max-width: 680px) { .two-col { grid-template-columns: 1fr; } }
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:680px){.two-col{grid-template-columns:1fr}}
 
-/* ── OPPORTUNITY ROWS ── */
-.opp-list { display: flex; flex-direction: column; gap: 10px; }
-.opp-item {
-  background: var(--surface2);
-  border-radius: 10px;
-  padding: 14px 16px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-  align-items: center;
+/* ── AI SPECIAL CARD ── */
+.ai-hero{
+  background:var(--surface);
+  border:1px solid rgba(6,147,227,0.3);
+  border-radius:14px;padding:24px 26px;margin-bottom:20px;
+  position:relative;overflow:hidden;box-shadow:var(--shadow);
 }
-.opp-query { font-size: 13.5px; font-weight: 600; color: var(--text); }
-.opp-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
-.opp-chips { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-.chip {
-  display: inline-block;
-  padding: 3px 9px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
+.ai-hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#0693e3 0%,#06B6D4 33%,#9333EA 66%,#0693e3 100%);
+  background-size:200% 100%;animation:shimmer 3s linear infinite;
 }
-.chip.imp { background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
-.chip.pos-good { background: var(--accent-bg); color: var(--accent-hi); }
-.chip.pos-mid { background: var(--amber-bg); color: var(--amber); }
-.chip.pos-bad { background: var(--red-bg); color: var(--red); }
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.ai-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--brand-bg);border:1px solid rgba(6,147,227,0.3);
+  border-radius:6px;padding:3px 10px;font-size:11px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--brand);margin-bottom:12px;
+}
+.ai-pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--brand);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+.ai-headline{
+  font-size:22px;font-weight:800;letter-spacing:-0.5px;
+  color:var(--text);text-wrap:balance;margin-bottom:8px;
+}
+.ai-desc{font-size:13.5px;color:var(--muted);max-width:62ch;line-height:1.65}
+.ai-sources{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));
+  gap:10px;margin-top:18px;
+}
+.ai-source{
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:10px;padding:14px 16px;
+}
+.ai-source-name{
+  font-size:13px;font-weight:700;color:var(--text);
+  margin-bottom:8px;display:flex;align-items:center;gap:7px;
+}
+.ai-source-icon{
+  width:22px;height:22px;border-radius:5px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;flex-shrink:0;
+}
+.ai-stat{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.ai-stat-label{font-size:11.5px;color:var(--muted)}
+.ai-stat-val{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text)}
+.ai-stat-val.good{color:var(--brand)}
+
+/* ── OPP LIST ── */
+.opp-list{display:flex;flex-direction:column;gap:10px}
+.opp-item{
+  background:var(--surface2);border-radius:10px;padding:14px 16px;
+  display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;
+}
+.opp-query{font-size:13.5px;font-weight:600;color:var(--text)}
+.opp-meta{font-size:12px;color:var(--muted);margin-top:2px}
+.opp-chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.chip{
+  display:inline-block;padding:3px 9px;border-radius:5px;
+  font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.chip.neutral{background:var(--surface);border:1px solid var(--border);color:var(--muted)}
+.chip.good{background:var(--brand-bg);color:var(--brand-dk)}
+.chip.mid{background:var(--amber-bg);color:#B45309}
+.chip.bad{background:var(--red-bg);color:#DC2626}
 
 /* ── ACTION ITEMS ── */
-.action-list { display: flex; flex-direction: column; gap: 12px; }
-.action-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 18px;
-  display: grid;
-  grid-template-columns: 28px 1fr auto;
-  gap: 12px;
-  align-items: start;
+.action-list{display:flex;flex-direction:column;gap:12px}
+.action-item{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;
+  display:grid;grid-template-columns:30px 1fr auto;
+  gap:12px;align-items:start;box-shadow:var(--shadow);
 }
-.action-num {
-  width: 28px; height: 28px;
-  background: var(--accent);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 800;
-  color: #06121F;
-  flex-shrink: 0;
+.action-num{
+  width:30px;height:30px;background:var(--brand);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;color:#FFFFFF;flex-shrink:0;
 }
-.action-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-.action-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
-.priority { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; padding: 3px 8px; border-radius: 4px; }
-.priority.high { background: var(--red-bg); color: var(--red); }
-.priority.medium { background: var(--amber-bg); color: var(--amber); }
-.priority.low { background: var(--blue-bg); color: var(--blue); }
-
-/* ── HERO STRIP ── */
-.overview-hero {
-  background: var(--header-bg);
-  border-radius: 14px;
-  padding: 28px 28px 24px;
-  margin-bottom: 28px;
-  position: relative;
-  overflow: hidden;
+.action-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.action-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.priority{
+  font-size:10.5px;font-weight:700;letter-spacing:0.06em;
+  text-transform:uppercase;white-space:nowrap;padding:3px 9px;border-radius:4px;
 }
-.overview-hero::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(5,226,164,0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.overview-hero-title {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #FFFFFF;
-  margin-bottom: 6px;
-  text-wrap: balance;
-}
-.overview-hero-sub {
-  font-size: 13px;
-  color: #6A8EAC;
-  margin-bottom: 20px;
-}
-.hero-kpis {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
-}
-.hero-kpi {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-.hero-kpi-val {
-  font-size: 24px;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.6px;
-  color: #FFFFFF;
-  margin-bottom: 3px;
-}
-.hero-kpi-val.mint { color: #05E2A4; }
-.hero-kpi-val.amber { color: #FFBB33; }
-.hero-kpi-val.red { color: #F0476F; }
-.hero-kpi-label { font-size: 11.5px; color: #6A8EAC; }
+.priority.high{background:var(--red-bg);color:#DC2626}
+.priority.medium{background:var(--amber-bg);color:#B45309}
+.priority.low{background:var(--brand-bg);color:var(--brand-dk)}
 </style>
-</head>
-<body>
 
 <!-- ── HEADER ── -->
 <div class="header">
-  <div class="logo">
-    <div class="logo-mark">U3</div>
-    <div class="logo-text">
-      <div class="logo-name">Unify360</div>
-      <div class="logo-sub">Performance Report</div>
-    </div>
-  </div>
+  <img src="data:image/png;base64,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" class="logo-img" alt="Unify360 — The #1 Local Marketing Platform">
   <div class="header-meta">
-    Jul 2025 – Jul 9, 2026<br>
-    Prepared by Real Time Marketing
+    <strong>SEO &amp; Performance Report</strong><br>
+    Jul 2025 – Jul 9, 2026 · Prepared by Real Time Marketing
   </div>
 </div>
 
@@ -611,762 +353,309 @@ tr.total td { background: var(--surface2); font-weight: 700; border-top: 2px sol
   <div class="tab" onclick="showTab('action',this)">Action Plan</div>
 </div>
 
-<!-- ══════════════════════════════════════ OVERVIEW ══ -->
+<!-- ══ OVERVIEW ══ -->
 <div id="tab-overview" class="tab-content active">
 <div class="page">
-
   <div class="overview-hero">
-    <div class="overview-hero-title">Unify360 — 12-Month Performance Summary</div>
-    <div class="overview-hero-sub">Jul 2025 – Jul 9, 2026 · GA4 · Google Search Console · CallRail</div>
+    <div class="hero-title">12-Month Performance Summary</div>
+    <div class="hero-sub">GA4 · Google Search Console · CallRail · Jul 2025 – Jul 9, 2026</div>
     <div class="hero-kpis">
-      <div class="hero-kpi">
-        <div class="hero-kpi-val">10,496</div>
-        <div class="hero-kpi-label">Total Sessions</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val mint">2,670</div>
-        <div class="hero-kpi-label">Organic Sessions</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val mint">+156%</div>
-        <div class="hero-kpi-label">Session Growth Dec→May</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val amber">79</div>
-        <div class="hero-kpi-label">AI-Referred Sessions</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val">927</div>
-        <div class="hero-kpi-label">GSC Clicks</div>
-      </div>
-      <div class="hero-kpi">
-        <div class="hero-kpi-val red">0</div>
-        <div class="hero-kpi-label">Conversions Tracked ⚠</div>
-      </div>
+      <div class="hero-kpi"><div class="hero-kpi-val">10,496</div><div class="hero-kpi-label">Total Sessions</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val brand">2,670</div><div class="hero-kpi-label">Organic Sessions (25.5%)</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val green">+156%</div><div class="hero-kpi-label">Session Growth Dec→May</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val teal">79</div><div class="hero-kpi-label">AI-Referred Sessions ✦</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val">927</div><div class="hero-kpi-label">GSC Clicks</div></div>
+      <div class="hero-kpi"><div class="hero-kpi-val red">0</div><div class="hero-kpi-label">Conversions Tracked ⚠</div></div>
     </div>
   </div>
 
-  <!-- Monthly trend chart -->
   <div class="card">
     <div class="card-title">Monthly Sessions — Jul 2025 through Jun 2026</div>
     <div class="monthly-chart" id="monthlyChart"></div>
-    <div style="font-size:11px;color:var(--muted);margin-top:40px">Sessions per month. May 2026 = peak (1,381). July 2026 shows 9 days only (448 so far).</div>
+    <div style="font-size:11px;color:var(--muted);margin-top:44px">Peak: May 2026 (1,381 sessions). July 2026 is partial — 9 days only.</div>
   </div>
 
-  <!-- Key channel breakdown -->
   <div class="two-col">
     <div class="card">
       <div class="card-title">Traffic by Channel</div>
       <div class="channel-bars">
-        <div class="channel-row">
-          <div class="channel-label">Direct</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:46.6%;background:var(--blue)"></div></div>
-          <div class="channel-val">4,895</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">Organic Search</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:25.4%;background:var(--accent)"></div></div>
-          <div class="channel-val">2,670</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">Referral</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:14.1%;background:#8B5CF6"></div></div>
-          <div class="channel-val">1,483</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">Google Ads</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:8.9%;background:var(--amber)"></div></div>
-          <div class="channel-val">930</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">GBP / Maps</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.6%;background:var(--red)"></div></div>
-          <div class="channel-val">170</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">Email</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.7%;background:#EC4899"></div></div>
-          <div class="channel-val">175</div>
-        </div>
-        <div class="channel-row">
-          <div class="channel-label">AI (ChatGPT…)</div>
-          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.75%;background:var(--accent)"></div></div>
-          <div class="channel-val" style="color:var(--accent);font-weight:800">79 ✦</div>
-        </div>
+        <div class="channel-row"><div class="channel-label">Direct / Dark Social</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:46.6%;background:#64748B"></div></div><div class="channel-val">4,895</div></div>
+        <div class="channel-row"><div class="channel-label">Organic Search</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:25.4%;background:#0693e3"></div></div><div class="channel-val">2,670</div></div>
+        <div class="channel-row"><div class="channel-label">Referral</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:14.1%;background:#9333EA"></div></div><div class="channel-val">1,483</div></div>
+        <div class="channel-row"><div class="channel-label">Google Ads</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:8.9%;background:#F59E0B"></div></div><div class="channel-val">930</div></div>
+        <div class="channel-row"><div class="channel-label">GBP / Maps</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.6%;background:#22C55E"></div></div><div class="channel-val">170</div></div>
+        <div class="channel-row"><div class="channel-label">Email</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.7%;background:#EC4899"></div></div><div class="channel-val">175</div></div>
+        <div class="channel-row"><div class="channel-label">AI (ChatGPT / Gemini)</div><div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.75%;background:#06B6D4"></div></div><div class="channel-val" style="color:var(--teal);font-weight:800">79 ✦</div></div>
       </div>
     </div>
     <div class="card">
-      <div class="card-title">At a Glance</div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="alert success">
-          <strong>AI assistants are referring qualified visitors</strong>
-          ChatGPT sent 46 sessions (65% engaged). Gemini sent 31 (55% engaged). Unify360 is showing up in AI conversations about review tools.
-        </div>
-        <div class="alert warning">
-          <strong>Conversion tracking gap is the #1 blocker</strong>
-          GA4 shows zero conversions across all 10,496 sessions. Without tracked conversions, there's no way to attribute trial signups or demo requests to any channel.
-        </div>
-        <div class="alert info">
-          <strong>Strong session growth trajectory</strong>
-          Sessions grew from 539 (Dec 2025) to 1,381 (May 2026) — a +156% climb in 5 months — before a seasonal dip in June.
-        </div>
+      <div class="card-title">Key Signals</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="alert success"><strong>ChatGPT &amp; Gemini are sending qualified visitors</strong>ChatGPT: 46 sessions at 65% engagement. Gemini: 31 at 55%. Unify360 is already appearing in AI conversations about review tools.</div>
+        <div class="alert warning"><strong>Conversion tracking gap is the #1 blocker</strong>Zero conversions tracked across all 10,496 sessions. No channel — including Google Ads — can show ROI until GA4 goals are configured.</div>
+        <div class="alert info"><strong>Strong growth trajectory</strong>Sessions climbed from 539 (Dec 2025) to 1,381 (May 2026) — +156% in 5 months — driven by organic and referral channels.</div>
       </div>
     </div>
   </div>
-
 </div>
 </div>
 
-<!-- ══════════════════════════════════════ TRAFFIC ══ -->
+<!-- ══ TRAFFIC ══ -->
 <div id="tab-traffic" class="tab-content">
 <div class="page">
-
-  <div class="section-eyebrow">Google Analytics 4</div>
-  <div class="section-title">Traffic & Engagement Analysis</div>
+  <div class="eyebrow">Google Analytics 4</div>
+  <div class="section-title">Traffic &amp; Engagement Analysis</div>
   <div class="section-desc">Jul 1, 2025 – Jul 9, 2026 · GA4 property 412450528</div>
 
   <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-val">10,496</div><div class="kpi-label">Total Sessions</div><div class="kpi-sub">All channels combined</div></div>
-    <div class="kpi green"><div class="kpi-val">2,670</div><div class="kpi-label">Organic Sessions</div><div class="kpi-sub">25.5% of total traffic</div></div>
-    <div class="kpi blue"><div class="kpi-val">4,895</div><div class="kpi-label">Direct Sessions</div><div class="kpi-sub">46.6% — includes dark social</div></div>
-    <div class="kpi"><div class="kpi-val">1,381</div><div class="kpi-label">Peak Month</div><div class="kpi-sub">May 2026</div></div>
-    <div class="kpi amber"><div class="kpi-val">18%</div><div class="kpi-label">CPC Engagement</div><div class="kpi-sub">Google Ads very low (930 sessions)</div></div>
-    <div class="kpi red"><div class="kpi-val">0</div><div class="kpi-label">Conversions</div><div class="kpi-sub">Not configured in GA4 ⚠</div></div>
+    <div class="kpi blue"><div class="kpi-val">10,496</div><div class="kpi-label">Total Sessions</div><div class="kpi-sub">All channels</div></div>
+    <div class="kpi blue"><div class="kpi-val">2,670</div><div class="kpi-label">Organic Sessions</div><div class="kpi-sub">25.5% of total</div></div>
+    <div class="kpi green"><div class="kpi-val">1,381</div><div class="kpi-label">Peak Month</div><div class="kpi-sub">May 2026</div></div>
+    <div class="kpi amber"><div class="kpi-val">18%</div><div class="kpi-label">CPC Engagement</div><div class="kpi-sub">Google Ads — very low</div></div>
+    <div class="kpi teal"><div class="kpi-val">79</div><div class="kpi-label">AI-Referred Sessions</div><div class="kpi-sub">ChatGPT + Gemini</div></div>
+    <div class="kpi red"><div class="kpi-val">0</div><div class="kpi-label">Conversions</div><div class="kpi-sub">Not configured ⚠</div></div>
   </div>
 
-  <div class="card" style="margin-bottom:20px">
+  <div class="card">
     <div class="card-title">Monthly Session Trend</div>
     <div class="monthly-chart" id="monthlyChart2"></div>
-    <div style="margin-top:40px;display:flex;gap:24px;flex-wrap:wrap">
+    <div style="margin-top:44px;display:flex;gap:24px;flex-wrap:wrap">
       <div style="font-size:12px;color:var(--muted)">▲ <strong style="color:var(--text)">+156%</strong> growth Dec 2025 → May 2026</div>
-      <div style="font-size:12px;color:var(--muted)">Oct/Dec 2025 were low points (607 / 539 sessions)</div>
-      <div style="font-size:12px;color:var(--muted)">Jun 2026 dipped slightly to 1,071 from May's peak</div>
+      <div style="font-size:12px;color:var(--muted)">Oct &amp; Dec 2025 were the low points (607 / 539)</div>
+      <div style="font-size:12px;color:var(--muted)">Jun 2026 softened to 1,071 from May's 1,381 peak</div>
     </div>
   </div>
 
-  <div class="section-eyebrow" style="margin-top:28px">Channel Breakdown</div>
-  <div class="section-title" style="font-size:16px;margin-bottom:12px">Traffic by Source / Medium</div>
-
+  <div class="eyebrow" style="margin-top:28px">Source / Medium Breakdown</div>
   <div class="table-wrap">
     <table>
-      <thead>
-        <tr>
-          <th>Source</th>
-          <th>Medium</th>
-          <th class="num">Sessions</th>
-          <th class="num">Users</th>
-          <th class="num">Pages/Session</th>
-          <th class="num">Engagement</th>
-          <th>Quality Signal</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Source</th><th>Medium</th><th class="num">Sessions</th><th class="num">Users</th><th class="num">Pages/Session</th><th class="num">Engagement</th><th>Signal</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>(direct)</strong></td>
-          <td><span class="tag blue">none</span></td>
-          <td class="num">4,895</td>
-          <td class="num">3,693</td>
-          <td class="num">1.50</td>
-          <td class="num">26.7%</td>
-          <td><span style="font-size:12px;color:var(--muted)">Low engagement — includes dashboard logins & dark social</span></td>
-        </tr>
-        <tr>
-          <td><strong>google</strong></td>
-          <td><span class="tag green">organic</span></td>
-          <td class="num">2,555</td>
-          <td class="num">942</td>
-          <td class="num">1.81</td>
-          <td class="num">46.2%</td>
-          <td><span class="tag green">Good</span></td>
-        </tr>
-        <tr>
-          <td><strong>google</strong></td>
-          <td><span class="tag amber">cpc</span></td>
-          <td class="num">930</td>
-          <td class="num">883</td>
-          <td class="num">1.07</td>
-          <td class="num" style="color:var(--red);font-weight:700">18.1%</td>
-          <td><span class="tag red">Very Low</span> — review ad targeting/landing pages</td>
-        </tr>
-        <tr>
-          <td><strong>newsletter</strong></td>
-          <td><span class="tag blue">email</span></td>
-          <td class="num">175</td>
-          <td class="num">87</td>
-          <td class="num">1.31</td>
-          <td class="num">37.7%</td>
-          <td><span class="tag amber">Moderate</span></td>
-        </tr>
-        <tr>
-          <td><strong>google</strong></td>
-          <td><span class="tag green">gbp</span></td>
-          <td class="num">170</td>
-          <td class="num">95</td>
-          <td class="num">1.79</td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">56.5%</td>
-          <td><span class="tag green">Excellent</span> — GBP visitors are high intent</td>
-        </tr>
-        <tr>
-          <td><strong>goldstarplumbingaz.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num">134</td>
-          <td class="num">122</td>
-          <td class="num">1.90</td>
-          <td class="num">58.2%</td>
-          <td><span class="tag green">Good</span> — client referral</td>
-        </tr>
-        <tr>
-          <td><strong>straightshooterplumbing.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num">80</td>
-          <td class="num">73</td>
-          <td class="num">2.00</td>
-          <td class="num">46.3%</td>
-          <td><span class="tag green">Good</span> — client referral</td>
-        </tr>
-        <tr>
-          <td><strong>dashboard.realtimemarketing.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num">79</td>
-          <td class="num">2</td>
-          <td class="num">3.27</td>
-          <td class="num">51.9%</td>
-          <td><span style="font-size:12px;color:var(--muted)">Internal/agency dashboard link</span></td>
-        </tr>
-        <tr style="background:rgba(5,226,164,0.04)">
-          <td><strong>chatgpt.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num" style="color:var(--accent);font-weight:800">46</td>
-          <td class="num">15</td>
-          <td class="num">2.80</td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">65.2% ✦</td>
-          <td><span class="tag green">AI Referral</span> — highest engagement of any source</td>
-        </tr>
-        <tr style="background:rgba(5,226,164,0.04)">
-          <td><strong>gemini.google.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num" style="color:var(--accent);font-weight:800">31</td>
-          <td class="num">3</td>
-          <td class="num">1.29</td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">54.8% ✦</td>
-          <td><span class="tag green">AI Referral</span> — Google Gemini recommending Unify360</td>
-        </tr>
-        <tr>
-          <td><strong>bing</strong></td>
-          <td><span class="tag green">organic</span></td>
-          <td class="num">74</td>
-          <td class="num">63</td>
-          <td class="num">1.20</td>
-          <td class="num">48.6%</td>
-          <td><span class="tag green">Good</span></td>
-        </tr>
-        <tr>
-          <td><strong>facebook.com</strong></td>
-          <td><span class="tag blue">referral</span></td>
-          <td class="num">76</td>
-          <td class="num">76</td>
-          <td class="num">1.03</td>
-          <td class="num">61.8%</td>
-          <td><span class="tag green">Good engagement</span></td>
-        </tr>
+        <tr><td><strong>(direct)</strong></td><td><span class="tag">none</span></td><td class="num">4,895</td><td class="num">3,693</td><td class="num">1.50</td><td class="num">26.7%</td><td style="font-size:12px;color:var(--muted)">Includes customer logins &amp; dark social</td></tr>
+        <tr><td><strong>google</strong></td><td><span class="tag green">organic</span></td><td class="num">2,555</td><td class="num">942</td><td class="num">1.81</td><td class="num">46.2%</td><td><span class="tag green">Good</span></td></tr>
+        <tr><td><strong>google</strong></td><td><span class="tag amber">cpc</span></td><td class="num">930</td><td class="num">883</td><td class="num">1.07</td><td class="num" style="color:var(--red);font-weight:700">18.1%</td><td><span class="tag red">Very Low — fix targeting</span></td></tr>
+        <tr><td><strong>newsletter</strong></td><td><span class="tag blue">email</span></td><td class="num">175</td><td class="num">87</td><td class="num">1.31</td><td class="num">37.7%</td><td><span class="tag amber">Moderate</span></td></tr>
+        <tr><td><strong>google</strong></td><td><span class="tag green">gbp</span></td><td class="num">170</td><td class="num">95</td><td class="num">1.79</td><td class="num" style="color:var(--brand);font-weight:700">56.5%</td><td><span class="tag green">Excellent — high intent</span></td></tr>
+        <tr><td><strong>goldstarplumbingaz.com</strong></td><td><span class="tag">referral</span></td><td class="num">134</td><td class="num">122</td><td class="num">1.90</td><td class="num">58.2%</td><td><span class="tag green">Good — client referral</span></td></tr>
+        <tr><td><strong>straightshooterplumbing.com</strong></td><td><span class="tag">referral</span></td><td class="num">80</td><td class="num">73</td><td class="num">2.00</td><td class="num">46.3%</td><td><span class="tag green">Good — client referral</span></td></tr>
+        <tr style="background:rgba(6,147,227,0.04)"><td><strong>chatgpt.com</strong></td><td><span class="tag blue">referral</span></td><td class="num" style="color:var(--brand);font-weight:800">46</td><td class="num">15</td><td class="num">2.80</td><td class="num" style="color:var(--brand);font-weight:700">65.2% ✦</td><td><span class="tag blue">AI Referral — best engagement</span></td></tr>
+        <tr style="background:rgba(6,147,227,0.04)"><td><strong>gemini.google.com</strong></td><td><span class="tag blue">referral</span></td><td class="num" style="color:var(--brand);font-weight:800">31</td><td class="num">3</td><td class="num">1.29</td><td class="num" style="color:var(--brand);font-weight:700">54.8% ✦</td><td><span class="tag blue">AI Referral</span></td></tr>
+        <tr><td><strong>bing</strong></td><td><span class="tag green">organic</span></td><td class="num">74</td><td class="num">63</td><td class="num">1.20</td><td class="num">48.6%</td><td><span class="tag green">Good</span></td></tr>
+        <tr><td><strong>facebook.com</strong></td><td><span class="tag">referral</span></td><td class="num">76</td><td class="num">76</td><td class="num">1.03</td><td class="num">61.8%</td><td><span class="tag green">Good engagement</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="alert warning">
-    <strong>Google Ads (CPC) has an 18.1% engagement rate — the lowest of any channel.</strong>
-    930 sessions with almost no engagement and zero tracked conversions means the spend is not attributable. Review ad creative, landing page alignment, and make sure goal completions are firing before scaling budget.
-  </div>
-
-  <div class="alert info">
-    <strong>Direct traffic (4,895 sessions) warrants a closer look.</strong>
-    For a B2B SaaS, a large "direct/none" bucket often includes: existing clients accessing the dashboard (if the app runs at the same domain), Slack/Teams link shares (dark social), and bookmarked visits. If the app and marketing site share a domain, GA4 cannot distinguish customers from prospects.
-  </div>
-
+  <div class="alert warning"><strong>Google Ads (CPC) has an 18.1% engagement rate — the lowest of any channel.</strong>930 sessions, zero valid calls, no tracked conversions. Either fix the landing pages and tracking, or redirect budget to organic content investment until metrics are in place.</div>
+  <div class="alert info"><strong>GBP / Maps visitors have a 56.5% engagement rate — the highest of any paid or owned channel.</strong>Prioritize keeping the GBP profile fully optimized (photos, posts, review responses) since this traffic converts at above-average quality.</div>
 </div>
 </div>
 
-<!-- ══════════════════════════════════════ GSC ══ -->
+<!-- ══ GSC ══ -->
 <div id="tab-gsc" class="tab-content">
 <div class="page">
-
-  <div class="section-eyebrow">Google Search Console</div>
-  <div class="section-title">Organic Rankings & Keyword Opportunities</div>
+  <div class="eyebrow">Google Search Console</div>
+  <div class="section-title">Organic Rankings &amp; Keyword Opportunities</div>
   <div class="section-desc">Jul 2025 – Jul 2026 · Site: https://unify360.com/</div>
 
   <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-val">927</div><div class="kpi-label">Total Clicks</div><div class="kpi-sub">All queries combined</div></div>
-    <div class="kpi"><div class="kpi-val">~97K</div><div class="kpi-label">Total Impressions (est.)</div><div class="kpi-sub">Based on page-level data</div></div>
-    <div class="kpi amber"><div class="kpi-val">97%</div><div class="kpi-label">Branded Click Share</div><div class="kpi-sub">Nearly all clicks = "unify360"</div></div>
-    <div class="kpi red"><div class="kpi-val">~0.05%</div><div class="kpi-label">CTR on AI Pages</div><div class="kpi-sub">14K+ impr, almost no clicks</div></div>
+    <div class="kpi blue"><div class="kpi-val">927</div><div class="kpi-label">Total Clicks</div><div class="kpi-sub">All queries</div></div>
+    <div class="kpi amber"><div class="kpi-val">97%</div><div class="kpi-label">Branded Click Share</div><div class="kpi-sub">Almost all from "unify360"</div></div>
+    <div class="kpi red"><div class="kpi-val">0.05%</div><div class="kpi-label">AI Page CTR</div><div class="kpi-sub">14K+ impressions, 7 clicks</div></div>
+    <div class="kpi teal"><div class="kpi-val">14,062</div><div class="kpi-label">AI Page Impressions</div><div class="kpi-sub">/ai-review-response-generator/</div></div>
   </div>
 
-  <div class="section-eyebrow" style="margin-top:8px">Branded vs Non-Brand</div>
-  <div class="section-title" style="font-size:16px;margin-bottom:6px">Search Click Composition</div>
-  <div class="alert warning" style="margin-bottom:20px">
-    <strong>Over 97% of organic clicks come from branded searches (people already looking for "unify360").</strong>
-    Non-brand clicks are in the single digits despite thousands of impressions for high-value keywords like "ai review response generator" (14,062 impressions) and "review response software" (11,667 impressions). CTR on these pages is below 0.1% — a title tag and meta description problem, not a ranking problem.
-  </div>
+  <div class="alert warning"><strong>97% of organic clicks come from branded searches — people already looking for "Unify360."</strong>The platform is getting tens of thousands of impressions for high-value non-brand keywords (AI tools, review management, reputation software) but earning almost no clicks from them. This is a CTR/title-tag problem, not a ranking problem.</div>
 
-  <div class="section-eyebrow" style="margin-top:8px">Top Pages</div>
-  <div class="section-title" style="font-size:16px;margin-bottom:12px">By Impressions — GSC Page Report</div>
-
+  <div class="eyebrow" style="margin-top:20px">Top Pages by Impressions</div>
   <div class="table-wrap">
     <table>
-      <thead>
-        <tr>
-          <th>Page</th>
-          <th class="num">Impressions</th>
-          <th class="num">Clicks</th>
-          <th class="num">CTR</th>
-          <th class="num">Avg Position</th>
-          <th>Opportunity</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Page</th><th class="num">Impressions</th><th class="num">Clicks</th><th class="num">CTR</th><th class="num">Avg Position</th><th>Opportunity</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span style="font-size:12px">/ai-review-response-generator/</span></td>
-          <td class="num" style="font-weight:700">14,062</td>
-          <td class="num">7</td>
-          <td class="num" style="color:var(--red);font-weight:700">0.05%</td>
-          <td class="num">18.9</td>
-          <td><span class="tag red">Fix Title Tag</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/ (homepage)</span></td>
-          <td class="num">14,565</td>
-          <td class="num" style="font-weight:700;color:var(--accent-hi)">1,072</td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">7.4%</td>
-          <td class="num">12.6</td>
-          <td><span class="tag green">Performing</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/messaging/</span></td>
-          <td class="num" style="font-weight:700">12,500</td>
-          <td class="num">25</td>
-          <td class="num" style="color:var(--red);font-weight:700">0.20%</td>
-          <td class="num">16.1</td>
-          <td><span class="tag red">Fix Title Tag</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/review-response-software/</span></td>
-          <td class="num" style="font-weight:700">11,667</td>
-          <td class="num">6</td>
-          <td class="num" style="color:var(--red);font-weight:700">0.05%</td>
-          <td class="num">22.7</td>
-          <td><span class="tag red">Fix Title Tag</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/industries-we-serve/plumbing/</span></td>
-          <td class="num">9,202</td>
-          <td class="num">11</td>
-          <td class="num" style="color:var(--red)">0.12%</td>
-          <td class="num">26.6</td>
-          <td><span class="tag amber">Build Topical Authority</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/?utm_medium=gbp (GBP listing)</span></td>
-          <td class="num">8,593</td>
-          <td class="num">57</td>
-          <td class="num" style="color:var(--accent-hi)">0.66%</td>
-          <td class="num">5.8</td>
-          <td><span class="tag green">Maps performing</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/reviews/</span></td>
-          <td class="num">8,443</td>
-          <td class="num">26</td>
-          <td class="num">0.31%</td>
-          <td class="num">16.2</td>
-          <td><span class="tag amber">Optimize meta</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/4-best-ai-tools-for-small-business-owners/</span></td>
-          <td class="num">5,354</td>
-          <td class="num">7</td>
-          <td class="num" style="color:var(--red)">0.13%</td>
-          <td class="num">19.1</td>
-          <td><span class="tag amber">Optimize title</span></td>
-        </tr>
-        <tr>
-          <td><span style="font-size:12px">/can-you-incentivize-google-reviews</span></td>
-          <td class="num">4,822</td>
-          <td class="num">16</td>
-          <td class="num">0.33%</td>
-          <td class="num">7.0</td>
-          <td><span class="tag green">Close to page 1</span></td>
-        </tr>
+        <tr><td style="font-size:12px">/ai-review-response-generator/</td><td class="num" style="font-weight:700">14,062</td><td class="num">7</td><td class="num" style="color:var(--red);font-weight:700">0.05%</td><td class="num">18.9</td><td><span class="tag red">Fix Title Tag</span></td></tr>
+        <tr><td style="font-size:12px">/ (homepage)</td><td class="num">14,565</td><td class="num" style="color:var(--brand);font-weight:700">1,072</td><td class="num" style="color:var(--brand);font-weight:700">7.4%</td><td class="num">12.6</td><td><span class="tag green">Performing</span></td></tr>
+        <tr><td style="font-size:12px">/messaging/</td><td class="num" style="font-weight:700">12,500</td><td class="num">25</td><td class="num" style="color:var(--red);font-weight:700">0.20%</td><td class="num">16.1</td><td><span class="tag red">Fix Title Tag</span></td></tr>
+        <tr><td style="font-size:12px">/review-response-software/</td><td class="num" style="font-weight:700">11,667</td><td class="num">6</td><td class="num" style="color:var(--red);font-weight:700">0.05%</td><td class="num">22.7</td><td><span class="tag red">Fix Title Tag</span></td></tr>
+        <tr><td style="font-size:12px">/industries-we-serve/plumbing/</td><td class="num">9,202</td><td class="num">11</td><td class="num" style="color:var(--red)">0.12%</td><td class="num">26.6</td><td><span class="tag amber">Build Authority</span></td></tr>
+        <tr><td style="font-size:12px">/?utm_medium=gbp</td><td class="num">8,593</td><td class="num">57</td><td class="num" style="color:var(--brand)">0.66%</td><td class="num">5.8</td><td><span class="tag green">Maps is working</span></td></tr>
+        <tr><td style="font-size:12px">/reviews/</td><td class="num">8,443</td><td class="num">26</td><td class="num">0.31%</td><td class="num">16.2</td><td><span class="tag amber">Optimize meta</span></td></tr>
+        <tr><td style="font-size:12px">/4-best-ai-tools-for-small-business-owners/</td><td class="num">5,354</td><td class="num">7</td><td class="num" style="color:var(--red)">0.13%</td><td class="num">19.1</td><td><span class="tag amber">Refresh + optimize</span></td></tr>
+        <tr><td style="font-size:12px">/can-you-incentivize-google-reviews</td><td class="num">4,822</td><td class="num">16</td><td class="num">0.33%</td><td class="num">7.0</td><td><span class="tag blue">Close to page 1</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="section-eyebrow" style="margin-top:28px">Non-Brand Keyword Opportunities</div>
-  <div class="section-title" style="font-size:16px;margin-bottom:12px">High-Impression Terms with Near-Zero Clicks</div>
-
+  <div class="eyebrow" style="margin-top:20px">Non-Brand Keyword Opportunities</div>
+  <div class="section-desc" style="margin-bottom:12px">High impression volume with near-zero clicks — fix CTR to unlock free traffic</div>
   <div class="opp-list">
     <div class="opp-item">
-      <div>
-        <div class="opp-query">"ai review response generator"</div>
-        <div class="opp-meta">Page: /ai-review-response-generator/ · Only 7 clicks despite 299 impressions on this exact query</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">299 impressions</div>
-        <div class="chip pos-mid">pos 25.6</div>
-        <div class="chip red">1 click</div>
-      </div>
+      <div><div class="opp-query">"ai review response generator"</div><div class="opp-meta">14,062 page impressions · Only 7 clicks · Title tag not matching intent</div></div>
+      <div class="opp-chips"><div class="chip neutral">299 query impr.</div><div class="chip mid">pos 25.6</div><div class="chip bad">1 click</div></div>
     </div>
     <div class="opp-item">
-      <div>
-        <div class="opp-query">"business reputation management"</div>
-        <div class="opp-meta">1,640 impressions — highest non-brand impression volume. Position 28.9 means page 3. Content investment needed.</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">1,640 impressions</div>
-        <div class="chip pos-bad">pos 28.9</div>
-        <div class="chip red">1 click</div>
-      </div>
+      <div><div class="opp-query">"business reputation management"</div><div class="opp-meta">Highest non-brand impression volume. Position 28.9 = page 3. Needs dedicated content.</div></div>
+      <div class="opp-chips"><div class="chip neutral">1,640 impr.</div><div class="chip bad">pos 28.9</div><div class="chip bad">1 click</div></div>
     </div>
     <div class="opp-item">
-      <div>
-        <div class="opp-query">"real time reviews"</div>
-        <div class="opp-meta">742 impressions at position 18.2 — very close to page 1. A push in content or links could unlock significant clicks.</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">742 impressions</div>
-        <div class="chip pos-mid">pos 18.2</div>
-        <div class="chip red">1 click</div>
-      </div>
+      <div><div class="opp-query">"real time reviews"</div><div class="opp-meta">Position 18.2 — just off page 1. A content refresh could push this into the top 10.</div></div>
+      <div class="opp-chips"><div class="chip neutral">742 impr.</div><div class="chip mid">pos 18.2</div><div class="chip bad">1 click</div></div>
     </div>
     <div class="opp-item">
-      <div>
-        <div class="opp-query">"review response generator"</div>
-        <div class="opp-meta">259 impressions at position 31. Separate from the "ai review response generator" term — both need work.</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">259 impressions</div>
-        <div class="chip pos-bad">pos 31</div>
-        <div class="chip red">1 click</div>
-      </div>
+      <div><div class="opp-query">"best ai tools for plumbers"</div><div class="opp-meta">Vertical-specific AI term. Perfect fit for Unify360's target customer. Needs a dedicated post.</div></div>
+      <div class="opp-chips"><div class="chip neutral">176 impr.</div><div class="chip bad">pos 28.4</div><div class="chip bad">1 click</div></div>
     </div>
     <div class="opp-item">
-      <div>
-        <div class="opp-query">"best ai tools for plumbers"</div>
-        <div class="opp-meta">Industry-specific AI term with 176 impressions. Strong fit for Unify360's target vertical. Ranking at pos 28 — needs a dedicated plumber-focused AI tools post.</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">176 impressions</div>
-        <div class="chip pos-bad">pos 28.4</div>
-        <div class="chip red">1 click</div>
-      </div>
-    </div>
-    <div class="opp-item">
-      <div>
-        <div class="opp-query">"review management software for agencies"</div>
-        <div class="opp-meta">Only 9 impressions but position 14.6 — already near page 1 with almost no competition. An exact-match landing page could drive agency leads.</div>
-      </div>
-      <div class="opp-chips">
-        <div class="chip imp">9 impressions</div>
-        <div class="chip pos-mid">pos 14.6</div>
-        <div class="chip amber">Near page 1</div>
-      </div>
+      <div><div class="opp-query">"review management software for agencies"</div><div class="opp-meta">Only 9 impressions but position 14.6 — nearly page 1 with no dedicated page. High-value agency term.</div></div>
+      <div class="opp-chips"><div class="chip neutral">9 impr.</div><div class="chip good">pos 14.6 — near pg 1</div></div>
     </div>
   </div>
-
 </div>
 </div>
 
-<!-- ══════════════════════════════════════ AI SEARCH ══ -->
+<!-- ══ AI SEARCH ══ -->
 <div id="tab-ai" class="tab-content">
 <div class="page">
-
   <div class="ai-hero">
     <div class="ai-badge"><div class="ai-pulse"></div>Live Signal</div>
     <div class="ai-headline">Unify360 is being recommended by AI assistants</div>
-    <div class="ai-desc">
-      ChatGPT and Google Gemini are actively sending visitors to Unify360 — and those visitors engage at the highest rate of any traffic source. This is the earliest measurable signal of AI search authority, and it's already outperforming most paid channels on engagement quality.
-    </div>
+    <div class="ai-desc">ChatGPT and Google Gemini are actively referring visitors to Unify360 — and those visitors engage at 65%, the highest rate of any traffic source. For a platform that sells AI-powered tools to home service businesses, being cited by AI is both a distribution channel and a credibility signal.</div>
     <div class="ai-sources">
       <div class="ai-source">
-        <div class="ai-source-name">
-          <div class="ai-source-icon" style="background:#10A37F;color:#fff">✦</div>
-          ChatGPT (chatgpt.com)
-        </div>
-        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">46</span></div>
+        <div class="ai-source-name"><div class="ai-source-icon" style="background:#10A37F;color:#fff">✦</div>ChatGPT</div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val good">46</span></div>
         <div class="ai-stat"><span class="ai-stat-label">Unique Users</span><span class="ai-stat-val">15</span></div>
         <div class="ai-stat"><span class="ai-stat-label">Pageviews</span><span class="ai-stat-val">129</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val green">65.2% ✦</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Pages/Session</span><span class="ai-stat-val">2.80</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val good">65.2% ✦</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pages / Session</span><span class="ai-stat-val">2.80</span></div>
       </div>
       <div class="ai-source">
-        <div class="ai-source-name">
-          <div class="ai-source-icon" style="background:#4285F4;color:#fff">G</div>
-          Google Gemini
-        </div>
-        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">31</span></div>
+        <div class="ai-source-name"><div class="ai-source-icon" style="background:#4285F4;color:#fff">G</div>Google Gemini</div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val good">31</span></div>
         <div class="ai-stat"><span class="ai-stat-label">Unique Users</span><span class="ai-stat-val">3</span></div>
         <div class="ai-stat"><span class="ai-stat-label">Pageviews</span><span class="ai-stat-val">40</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val green">54.8%</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Pages/Session</span><span class="ai-stat-val">1.29</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val good">54.8%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pages / Session</span><span class="ai-stat-val">1.29</span></div>
       </div>
       <div class="ai-source">
-        <div class="ai-source-name">
-          <div class="ai-source-icon" style="background:var(--accent);color:#06121F">AI</div>
-          AI Assistant (medium)
-        </div>
-        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">2</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val">50%</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Source</span><span class="ai-stat-val" style="font-size:11px">GA4 ai-assistant medium</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">Note</span><span class="ai-stat-val" style="font-size:11px;color:var(--muted)">Will grow as GA4 adds more AI attribution</span></div>
+        <div class="ai-source-name"><div class="ai-source-icon" style="background:#0693e3;color:#fff">AI</div>GA4 AI Medium</div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val good">2</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement</span><span class="ai-stat-val">50%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Note</span><span class="ai-stat-val" style="font-size:11px;color:var(--muted)">GA4's new ai-assistant medium tag — will grow as more AI tools get classified</span></div>
       </div>
-      <div class="ai-source" style="border-color:rgba(5,200,144,0.2);background:rgba(5,226,164,0.04)">
-        <div class="ai-source-name" style="color:var(--accent)">Total AI-Sourced</div>
-        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green" style="font-size:20px">79</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">vs. Google Ads (930)</span><span class="ai-stat-val green">8.5%</span></div>
-        <div class="ai-stat"><span class="ai-stat-label">AI Engagement vs Ads</span><span class="ai-stat-val green">65% vs 18%</span></div>
-        <div style="margin-top:10px;font-size:11px;color:var(--accent);font-weight:600">Visitors from AI convert at ~3.5x the engagement rate of Google Ads visitors</div>
+      <div class="ai-source" style="border-color:rgba(6,147,227,0.3)">
+        <div class="ai-source-name" style="color:var(--brand)">Total AI Traffic</div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val good" style="font-size:22px">79</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">vs Google Ads (930 sessions)</span><span class="ai-stat-val">8.5%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">AI engage vs Ads engage</span><span class="ai-stat-val good">65% vs 18%</span></div>
+        <div style="margin-top:10px;font-size:11px;color:var(--brand);font-weight:600">AI visitors engage at 3.5× the rate of Google Ads visitors</div>
       </div>
     </div>
   </div>
 
-  <!-- Why it matters -->
   <div class="two-col">
     <div class="card">
-      <div class="card-title">Why This Matters for Unify360</div>
-      <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--muted);line-height:1.6">
-        <p>Unify360 <em>is</em> an AI-powered platform — which means it competes and coexists with AI tools. Being cited by ChatGPT and Gemini is both a distribution win and a validation signal: AI assistants are treating Unify360 as a credible answer to "what review management tool should I use?"</p>
-        <p>The 15 unique ChatGPT users who visited 129 pages are likely prospective customers deep in research mode — exactly the decision-stage buyers that paid search struggles to reach.</p>
-        <p>This is early. AI referral traffic will grow substantially as more people use AI assistants to research software purchases. The time to optimize for it is now, before competitors capture those citations.</p>
+      <div class="card-title">Why This Matters</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.65;display:flex;flex-direction:column;gap:10px">
+        <p>Unify360 <em>is</em> an AI-powered platform — which means it competes and coexists with AI search tools. Being cited by ChatGPT and Gemini is a validation signal: AI assistants already treat Unify360 as a credible answer to "what review management tool should I use?"</p>
+        <p>The 15 unique ChatGPT users who browsed 129 pages are likely decision-stage buyers in deep research mode — exactly who paid search struggles to reach affordably.</p>
+        <p>AI referral traffic will grow significantly as more B2B software purchases start with an AI assistant query. The investment to capture more of it now is relatively low.</p>
       </div>
     </div>
     <div class="card">
-      <div class="card-title">GSC Keywords Appearing in AI Searches</div>
-      <div class="opp-list" style="gap:8px">
-        <div class="opp-item" style="padding:10px 12px">
-          <div><div class="opp-query" style="font-size:12.5px">"ai review response generator"</div><div class="opp-meta">299 impressions · pos 25.6 on Google</div></div>
-          <div><div class="chip pos-mid">AI intent</div></div>
-        </div>
-        <div class="opp-item" style="padding:10px 12px">
-          <div><div class="opp-query" style="font-size:12.5px">"best ai tools for plumbers"</div><div class="opp-meta">176 impressions · pos 28.4</div></div>
-          <div><div class="chip pos-mid">AI intent</div></div>
-        </div>
-        <div class="opp-item" style="padding:10px 12px">
-          <div><div class="opp-query" style="font-size:12.5px">"ai for electricians"</div><div class="opp-meta">177 impressions · pos 41</div></div>
-          <div><div class="chip pos-bad">AI intent</div></div>
-        </div>
-        <div class="opp-item" style="padding:10px 12px">
-          <div><div class="opp-query" style="font-size:12.5px">"electrician ai"</div><div class="opp-meta">29 impressions · pos 67</div></div>
-          <div><div class="chip pos-bad">AI intent</div></div>
-        </div>
+      <div class="card-title">How to Strengthen AI Citation Authority</div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px">1. Restructure AI pages with FAQ format</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">AI assistants favor pages that answer a question directly in the first sentence. Rewrite /ai-review-response-generator/ to open with: "An AI review response generator is a tool that…"</div></div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px">2. Add FAQ schema (JSON-LD) to AI pages</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">Structured data on the AI tool pages makes them significantly easier for ChatGPT and Google AI Overviews to parse and cite — a direct lever on AI referral growth.</div></div>
+        <div><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px">3. Publish vertical AI guides</div><div style="font-size:12.5px;color:var(--muted);line-height:1.6">"Best AI Tools for Plumbers 2026", "AI Review Management for Electricians" — each targets an AI-intent query where Unify360 already weakly ranks.</div></div>
       </div>
     </div>
   </div>
-
-  <div class="card">
-    <div class="card-title">How to Strengthen AI Citation Authority</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">1. Build FAQ-format content</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">AI assistants favor pages that directly answer a question in the first sentence. Restructure the AI Review Response Generator and Review Response Software pages with a clear Q&amp;A format in the opening paragraph — "What is an AI review response generator? It's a tool that…"</div>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">2. Add structured data (FAQ schema)</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">FAQ schema markup on the AI-related pages makes content easier for both Google's AI Overviews and ChatGPT's plugin-based search to parse and cite. This is one of the most direct levers for AI visibility.</div>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">3. Publish vertical-specific AI guides</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">Dedicated blog posts: "Best AI Tools for Plumbers 2026", "AI Review Management for Electricians", "How AI is Changing Home Service Reviews" — each targets an AI-intent query where Unify360 already shows up weakly.</div>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">4. Track AI referrals as a conversion funnel</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">Set up a GA4 segment for chatgpt.com + gemini.google.com referrals. Once conversions are tracked, you'll be able to see the actual ROI of AI citation authority vs. Google Ads spend.</div>
-      </div>
-    </div>
-  </div>
-
 </div>
 </div>
 
-<!-- ══════════════════════════════════════ CALLRAIL ══ -->
+<!-- ══ CALLRAIL ══ -->
 <div id="tab-callrail" class="tab-content">
 <div class="page">
-
-  <div class="section-eyebrow">CallRail</div>
-  <div class="section-title">Call Volume & Lead Quality</div>
+  <div class="eyebrow">CallRail</div>
+  <div class="section-title">Call Volume &amp; Lead Quality</div>
   <div class="section-desc">Jul 2025 – Jul 9, 2026 · Company: Unify360.com</div>
 
-  <div class="alert info" style="margin-bottom:20px">
-    <strong>Context: Unify360 is a B2B SaaS — call behavior differs from B2C service businesses.</strong>
-    Many of the 318 logged calls are tracking-number reroutes from client websites (e.g., straightshooterplumbing.com, titanroofingfl.com) where Unify360's tracking number is embedded. These are client website visitors, not Unify360 prospects. Genuine inbound prospect calls come from Direct, Google Organic, and Directory Listings sources.
-  </div>
+  <div class="alert info"><strong>Context: Unify360 is B2B SaaS — call behavior differs from service businesses.</strong>Many of the 318 logged calls are tracking-number reroutes from client websites (straightshooterplumbing.com, titanroofingfl.com, goldstarplumbingaz.com) where Unify360's tracking number is embedded. These are client website visitors, not Unify360 prospects. Genuine inbound calls come from Direct, Google Organic, and Directory Listings.</div>
 
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-val">318</div><div class="kpi-label">Total Call Events</div><div class="kpi-sub">Including client site reroutes</div></div>
+    <div class="kpi"><div class="kpi-val">318</div><div class="kpi-label">Total Call Events</div><div class="kpi-sub">Incl. client-site reroutes</div></div>
     <div class="kpi blue"><div class="kpi-val">49</div><div class="kpi-label">Answered</div><div class="kpi-sub">15.4% answer rate</div></div>
-    <div class="kpi green"><div class="kpi-val">18</div><div class="kpi-label">Valid Leads (≥30s)</div><div class="kpi-sub">Answered + 30 seconds or more</div></div>
-    <div class="kpi red"><div class="kpi-val">29</div><div class="kpi-label">Short / Hangups</div><div class="kpi-sub">&lt;30s of the answered calls</div></div>
-    <div class="kpi"><div class="kpi-val">33s</div><div class="kpi-label">Avg Duration (answered)</div><div class="kpi-sub">Borderline — many just over threshold</div></div>
-    <div class="kpi amber"><div class="kpi-val">3%</div><div class="kpi-label">Overall Valid Rate</div><div class="kpi-sub">18 of 318 — expected for B2B SaaS</div></div>
+    <div class="kpi green"><div class="kpi-val">18</div><div class="kpi-label">Valid Leads (≥30s)</div><div class="kpi-sub">Answered + 30s or more</div></div>
+    <div class="kpi red"><div class="kpi-val">29</div><div class="kpi-label">Short / Hangups</div><div class="kpi-sub">&lt;30s of answered calls</div></div>
+    <div class="kpi"><div class="kpi-val">33s</div><div class="kpi-label">Avg Duration</div><div class="kpi-sub">Answered calls</div></div>
+    <div class="kpi amber"><div class="kpi-val">3%</div><div class="kpi-label">Overall Valid Rate</div><div class="kpi-sub">Expected for B2B SaaS</div></div>
   </div>
-
-  <div class="section-eyebrow" style="margin-top:8px">Genuine Prospect Calls</div>
-  <div class="section-title" style="font-size:16px;margin-bottom:12px">Valid Inbound Calls by Source</div>
 
   <div class="table-wrap">
     <table>
-      <thead>
-        <tr>
-          <th>Source</th>
-          <th class="num">Valid Calls</th>
-          <th class="num">Short/Not Valid</th>
-          <th>Representative Callers</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Source</th><th class="num">Valid Calls</th><th class="num">Short / Not Valid</th><th>Representative Callers</th></tr></thead>
       <tbody>
-        <tr>
-          <td><strong>Direct</strong></td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">4</td>
-          <td class="num">3</td>
-          <td style="font-size:12px;color:var(--muted)">Arlington TX (80s), Marco Island FL (46s), Sacramento CA (102s), Royal Oak MI (60s)</td>
-        </tr>
-        <tr>
-          <td><strong>Directory Listings</strong></td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">4</td>
-          <td class="num">0</td>
-          <td style="font-size:12px;color:var(--muted)">Wauchula FL (30s), Kansas City MO (33s), Avon Park FL (30s), Palmetto FL (36s)</td>
-        </tr>
-        <tr>
-          <td><strong>Google Organic</strong></td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">3</td>
-          <td class="num">1</td>
-          <td style="font-size:12px;color:var(--muted)">Pensacola FL (161s), Houston TX (50s), Sacramento CA (89s)</td>
-        </tr>
-        <tr>
-          <td><strong>Facebook</strong></td>
-          <td class="num" style="color:var(--accent-hi);font-weight:700">1</td>
-          <td class="num">1</td>
-          <td style="font-size:12px;color:var(--muted)">Glasgow Rural KY (203s) — very engaged caller</td>
-        </tr>
-        <tr>
-          <td><strong>straightshooterplumbing.com</strong></td>
-          <td class="num">2</td>
-          <td class="num">13+</td>
-          <td style="font-size:12px;color:var(--muted)">Client site embeds — 11 attempts by FISHER LUZ on Jun 29 alone</td>
-        </tr>
-        <tr>
-          <td><strong>goldstarplumbingaz.com</strong></td>
-          <td class="num">1</td>
-          <td class="num">5</td>
-          <td style="font-size:12px;color:var(--muted)">MONTES PATRICIA called 5× on Jun 1 — client website visitor</td>
-        </tr>
-        <tr>
-          <td><strong>Google Ads</strong></td>
-          <td class="num">0</td>
-          <td class="num" style="color:var(--red);font-weight:700">1</td>
-          <td style="font-size:12px;color:var(--muted)">ANDERSON TERI 21s — short call, no valid lead from paid search</td>
-        </tr>
-        <tr class="total">
-          <td>TOTAL</td>
-          <td class="num" style="color:var(--accent-hi)">18 valid</td>
-          <td class="num" style="color:var(--red)">29 short</td>
-          <td></td>
-        </tr>
+        <tr><td><strong>Direct</strong></td><td class="num" style="color:var(--brand);font-weight:700">4</td><td class="num">3</td><td style="font-size:12px;color:var(--muted)">Arlington TX (80s), Marco Island FL (46s), Sacramento CA (102s), Royal Oak MI (60s)</td></tr>
+        <tr><td><strong>Directory Listings</strong></td><td class="num" style="color:var(--brand);font-weight:700">4</td><td class="num">0</td><td style="font-size:12px;color:var(--muted)">Wauchula FL (30s), Kansas City MO (33s), Avon Park FL (30s), Palmetto FL (36s)</td></tr>
+        <tr><td><strong>Google Organic</strong></td><td class="num" style="color:var(--brand);font-weight:700">3</td><td class="num">1</td><td style="font-size:12px;color:var(--muted)">Pensacola FL (161s), Houston TX (50s), Sacramento CA (89s)</td></tr>
+        <tr><td><strong>Facebook</strong></td><td class="num">1</td><td class="num">1</td><td style="font-size:12px;color:var(--muted)">Glasgow Rural KY (203s) — highly engaged</td></tr>
+        <tr><td><strong>Client sites (referral embeds)</strong></td><td class="num">5</td><td class="num" style="color:var(--red);font-weight:700">20+</td><td style="font-size:12px;color:var(--muted)">FISHER LUZ: 11 calls Jun 29 from straightshooterplumbing.com. MONTES PATRICIA: 5 calls Jun 1.</td></tr>
+        <tr><td><strong>Google Ads</strong></td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red);font-weight:700">1</td><td style="font-size:12px;color:var(--muted)">ANDERSON TERI 21s — short hangup. No valid leads from paid search.</td></tr>
+        <tr class="total"><td>TOTAL</td><td class="num" style="color:var(--brand)">18 valid</td><td class="num" style="color:var(--red)">29 short</td><td></td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="alert warning">
-    <strong>Google Ads produced zero valid calls despite 930 sessions and unknown spend.</strong>
-    The only Ads call was ANDERSON TERI at 21 seconds — a short hangup. Without conversion tracking or call attribution, there's no way to quantify what the ad budget is returning.
-  </div>
-
-  <div class="card">
-    <div class="card-title">Call Pattern Analysis</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Repeat Short Calls (Client Site Bleed-Through)</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">FISHER LUZ (Silverdale WA) called 11 times on June 29 — all from straightshooterplumbing.com, all under 20 seconds. MONTES PATRICIA called 5 times on June 1 from goldstarplumbingaz.com. These are visitors to client sites hitting Unify360's embedded tracking number. Consider routing these numbers to the client's own answering line.</div>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Genuine Prospect Profile</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">The 11 valid non-client calls average 69 seconds — a solid conversation length for an initial B2B inquiry. Callers are distributed nationally (FL, TX, CA, KY, MI, WA, MO) suggesting Unify360 has national reach. Directory Listings and Direct are the most reliable sources of real inbound prospects.</div>
-      </div>
-    </div>
-  </div>
-
+  <div class="alert warning"><strong>Google Ads produced zero valid calls despite 930 sessions and active spend.</strong>The only Ads call was a 21-second hangup. Without conversion tracking or call attribution, spend cannot be optimized. Pause or fix tracking before scaling any Ads budget.</div>
 </div>
 </div>
 
-<!-- ══════════════════════════════════════ ACTION PLAN ══ -->
+<!-- ══ ACTION PLAN ══ -->
 <div id="tab-action" class="tab-content">
 <div class="page">
-
-  <div class="section-eyebrow">Recommendations</div>
+  <div class="eyebrow">Recommendations</div>
   <div class="section-title">Priority Action Plan</div>
-  <div class="section-desc">Ordered by impact and urgency. Focus Jul–Sep 2026.</div>
+  <div class="section-desc">Ordered by impact. Focus Jul – Sep 2026.</div>
 
   <div class="action-list">
     <div class="action-item">
       <div class="action-num">1</div>
-      <div>
-        <div class="action-title">Set up GA4 conversion tracking — this is the #1 gap</div>
-        <div class="action-desc">Every channel shows zero conversions. Configure GA4 events for: free trial signups, demo request form submissions, contact form completions, and any "Get Started" CTA clicks. Until this is live, no channel's ROI can be measured — including the $X/month being spent on Google Ads.</div>
-      </div>
+      <div><div class="action-title">Configure GA4 conversion tracking — blocks everything else</div><div class="action-desc">Set up events for: free trial signups, demo requests, contact form completions, and CTA clicks. Until this is live, no channel can show ROI. Google Ads is especially blind — 930 sessions with zero measurable outcome.</div></div>
       <div class="priority high">Critical</div>
     </div>
     <div class="action-item">
       <div class="action-num">2</div>
-      <div>
-        <div class="action-title">Fix title tags and meta descriptions on three high-impression pages</div>
-        <div class="action-desc">Three pages have 10,000–14,000 impressions each with less than 0.2% CTR: /ai-review-response-generator/ (14,062 impressions), /messaging/ (12,500), /review-response-software/ (11,667). Rewrite their title tags to include the exact search term and a clear benefit statement. Even lifting CTR from 0.05% to 1% would add 100+ qualified clicks per month — for free.</div>
-      </div>
+      <div><div class="action-title">Rewrite title tags on three high-impression pages</div><div class="action-desc">/ai-review-response-generator/ (14,062 impr, 0.05% CTR), /messaging/ (12,500 impr, 0.20% CTR), /review-response-software/ (11,667 impr, 0.05% CTR). Include the exact search term and a clear benefit in each title. Even a 1% CTR lift adds 300+ free clicks per month across these three pages.</div></div>
       <div class="priority high">High</div>
     </div>
     <div class="action-item">
       <div class="action-num">3</div>
-      <div>
-        <div class="action-title">Publish vertical AI guides to capture "best ai tools for [trade]" queries</div>
-        <div class="action-desc">Unify360 already ranks (weakly) for "best ai tools for plumbers" (pos 28) and "ai for electricians" (pos 41). Dedicated, authoritative guides like "Best AI Tools for Plumbers in 2026" and "How AI Review Management Works for Electricians" will: (a) move these rankings toward page 1, (b) give ChatGPT and Gemini more structured content to cite, and (c) create bottom-of-funnel entry points for decision-stage buyers.</div>
-      </div>
+      <div><div class="action-title">Add FAQ schema to AI-related pages</div><div class="action-desc">FAQ schema on /ai-review-response-generator/, /review-response-software/, and /4-best-ai-tools-for-small-business-owners/ makes these pages parseable by ChatGPT and Google AI Overviews. This directly amplifies the AI referral traffic already arriving (79 sessions) and positions Unify360 for AI search growth.</div></div>
       <div class="priority high">High</div>
     </div>
     <div class="action-item">
       <div class="action-num">4</div>
-      <div>
-        <div class="action-title">Add FAQ schema to all AI-related pages</div>
-        <div class="action-desc">ChatGPT and Google AI Overviews both heavily favor FAQ-structured content. Add FAQSchema JSON-LD to /ai-review-response-generator/, /review-response-software/, and /4-best-ai-tools-for-small-business-owners/. This directly amplifies the AI referral traffic already arriving (79 sessions) and positions Unify360 for growth as AI search scales.</div>
-      </div>
+      <div><div class="action-title">Publish vertical-specific AI guides</div><div class="action-desc">"Best AI Tools for Plumbers 2026", "AI Review Management for Electricians", "How AI is Changing Home Service Reviews" — each targets an AI-intent keyword where Unify360 already appears weakly in GSC. These posts both improve rankings and give ChatGPT/Gemini richer content to cite.</div></div>
       <div class="priority high">High</div>
     </div>
     <div class="action-item">
       <div class="action-num">5</div>
-      <div>
-        <div class="action-title">Review or pause Google Ads until conversion tracking is live</div>
-        <div class="action-desc">CPC traffic has 18.1% engagement — the lowest of all channels. Zero valid calls came from Ads. Without conversion tracking, the campaign cannot optimize for actual leads. Either pause spend until GA4 goals are configured, or set up call tracking and form tracking first and give it 30 days with smart bidding toward a conversion goal.</div>
-      </div>
+      <div><div class="action-title">Pause or fix Google Ads until tracking is live</div><div class="action-desc">18.1% engagement, zero valid calls, zero tracked conversions. The campaign cannot optimize. Either pause until GA4 goals are configured, or fix tracking first then give smart bidding 30 days with a conversion target before evaluating.</div></div>
       <div class="priority medium">Medium</div>
     </div>
     <div class="action-item">
       <div class="action-num">6</div>
-      <div>
-        <div class="action-title">Target "review management software for agencies" with a dedicated page</div>
-        <div class="action-desc">This term has only 9 GSC impressions but already ranks at position 14.6 — meaning Google sees Unify360 as relevant, but there's no strong exact-match page for it. A dedicated /agency/ or /review-management-for-agencies/ landing page targeting this term could rank on page 1 within 60–90 days and capture high-intent agency buyers, a likely growth vertical.</div>
-      </div>
+      <div><div class="action-title">Create a dedicated /agency/ landing page</div><div class="action-desc">"Review management software for agencies" has only 9 GSC impressions but ranks at position 14.6 — Google already sees Unify360 as relevant with no dedicated page. An exact-match page targeting agencies could rank on page 1 within 60–90 days and attract high-value reseller/white-label leads.</div></div>
       <div class="priority medium">Medium</div>
     </div>
     <div class="action-item">
       <div class="action-num">7</div>
-      <div>
-        <div class="action-title">Push "can you incentivize google reviews" to page 1</div>
-        <div class="action-desc">This page ranks at position 7.0 with 4,822 impressions — it's sitting just below the top 5 results. A focused content refresh (update the date, add 2–3 new sections, improve internal linking) combined with 3–5 relevant backlinks could push it into the top 5 and unlock a significant click increase from 16 clicks to 100+ per month.</div>
-      </div>
+      <div><div class="action-title">Push "can you incentivize google reviews" to page 1</div><div class="action-desc">This page is at position 7.0 with 4,822 impressions — sitting just outside the top 5. A content refresh (updated date, 2–3 new sections, improved internal linking) plus 3–5 backlinks should push it into top 5 and unlock a significant click increase from 16 clicks/month to 100+.</div></div>
       <div class="priority medium">Medium</div>
     </div>
     <div class="action-item">
       <div class="action-num">8</div>
-      <div>
-        <div class="action-title">Track and segment AI referral traffic in GA4</div>
-        <div class="action-desc">Create a custom GA4 segment for chatgpt.com + gemini.google.com referrals. Once conversions are tracked, monitor the AI referral conversion rate vs. other channels monthly. Set a goal: grow AI-sourced sessions from 79 to 200+ by Dec 2026 through the content and schema actions above. This is a channel with near-zero cost and above-average engagement — invest in it now.</div>
-      </div>
+      <div><div class="action-title">Track AI referrals as a separate funnel in GA4</div><div class="action-desc">Create a custom GA4 segment for chatgpt.com + gemini.google.com. Target: grow AI sessions from 79 to 200+ by Dec 2026 through the content and schema actions above. Zero cost channel, above-average engagement — invest in it now before competitors capture the same citations.</div></div>
       <div class="priority low">Ongoing</div>
     </div>
   </div>
@@ -1374,33 +663,11 @@ tr.total td { background: var(--surface2); font-weight: 700; border-top: 2px sol
   <div class="card" style="margin-top:28px">
     <div class="card-title">30 / 60 / 90 Day Focus</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">30 Days</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          ✔ Configure GA4 conversions<br>
-          ✔ Rewrite 3 high-impression title tags<br>
-          ✔ Add FAQ schema to AI pages
-        </div>
-      </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          ✔ Publish 2 vertical AI guides<br>
-          ✔ Build /agency/ landing page<br>
-          ✔ Review/pause Google Ads with data
-        </div>
-      </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">90 Days</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
-          ✔ Refresh "incentivize google reviews" post<br>
-          ✔ Review AI referral growth vs baseline<br>
-          ✔ Set Q4 content calendar by channel
-        </div>
-      </div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:8px">30 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Configure GA4 conversions<br>✔ Rewrite 3 title tags<br>✔ Add FAQ schema to AI pages</div></div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Publish 2 vertical AI guides<br>✔ Build /agency/ landing page<br>✔ Review/pause Ads with data</div></div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">90 Days</div><div style="font-size:12.5px;color:var(--muted);line-height:1.7">✔ Refresh "incentivize reviews" post<br>✔ Review AI referral growth<br>✔ Set Q4 content calendar</div></div>
     </div>
   </div>
-
 </div>
 </div>
 
@@ -1414,18 +681,10 @@ function showTab(id, el) {
 }
 
 const months = [
-  { label: 'Jul '25', val: 703 },
-  { label: 'Aug '25', val: 824 },
-  { label: 'Sep '25', val: 814 },
-  { label: 'Oct '25', val: 607 },
-  { label: 'Nov '25', val: 664 },
-  { label: 'Dec '25', val: 539 },
-  { label: 'Jan '26', val: 693 },
-  { label: 'Feb '26', val: 745 },
-  { label: 'Mar '26', val: 809 },
-  { label: 'Apr '26', val: 1061 },
-  { label: 'May '26', val: 1381 },
-  { label: 'Jun '26', val: 1071 },
+  {label:"Jul '25",val:703},{label:"Aug '25",val:824},{label:"Sep '25",val:814},
+  {label:"Oct '25",val:607},{label:"Nov '25",val:664},{label:"Dec '25",val:539},
+  {label:"Jan '26",val:693},{label:"Feb '26",val:745},{label:"Mar '26",val:809},
+  {label:"Apr '26",val:1061},{label:"May '26",val:1381},{label:"Jun '26",val:1071},
 ];
 const MAX = 1381;
 
@@ -1433,15 +692,16 @@ function buildChart(id) {
   const el = document.getElementById(id);
   if (!el || el.dataset.built) return;
   el.dataset.built = '1';
-  months.forEach((m, i) => {
+  months.forEach(m => {
     const pct = (m.val / MAX) * 100;
     const isPeak = m.val === MAX;
-    const color = isPeak ? 'var(--accent)' : (m.val < 600 ? 'var(--red)' : 'var(--blue)');
+    const isLow = m.val < 620;
+    const color = isPeak ? '#0693e3' : isLow ? '#EF4444' : '#93C5FD';
     const wrap = document.createElement('div');
     wrap.className = 'month-bar-wrap';
     wrap.innerHTML = `
-      <div class="month-bar" style="height:${pct}%;background:${color};opacity:${isPeak?1:0.65}" title="${m.label}: ${m.val.toLocaleString()} sessions">
-        ${isPeak ? '<div class="month-bar-val" style="color:var(--accent)">' + m.val.toLocaleString() + '</div>' : ''}
+      <div class="month-bar" style="height:${pct}%;background:${color};opacity:${isPeak?1:0.75}" title="${m.label}: ${m.val.toLocaleString()} sessions">
+        ${isPeak ? '<div class="month-bar-val">' + m.val.toLocaleString() + '</div>' : ''}
       </div>
       <div class="month-bar-label">${m.label}</div>`;
     el.appendChild(wrap);
