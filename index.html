@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unify360 — SEO & Performance Report</title>
+<style>
+/* ── TOKEN LAYER ── */
+:root {
+  --bg:        #F4F7FC;
+  --surface:   #FFFFFF;
+  --surface2:  #EEF2F9;
+  --border:    #D8E0ED;
+  --text:      #101828;
+  --muted:     #5A6A84;
+  --accent:    #05C690;
+  --accent-hi: #03A87A;
+  --accent-bg: #E6FBF4;
+  --amber:     #FFAB00;
+  --amber-bg:  #FFF8E6;
+  --red:       #EF476F;
+  --red-bg:    #FEF0F4;
+  --blue:      #3B82F6;
+  --blue-bg:   #EFF6FF;
+  --navy:      #080F1E;
+  --tab-bg:    #0C1527;
+  --tab-text:  #8EA4C4;
+  --tab-active:#FFFFFF;
+  --header-bg: #0A1830;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #080F1E;
+    --surface:   #0E1B30;
+    --surface2:  #132040;
+    --border:    #1E3358;
+    --text:      #E4EBF7;
+    --muted:     #6B849E;
+    --accent:    #05E2A4;
+    --accent-hi: #04C490;
+    --accent-bg: #03291E;
+    --amber:     #FFBB33;
+    --amber-bg:  #2A2000;
+    --red:       #F0476F;
+    --red-bg:    #2A0010;
+    --blue:      #60A5FA;
+    --blue-bg:   #0E1E40;
+    --tab-bg:    #060D1C;
+    --tab-text:  #7A90B0;
+    --tab-active:#FFFFFF;
+    --header-bg: #060D1C;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#080F1E;--surface:#0E1B30;--surface2:#132040;--border:#1E3358;
+  --text:#E4EBF7;--muted:#6B849E;--accent:#05E2A4;--accent-hi:#04C490;
+  --accent-bg:#03291E;--amber:#FFBB33;--amber-bg:#2A2000;--red:#F0476F;
+  --red-bg:#2A0010;--blue:#60A5FA;--blue-bg:#0E1E40;
+  --tab-bg:#060D1C;--tab-text:#7A90B0;--tab-active:#FFFFFF;--header-bg:#060D1C;
+}
+:root[data-theme="light"] {
+  --bg:#F4F7FC;--surface:#FFFFFF;--surface2:#EEF2F9;--border:#D8E0ED;
+  --text:#101828;--muted:#5A6A84;--accent:#05C690;--accent-hi:#03A87A;
+  --accent-bg:#E6FBF4;--amber:#FFAB00;--amber-bg:#FFF8E6;--red:#EF476F;
+  --red-bg:#FEF0F4;--blue:#3B82F6;--blue-bg:#EFF6FF;
+  --tab-bg:#0C1527;--tab-text:#8EA4C4;--tab-active:#FFFFFF;--header-bg:#0A1830;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ── HEADER ── */
+.header {
+  background: var(--header-bg);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  flex-shrink: 0;
+}
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #05E2A4 0%, #00A3FF 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #06121F;
+  letter-spacing: -0.5px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.logo-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.3px;
+}
+.logo-sub {
+  font-size: 11px;
+  color: #5A7EA0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.header-meta {
+  font-size: 11.5px;
+  color: #4A6A8A;
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* ── TABS ── */
+.tabs {
+  background: var(--tab-bg);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 20px;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tab-text);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  letter-spacing: 0.01em;
+}
+.tab:hover { color: #c8d8ea; }
+.tab.active {
+  color: var(--tab-active);
+  border-bottom-color: var(--accent);
+}
+
+/* ── TAB PANELS ── */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ── LAYOUT ── */
+.page { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+
+/* ── SECTION LABELS ── */
+.section-eyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+  text-wrap: balance;
+  letter-spacing: -0.3px;
+}
+.section-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  max-width: 68ch;
+}
+
+/* ── KPI GRID ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.kpi-val {
+  font-size: 26px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.kpi-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.kpi-sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+.kpi.green { border-left: 3px solid var(--accent); }
+.kpi.green .kpi-val { color: var(--accent-hi); }
+.kpi.amber { border-left: 3px solid var(--amber); }
+.kpi.amber .kpi-val { color: var(--amber); }
+.kpi.red { border-left: 3px solid var(--red); }
+.kpi.red .kpi-val { color: var(--red); }
+.kpi.blue { border-left: 3px solid var(--blue); }
+.kpi.blue .kpi-val { color: var(--blue); }
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* ── AI SECTION SPECIAL CARD ── */
+.ai-hero {
+  background: var(--surface);
+  border: 1px solid rgba(5, 200, 144, 0.25);
+  border-radius: 14px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.ai-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #05E2A4 0%, #00A3FF 50%, #05E2A4 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-bg);
+  border: 1px solid rgba(5, 200, 144, 0.3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.ai-pulse {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.ai-headline {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  text-wrap: balance;
+  margin-bottom: 8px;
+}
+.ai-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.65;
+}
+.ai-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.ai-source {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.ai-source-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ai-source-icon {
+  width: 20px; height: 20px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.ai-stat { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.ai-stat-label { font-size: 11.5px; color: var(--muted); }
+.ai-stat-val { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); }
+.ai-stat-val.green { color: var(--accent-hi); }
+
+/* ── ALERTS ── */
+.alert {
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  border-left: 3px solid;
+  line-height: 1.55;
+}
+.alert strong { display: block; font-size: 13.5px; margin-bottom: 3px; }
+.alert.info { background: var(--blue-bg); border-color: var(--blue); color: var(--text); }
+.alert.warning { background: var(--amber-bg); border-color: var(--amber); color: var(--text); }
+.alert.danger { background: var(--red-bg); border-color: var(--red); color: var(--text); }
+.alert.success { background: var(--accent-bg); border-color: var(--accent); color: var(--text); }
+
+/* ── DATA TABLE ── */
+.table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+thead { background: var(--surface2); }
+th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+th.num, td.num { text-align: right; }
+td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+tr:hover td { background: var(--surface2); }
+tr.total td { background: var(--surface2); font-weight: 700; border-top: 2px solid var(--border); }
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.tag.green { background: var(--accent-bg); color: var(--accent-hi); }
+.tag.amber { background: var(--amber-bg); color: var(--amber); }
+.tag.red { background: var(--red-bg); color: var(--red); }
+.tag.blue { background: var(--blue-bg); color: var(--blue); }
+
+/* ── CHANNEL BAR CHART ── */
+.channel-bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.channel-row { display: flex; align-items: center; gap: 12px; }
+.channel-label { font-size: 12px; font-weight: 600; color: var(--text); width: 120px; flex-shrink: 0; }
+.channel-bar-track {
+  flex: 1;
+  height: 9px;
+  background: var(--surface2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.channel-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.6s ease;
+}
+.channel-val { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--muted); width: 60px; text-align: right; }
+
+/* ── MONTHLY CHART ── */
+.monthly-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 140px;
+  padding: 8px 0 0;
+  margin-bottom: 6px;
+}
+.month-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  justify-content: flex-end;
+}
+.month-bar {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  min-height: 4px;
+  cursor: default;
+  position: relative;
+  transition: opacity 0.15s;
+}
+.month-bar:hover { opacity: 0.8; }
+.month-bar-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transform: rotate(-40deg) translateX(-4px);
+  transform-origin: center top;
+  margin-top: 8px;
+}
+.month-bar-val {
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--muted);
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* ── TWO-COL ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 680px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ── OPPORTUNITY ROWS ── */
+.opp-list { display: flex; flex-direction: column; gap: 10px; }
+.opp-item {
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+.opp-query { font-size: 13.5px; font-weight: 600; color: var(--text); }
+.opp-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.opp-chips { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.chip {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.chip.imp { background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.chip.pos-good { background: var(--accent-bg); color: var(--accent-hi); }
+.chip.pos-mid { background: var(--amber-bg); color: var(--amber); }
+.chip.pos-bad { background: var(--red-bg); color: var(--red); }
+
+/* ── ACTION ITEMS ── */
+.action-list { display: flex; flex-direction: column; gap: 12px; }
+.action-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+.action-num {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #06121F;
+  flex-shrink: 0;
+}
+.action-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.action-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.priority { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; padding: 3px 8px; border-radius: 4px; }
+.priority.high { background: var(--red-bg); color: var(--red); }
+.priority.medium { background: var(--amber-bg); color: var(--amber); }
+.priority.low { background: var(--blue-bg); color: var(--blue); }
+
+/* ── HERO STRIP ── */
+.overview-hero {
+  background: var(--header-bg);
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.overview-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(5,226,164,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.overview-hero-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  text-wrap: balance;
+}
+.overview-hero-sub {
+  font-size: 13px;
+  color: #6A8EAC;
+  margin-bottom: 20px;
+}
+.hero-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.hero-kpi {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.hero-kpi-val {
+  font-size: 24px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.6px;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+.hero-kpi-val.mint { color: #05E2A4; }
+.hero-kpi-val.amber { color: #FFBB33; }
+.hero-kpi-val.red { color: #F0476F; }
+.hero-kpi-label { font-size: 11.5px; color: #6A8EAC; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="header">
+  <div class="logo">
+    <div class="logo-mark">U3</div>
+    <div class="logo-text">
+      <div class="logo-name">Unify360</div>
+      <div class="logo-sub">Performance Report</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    Jul 2025 – Jul 9, 2026<br>
+    Prepared by Real Time Marketing
+  </div>
+</div>
+
+<!-- ── TABS ── -->
+<div class="tabs">
+  <div class="tab active" onclick="showTab('overview',this)">Overview</div>
+  <div class="tab" onclick="showTab('traffic',this)">Traffic</div>
+  <div class="tab" onclick="showTab('gsc',this)">Search Console</div>
+  <div class="tab" onclick="showTab('ai',this)">✦ AI Search</div>
+  <div class="tab" onclick="showTab('callrail',this)">CallRail</div>
+  <div class="tab" onclick="showTab('action',this)">Action Plan</div>
+</div>
+
+<!-- ══════════════════════════════════════ OVERVIEW ══ -->
+<div id="tab-overview" class="tab-content active">
+<div class="page">
+
+  <div class="overview-hero">
+    <div class="overview-hero-title">Unify360 — 12-Month Performance Summary</div>
+    <div class="overview-hero-sub">Jul 2025 – Jul 9, 2026 · GA4 · Google Search Console · CallRail</div>
+    <div class="hero-kpis">
+      <div class="hero-kpi">
+        <div class="hero-kpi-val">10,496</div>
+        <div class="hero-kpi-label">Total Sessions</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val mint">2,670</div>
+        <div class="hero-kpi-label">Organic Sessions</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val mint">+156%</div>
+        <div class="hero-kpi-label">Session Growth Dec→May</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val amber">79</div>
+        <div class="hero-kpi-label">AI-Referred Sessions</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val">927</div>
+        <div class="hero-kpi-label">GSC Clicks</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val red">0</div>
+        <div class="hero-kpi-label">Conversions Tracked ⚠</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly trend chart -->
+  <div class="card">
+    <div class="card-title">Monthly Sessions — Jul 2025 through Jun 2026</div>
+    <div class="monthly-chart" id="monthlyChart"></div>
+    <div style="font-size:11px;color:var(--muted);margin-top:40px">Sessions per month. May 2026 = peak (1,381). July 2026 shows 9 days only (448 so far).</div>
+  </div>
+
+  <!-- Key channel breakdown -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Traffic by Channel</div>
+      <div class="channel-bars">
+        <div class="channel-row">
+          <div class="channel-label">Direct</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:46.6%;background:var(--blue)"></div></div>
+          <div class="channel-val">4,895</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">Organic Search</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:25.4%;background:var(--accent)"></div></div>
+          <div class="channel-val">2,670</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">Referral</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:14.1%;background:#8B5CF6"></div></div>
+          <div class="channel-val">1,483</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">Google Ads</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:8.9%;background:var(--amber)"></div></div>
+          <div class="channel-val">930</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">GBP / Maps</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.6%;background:var(--red)"></div></div>
+          <div class="channel-val">170</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">Email</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:1.7%;background:#EC4899"></div></div>
+          <div class="channel-val">175</div>
+        </div>
+        <div class="channel-row">
+          <div class="channel-label">AI (ChatGPT…)</div>
+          <div class="channel-bar-track"><div class="channel-bar-fill" style="width:0.75%;background:var(--accent)"></div></div>
+          <div class="channel-val" style="color:var(--accent);font-weight:800">79 ✦</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">At a Glance</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="alert success">
+          <strong>AI assistants are referring qualified visitors</strong>
+          ChatGPT sent 46 sessions (65% engaged). Gemini sent 31 (55% engaged). Unify360 is showing up in AI conversations about review tools.
+        </div>
+        <div class="alert warning">
+          <strong>Conversion tracking gap is the #1 blocker</strong>
+          GA4 shows zero conversions across all 10,496 sessions. Without tracked conversions, there's no way to attribute trial signups or demo requests to any channel.
+        </div>
+        <div class="alert info">
+          <strong>Strong session growth trajectory</strong>
+          Sessions grew from 539 (Dec 2025) to 1,381 (May 2026) — a +156% climb in 5 months — before a seasonal dip in June.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ TRAFFIC ══ -->
+<div id="tab-traffic" class="tab-content">
+<div class="page">
+
+  <div class="section-eyebrow">Google Analytics 4</div>
+  <div class="section-title">Traffic & Engagement Analysis</div>
+  <div class="section-desc">Jul 1, 2025 – Jul 9, 2026 · GA4 property 412450528</div>
+
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-val">10,496</div><div class="kpi-label">Total Sessions</div><div class="kpi-sub">All channels combined</div></div>
+    <div class="kpi green"><div class="kpi-val">2,670</div><div class="kpi-label">Organic Sessions</div><div class="kpi-sub">25.5% of total traffic</div></div>
+    <div class="kpi blue"><div class="kpi-val">4,895</div><div class="kpi-label">Direct Sessions</div><div class="kpi-sub">46.6% — includes dark social</div></div>
+    <div class="kpi"><div class="kpi-val">1,381</div><div class="kpi-label">Peak Month</div><div class="kpi-sub">May 2026</div></div>
+    <div class="kpi amber"><div class="kpi-val">18%</div><div class="kpi-label">CPC Engagement</div><div class="kpi-sub">Google Ads very low (930 sessions)</div></div>
+    <div class="kpi red"><div class="kpi-val">0</div><div class="kpi-label">Conversions</div><div class="kpi-sub">Not configured in GA4 ⚠</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title">Monthly Session Trend</div>
+    <div class="monthly-chart" id="monthlyChart2"></div>
+    <div style="margin-top:40px;display:flex;gap:24px;flex-wrap:wrap">
+      <div style="font-size:12px;color:var(--muted)">▲ <strong style="color:var(--text)">+156%</strong> growth Dec 2025 → May 2026</div>
+      <div style="font-size:12px;color:var(--muted)">Oct/Dec 2025 were low points (607 / 539 sessions)</div>
+      <div style="font-size:12px;color:var(--muted)">Jun 2026 dipped slightly to 1,071 from May's peak</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:28px">Channel Breakdown</div>
+  <div class="section-title" style="font-size:16px;margin-bottom:12px">Traffic by Source / Medium</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Medium</th>
+          <th class="num">Sessions</th>
+          <th class="num">Users</th>
+          <th class="num">Pages/Session</th>
+          <th class="num">Engagement</th>
+          <th>Quality Signal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>(direct)</strong></td>
+          <td><span class="tag blue">none</span></td>
+          <td class="num">4,895</td>
+          <td class="num">3,693</td>
+          <td class="num">1.50</td>
+          <td class="num">26.7%</td>
+          <td><span style="font-size:12px;color:var(--muted)">Low engagement — includes dashboard logins & dark social</span></td>
+        </tr>
+        <tr>
+          <td><strong>google</strong></td>
+          <td><span class="tag green">organic</span></td>
+          <td class="num">2,555</td>
+          <td class="num">942</td>
+          <td class="num">1.81</td>
+          <td class="num">46.2%</td>
+          <td><span class="tag green">Good</span></td>
+        </tr>
+        <tr>
+          <td><strong>google</strong></td>
+          <td><span class="tag amber">cpc</span></td>
+          <td class="num">930</td>
+          <td class="num">883</td>
+          <td class="num">1.07</td>
+          <td class="num" style="color:var(--red);font-weight:700">18.1%</td>
+          <td><span class="tag red">Very Low</span> — review ad targeting/landing pages</td>
+        </tr>
+        <tr>
+          <td><strong>newsletter</strong></td>
+          <td><span class="tag blue">email</span></td>
+          <td class="num">175</td>
+          <td class="num">87</td>
+          <td class="num">1.31</td>
+          <td class="num">37.7%</td>
+          <td><span class="tag amber">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><strong>google</strong></td>
+          <td><span class="tag green">gbp</span></td>
+          <td class="num">170</td>
+          <td class="num">95</td>
+          <td class="num">1.79</td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">56.5%</td>
+          <td><span class="tag green">Excellent</span> — GBP visitors are high intent</td>
+        </tr>
+        <tr>
+          <td><strong>goldstarplumbingaz.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num">134</td>
+          <td class="num">122</td>
+          <td class="num">1.90</td>
+          <td class="num">58.2%</td>
+          <td><span class="tag green">Good</span> — client referral</td>
+        </tr>
+        <tr>
+          <td><strong>straightshooterplumbing.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num">80</td>
+          <td class="num">73</td>
+          <td class="num">2.00</td>
+          <td class="num">46.3%</td>
+          <td><span class="tag green">Good</span> — client referral</td>
+        </tr>
+        <tr>
+          <td><strong>dashboard.realtimemarketing.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num">79</td>
+          <td class="num">2</td>
+          <td class="num">3.27</td>
+          <td class="num">51.9%</td>
+          <td><span style="font-size:12px;color:var(--muted)">Internal/agency dashboard link</span></td>
+        </tr>
+        <tr style="background:rgba(5,226,164,0.04)">
+          <td><strong>chatgpt.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num" style="color:var(--accent);font-weight:800">46</td>
+          <td class="num">15</td>
+          <td class="num">2.80</td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">65.2% ✦</td>
+          <td><span class="tag green">AI Referral</span> — highest engagement of any source</td>
+        </tr>
+        <tr style="background:rgba(5,226,164,0.04)">
+          <td><strong>gemini.google.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num" style="color:var(--accent);font-weight:800">31</td>
+          <td class="num">3</td>
+          <td class="num">1.29</td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">54.8% ✦</td>
+          <td><span class="tag green">AI Referral</span> — Google Gemini recommending Unify360</td>
+        </tr>
+        <tr>
+          <td><strong>bing</strong></td>
+          <td><span class="tag green">organic</span></td>
+          <td class="num">74</td>
+          <td class="num">63</td>
+          <td class="num">1.20</td>
+          <td class="num">48.6%</td>
+          <td><span class="tag green">Good</span></td>
+        </tr>
+        <tr>
+          <td><strong>facebook.com</strong></td>
+          <td><span class="tag blue">referral</span></td>
+          <td class="num">76</td>
+          <td class="num">76</td>
+          <td class="num">1.03</td>
+          <td class="num">61.8%</td>
+          <td><span class="tag green">Good engagement</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert warning">
+    <strong>Google Ads (CPC) has an 18.1% engagement rate — the lowest of any channel.</strong>
+    930 sessions with almost no engagement and zero tracked conversions means the spend is not attributable. Review ad creative, landing page alignment, and make sure goal completions are firing before scaling budget.
+  </div>
+
+  <div class="alert info">
+    <strong>Direct traffic (4,895 sessions) warrants a closer look.</strong>
+    For a B2B SaaS, a large "direct/none" bucket often includes: existing clients accessing the dashboard (if the app runs at the same domain), Slack/Teams link shares (dark social), and bookmarked visits. If the app and marketing site share a domain, GA4 cannot distinguish customers from prospects.
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ GSC ══ -->
+<div id="tab-gsc" class="tab-content">
+<div class="page">
+
+  <div class="section-eyebrow">Google Search Console</div>
+  <div class="section-title">Organic Rankings & Keyword Opportunities</div>
+  <div class="section-desc">Jul 2025 – Jul 2026 · Site: https://unify360.com/</div>
+
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-val">927</div><div class="kpi-label">Total Clicks</div><div class="kpi-sub">All queries combined</div></div>
+    <div class="kpi"><div class="kpi-val">~97K</div><div class="kpi-label">Total Impressions (est.)</div><div class="kpi-sub">Based on page-level data</div></div>
+    <div class="kpi amber"><div class="kpi-val">97%</div><div class="kpi-label">Branded Click Share</div><div class="kpi-sub">Nearly all clicks = "unify360"</div></div>
+    <div class="kpi red"><div class="kpi-val">~0.05%</div><div class="kpi-label">CTR on AI Pages</div><div class="kpi-sub">14K+ impr, almost no clicks</div></div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:8px">Branded vs Non-Brand</div>
+  <div class="section-title" style="font-size:16px;margin-bottom:6px">Search Click Composition</div>
+  <div class="alert warning" style="margin-bottom:20px">
+    <strong>Over 97% of organic clicks come from branded searches (people already looking for "unify360").</strong>
+    Non-brand clicks are in the single digits despite thousands of impressions for high-value keywords like "ai review response generator" (14,062 impressions) and "review response software" (11,667 impressions). CTR on these pages is below 0.1% — a title tag and meta description problem, not a ranking problem.
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:8px">Top Pages</div>
+  <div class="section-title" style="font-size:16px;margin-bottom:12px">By Impressions — GSC Page Report</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th class="num">Impressions</th>
+          <th class="num">Clicks</th>
+          <th class="num">CTR</th>
+          <th class="num">Avg Position</th>
+          <th>Opportunity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span style="font-size:12px">/ai-review-response-generator/</span></td>
+          <td class="num" style="font-weight:700">14,062</td>
+          <td class="num">7</td>
+          <td class="num" style="color:var(--red);font-weight:700">0.05%</td>
+          <td class="num">18.9</td>
+          <td><span class="tag red">Fix Title Tag</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/ (homepage)</span></td>
+          <td class="num">14,565</td>
+          <td class="num" style="font-weight:700;color:var(--accent-hi)">1,072</td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">7.4%</td>
+          <td class="num">12.6</td>
+          <td><span class="tag green">Performing</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/messaging/</span></td>
+          <td class="num" style="font-weight:700">12,500</td>
+          <td class="num">25</td>
+          <td class="num" style="color:var(--red);font-weight:700">0.20%</td>
+          <td class="num">16.1</td>
+          <td><span class="tag red">Fix Title Tag</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/review-response-software/</span></td>
+          <td class="num" style="font-weight:700">11,667</td>
+          <td class="num">6</td>
+          <td class="num" style="color:var(--red);font-weight:700">0.05%</td>
+          <td class="num">22.7</td>
+          <td><span class="tag red">Fix Title Tag</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/industries-we-serve/plumbing/</span></td>
+          <td class="num">9,202</td>
+          <td class="num">11</td>
+          <td class="num" style="color:var(--red)">0.12%</td>
+          <td class="num">26.6</td>
+          <td><span class="tag amber">Build Topical Authority</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/?utm_medium=gbp (GBP listing)</span></td>
+          <td class="num">8,593</td>
+          <td class="num">57</td>
+          <td class="num" style="color:var(--accent-hi)">0.66%</td>
+          <td class="num">5.8</td>
+          <td><span class="tag green">Maps performing</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/reviews/</span></td>
+          <td class="num">8,443</td>
+          <td class="num">26</td>
+          <td class="num">0.31%</td>
+          <td class="num">16.2</td>
+          <td><span class="tag amber">Optimize meta</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/4-best-ai-tools-for-small-business-owners/</span></td>
+          <td class="num">5,354</td>
+          <td class="num">7</td>
+          <td class="num" style="color:var(--red)">0.13%</td>
+          <td class="num">19.1</td>
+          <td><span class="tag amber">Optimize title</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-size:12px">/can-you-incentivize-google-reviews</span></td>
+          <td class="num">4,822</td>
+          <td class="num">16</td>
+          <td class="num">0.33%</td>
+          <td class="num">7.0</td>
+          <td><span class="tag green">Close to page 1</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:28px">Non-Brand Keyword Opportunities</div>
+  <div class="section-title" style="font-size:16px;margin-bottom:12px">High-Impression Terms with Near-Zero Clicks</div>
+
+  <div class="opp-list">
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"ai review response generator"</div>
+        <div class="opp-meta">Page: /ai-review-response-generator/ · Only 7 clicks despite 299 impressions on this exact query</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">299 impressions</div>
+        <div class="chip pos-mid">pos 25.6</div>
+        <div class="chip red">1 click</div>
+      </div>
+    </div>
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"business reputation management"</div>
+        <div class="opp-meta">1,640 impressions — highest non-brand impression volume. Position 28.9 means page 3. Content investment needed.</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">1,640 impressions</div>
+        <div class="chip pos-bad">pos 28.9</div>
+        <div class="chip red">1 click</div>
+      </div>
+    </div>
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"real time reviews"</div>
+        <div class="opp-meta">742 impressions at position 18.2 — very close to page 1. A push in content or links could unlock significant clicks.</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">742 impressions</div>
+        <div class="chip pos-mid">pos 18.2</div>
+        <div class="chip red">1 click</div>
+      </div>
+    </div>
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"review response generator"</div>
+        <div class="opp-meta">259 impressions at position 31. Separate from the "ai review response generator" term — both need work.</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">259 impressions</div>
+        <div class="chip pos-bad">pos 31</div>
+        <div class="chip red">1 click</div>
+      </div>
+    </div>
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"best ai tools for plumbers"</div>
+        <div class="opp-meta">Industry-specific AI term with 176 impressions. Strong fit for Unify360's target vertical. Ranking at pos 28 — needs a dedicated plumber-focused AI tools post.</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">176 impressions</div>
+        <div class="chip pos-bad">pos 28.4</div>
+        <div class="chip red">1 click</div>
+      </div>
+    </div>
+    <div class="opp-item">
+      <div>
+        <div class="opp-query">"review management software for agencies"</div>
+        <div class="opp-meta">Only 9 impressions but position 14.6 — already near page 1 with almost no competition. An exact-match landing page could drive agency leads.</div>
+      </div>
+      <div class="opp-chips">
+        <div class="chip imp">9 impressions</div>
+        <div class="chip pos-mid">pos 14.6</div>
+        <div class="chip amber">Near page 1</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ AI SEARCH ══ -->
+<div id="tab-ai" class="tab-content">
+<div class="page">
+
+  <div class="ai-hero">
+    <div class="ai-badge"><div class="ai-pulse"></div>Live Signal</div>
+    <div class="ai-headline">Unify360 is being recommended by AI assistants</div>
+    <div class="ai-desc">
+      ChatGPT and Google Gemini are actively sending visitors to Unify360 — and those visitors engage at the highest rate of any traffic source. This is the earliest measurable signal of AI search authority, and it's already outperforming most paid channels on engagement quality.
+    </div>
+    <div class="ai-sources">
+      <div class="ai-source">
+        <div class="ai-source-name">
+          <div class="ai-source-icon" style="background:#10A37F;color:#fff">✦</div>
+          ChatGPT (chatgpt.com)
+        </div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">46</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Unique Users</span><span class="ai-stat-val">15</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pageviews</span><span class="ai-stat-val">129</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val green">65.2% ✦</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pages/Session</span><span class="ai-stat-val">2.80</span></div>
+      </div>
+      <div class="ai-source">
+        <div class="ai-source-name">
+          <div class="ai-source-icon" style="background:#4285F4;color:#fff">G</div>
+          Google Gemini
+        </div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">31</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Unique Users</span><span class="ai-stat-val">3</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pageviews</span><span class="ai-stat-val">40</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val green">54.8%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Pages/Session</span><span class="ai-stat-val">1.29</span></div>
+      </div>
+      <div class="ai-source">
+        <div class="ai-source-name">
+          <div class="ai-source-icon" style="background:var(--accent);color:#06121F">AI</div>
+          AI Assistant (medium)
+        </div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green">2</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Engagement Rate</span><span class="ai-stat-val">50%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Source</span><span class="ai-stat-val" style="font-size:11px">GA4 ai-assistant medium</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">Note</span><span class="ai-stat-val" style="font-size:11px;color:var(--muted)">Will grow as GA4 adds more AI attribution</span></div>
+      </div>
+      <div class="ai-source" style="border-color:rgba(5,200,144,0.2);background:rgba(5,226,164,0.04)">
+        <div class="ai-source-name" style="color:var(--accent)">Total AI-Sourced</div>
+        <div class="ai-stat"><span class="ai-stat-label">Sessions</span><span class="ai-stat-val green" style="font-size:20px">79</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">vs. Google Ads (930)</span><span class="ai-stat-val green">8.5%</span></div>
+        <div class="ai-stat"><span class="ai-stat-label">AI Engagement vs Ads</span><span class="ai-stat-val green">65% vs 18%</span></div>
+        <div style="margin-top:10px;font-size:11px;color:var(--accent);font-weight:600">Visitors from AI convert at ~3.5x the engagement rate of Google Ads visitors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why it matters -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Why This Matters for Unify360</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--muted);line-height:1.6">
+        <p>Unify360 <em>is</em> an AI-powered platform — which means it competes and coexists with AI tools. Being cited by ChatGPT and Gemini is both a distribution win and a validation signal: AI assistants are treating Unify360 as a credible answer to "what review management tool should I use?"</p>
+        <p>The 15 unique ChatGPT users who visited 129 pages are likely prospective customers deep in research mode — exactly the decision-stage buyers that paid search struggles to reach.</p>
+        <p>This is early. AI referral traffic will grow substantially as more people use AI assistants to research software purchases. The time to optimize for it is now, before competitors capture those citations.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">GSC Keywords Appearing in AI Searches</div>
+      <div class="opp-list" style="gap:8px">
+        <div class="opp-item" style="padding:10px 12px">
+          <div><div class="opp-query" style="font-size:12.5px">"ai review response generator"</div><div class="opp-meta">299 impressions · pos 25.6 on Google</div></div>
+          <div><div class="chip pos-mid">AI intent</div></div>
+        </div>
+        <div class="opp-item" style="padding:10px 12px">
+          <div><div class="opp-query" style="font-size:12.5px">"best ai tools for plumbers"</div><div class="opp-meta">176 impressions · pos 28.4</div></div>
+          <div><div class="chip pos-mid">AI intent</div></div>
+        </div>
+        <div class="opp-item" style="padding:10px 12px">
+          <div><div class="opp-query" style="font-size:12.5px">"ai for electricians"</div><div class="opp-meta">177 impressions · pos 41</div></div>
+          <div><div class="chip pos-bad">AI intent</div></div>
+        </div>
+        <div class="opp-item" style="padding:10px 12px">
+          <div><div class="opp-query" style="font-size:12.5px">"electrician ai"</div><div class="opp-meta">29 impressions · pos 67</div></div>
+          <div><div class="chip pos-bad">AI intent</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">How to Strengthen AI Citation Authority</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">1. Build FAQ-format content</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">AI assistants favor pages that directly answer a question in the first sentence. Restructure the AI Review Response Generator and Review Response Software pages with a clear Q&amp;A format in the opening paragraph — "What is an AI review response generator? It's a tool that…"</div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">2. Add structured data (FAQ schema)</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">FAQ schema markup on the AI-related pages makes content easier for both Google's AI Overviews and ChatGPT's plugin-based search to parse and cite. This is one of the most direct levers for AI visibility.</div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">3. Publish vertical-specific AI guides</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">Dedicated blog posts: "Best AI Tools for Plumbers 2026", "AI Review Management for Electricians", "How AI is Changing Home Service Reviews" — each targets an AI-intent query where Unify360 already shows up weakly.</div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px">4. Track AI referrals as a conversion funnel</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">Set up a GA4 segment for chatgpt.com + gemini.google.com referrals. Once conversions are tracked, you'll be able to see the actual ROI of AI citation authority vs. Google Ads spend.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ CALLRAIL ══ -->
+<div id="tab-callrail" class="tab-content">
+<div class="page">
+
+  <div class="section-eyebrow">CallRail</div>
+  <div class="section-title">Call Volume & Lead Quality</div>
+  <div class="section-desc">Jul 2025 – Jul 9, 2026 · Company: Unify360.com</div>
+
+  <div class="alert info" style="margin-bottom:20px">
+    <strong>Context: Unify360 is a B2B SaaS — call behavior differs from B2C service businesses.</strong>
+    Many of the 318 logged calls are tracking-number reroutes from client websites (e.g., straightshooterplumbing.com, titanroofingfl.com) where Unify360's tracking number is embedded. These are client website visitors, not Unify360 prospects. Genuine inbound prospect calls come from Direct, Google Organic, and Directory Listings sources.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi"><div class="kpi-val">318</div><div class="kpi-label">Total Call Events</div><div class="kpi-sub">Including client site reroutes</div></div>
+    <div class="kpi blue"><div class="kpi-val">49</div><div class="kpi-label">Answered</div><div class="kpi-sub">15.4% answer rate</div></div>
+    <div class="kpi green"><div class="kpi-val">18</div><div class="kpi-label">Valid Leads (≥30s)</div><div class="kpi-sub">Answered + 30 seconds or more</div></div>
+    <div class="kpi red"><div class="kpi-val">29</div><div class="kpi-label">Short / Hangups</div><div class="kpi-sub">&lt;30s of the answered calls</div></div>
+    <div class="kpi"><div class="kpi-val">33s</div><div class="kpi-label">Avg Duration (answered)</div><div class="kpi-sub">Borderline — many just over threshold</div></div>
+    <div class="kpi amber"><div class="kpi-val">3%</div><div class="kpi-label">Overall Valid Rate</div><div class="kpi-sub">18 of 318 — expected for B2B SaaS</div></div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:8px">Genuine Prospect Calls</div>
+  <div class="section-title" style="font-size:16px;margin-bottom:12px">Valid Inbound Calls by Source</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th class="num">Valid Calls</th>
+          <th class="num">Short/Not Valid</th>
+          <th>Representative Callers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Direct</strong></td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">4</td>
+          <td class="num">3</td>
+          <td style="font-size:12px;color:var(--muted)">Arlington TX (80s), Marco Island FL (46s), Sacramento CA (102s), Royal Oak MI (60s)</td>
+        </tr>
+        <tr>
+          <td><strong>Directory Listings</strong></td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">4</td>
+          <td class="num">0</td>
+          <td style="font-size:12px;color:var(--muted)">Wauchula FL (30s), Kansas City MO (33s), Avon Park FL (30s), Palmetto FL (36s)</td>
+        </tr>
+        <tr>
+          <td><strong>Google Organic</strong></td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">3</td>
+          <td class="num">1</td>
+          <td style="font-size:12px;color:var(--muted)">Pensacola FL (161s), Houston TX (50s), Sacramento CA (89s)</td>
+        </tr>
+        <tr>
+          <td><strong>Facebook</strong></td>
+          <td class="num" style="color:var(--accent-hi);font-weight:700">1</td>
+          <td class="num">1</td>
+          <td style="font-size:12px;color:var(--muted)">Glasgow Rural KY (203s) — very engaged caller</td>
+        </tr>
+        <tr>
+          <td><strong>straightshooterplumbing.com</strong></td>
+          <td class="num">2</td>
+          <td class="num">13+</td>
+          <td style="font-size:12px;color:var(--muted)">Client site embeds — 11 attempts by FISHER LUZ on Jun 29 alone</td>
+        </tr>
+        <tr>
+          <td><strong>goldstarplumbingaz.com</strong></td>
+          <td class="num">1</td>
+          <td class="num">5</td>
+          <td style="font-size:12px;color:var(--muted)">MONTES PATRICIA called 5× on Jun 1 — client website visitor</td>
+        </tr>
+        <tr>
+          <td><strong>Google Ads</strong></td>
+          <td class="num">0</td>
+          <td class="num" style="color:var(--red);font-weight:700">1</td>
+          <td style="font-size:12px;color:var(--muted)">ANDERSON TERI 21s — short call, no valid lead from paid search</td>
+        </tr>
+        <tr class="total">
+          <td>TOTAL</td>
+          <td class="num" style="color:var(--accent-hi)">18 valid</td>
+          <td class="num" style="color:var(--red)">29 short</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert warning">
+    <strong>Google Ads produced zero valid calls despite 930 sessions and unknown spend.</strong>
+    The only Ads call was ANDERSON TERI at 21 seconds — a short hangup. Without conversion tracking or call attribution, there's no way to quantify what the ad budget is returning.
+  </div>
+
+  <div class="card">
+    <div class="card-title">Call Pattern Analysis</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Repeat Short Calls (Client Site Bleed-Through)</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">FISHER LUZ (Silverdale WA) called 11 times on June 29 — all from straightshooterplumbing.com, all under 20 seconds. MONTES PATRICIA called 5 times on June 1 from goldstarplumbingaz.com. These are visitors to client sites hitting Unify360's embedded tracking number. Consider routing these numbers to the client's own answering line.</div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Genuine Prospect Profile</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6">The 11 valid non-client calls average 69 seconds — a solid conversation length for an initial B2B inquiry. Callers are distributed nationally (FL, TX, CA, KY, MI, WA, MO) suggesting Unify360 has national reach. Directory Listings and Direct are the most reliable sources of real inbound prospects.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════ ACTION PLAN ══ -->
+<div id="tab-action" class="tab-content">
+<div class="page">
+
+  <div class="section-eyebrow">Recommendations</div>
+  <div class="section-title">Priority Action Plan</div>
+  <div class="section-desc">Ordered by impact and urgency. Focus Jul–Sep 2026.</div>
+
+  <div class="action-list">
+    <div class="action-item">
+      <div class="action-num">1</div>
+      <div>
+        <div class="action-title">Set up GA4 conversion tracking — this is the #1 gap</div>
+        <div class="action-desc">Every channel shows zero conversions. Configure GA4 events for: free trial signups, demo request form submissions, contact form completions, and any "Get Started" CTA clicks. Until this is live, no channel's ROI can be measured — including the $X/month being spent on Google Ads.</div>
+      </div>
+      <div class="priority high">Critical</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">2</div>
+      <div>
+        <div class="action-title">Fix title tags and meta descriptions on three high-impression pages</div>
+        <div class="action-desc">Three pages have 10,000–14,000 impressions each with less than 0.2% CTR: /ai-review-response-generator/ (14,062 impressions), /messaging/ (12,500), /review-response-software/ (11,667). Rewrite their title tags to include the exact search term and a clear benefit statement. Even lifting CTR from 0.05% to 1% would add 100+ qualified clicks per month — for free.</div>
+      </div>
+      <div class="priority high">High</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">3</div>
+      <div>
+        <div class="action-title">Publish vertical AI guides to capture "best ai tools for [trade]" queries</div>
+        <div class="action-desc">Unify360 already ranks (weakly) for "best ai tools for plumbers" (pos 28) and "ai for electricians" (pos 41). Dedicated, authoritative guides like "Best AI Tools for Plumbers in 2026" and "How AI Review Management Works for Electricians" will: (a) move these rankings toward page 1, (b) give ChatGPT and Gemini more structured content to cite, and (c) create bottom-of-funnel entry points for decision-stage buyers.</div>
+      </div>
+      <div class="priority high">High</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">4</div>
+      <div>
+        <div class="action-title">Add FAQ schema to all AI-related pages</div>
+        <div class="action-desc">ChatGPT and Google AI Overviews both heavily favor FAQ-structured content. Add FAQSchema JSON-LD to /ai-review-response-generator/, /review-response-software/, and /4-best-ai-tools-for-small-business-owners/. This directly amplifies the AI referral traffic already arriving (79 sessions) and positions Unify360 for growth as AI search scales.</div>
+      </div>
+      <div class="priority high">High</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">5</div>
+      <div>
+        <div class="action-title">Review or pause Google Ads until conversion tracking is live</div>
+        <div class="action-desc">CPC traffic has 18.1% engagement — the lowest of all channels. Zero valid calls came from Ads. Without conversion tracking, the campaign cannot optimize for actual leads. Either pause spend until GA4 goals are configured, or set up call tracking and form tracking first and give it 30 days with smart bidding toward a conversion goal.</div>
+      </div>
+      <div class="priority medium">Medium</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">6</div>
+      <div>
+        <div class="action-title">Target "review management software for agencies" with a dedicated page</div>
+        <div class="action-desc">This term has only 9 GSC impressions but already ranks at position 14.6 — meaning Google sees Unify360 as relevant, but there's no strong exact-match page for it. A dedicated /agency/ or /review-management-for-agencies/ landing page targeting this term could rank on page 1 within 60–90 days and capture high-intent agency buyers, a likely growth vertical.</div>
+      </div>
+      <div class="priority medium">Medium</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">7</div>
+      <div>
+        <div class="action-title">Push "can you incentivize google reviews" to page 1</div>
+        <div class="action-desc">This page ranks at position 7.0 with 4,822 impressions — it's sitting just below the top 5 results. A focused content refresh (update the date, add 2–3 new sections, improve internal linking) combined with 3–5 relevant backlinks could push it into the top 5 and unlock a significant click increase from 16 clicks to 100+ per month.</div>
+      </div>
+      <div class="priority medium">Medium</div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">8</div>
+      <div>
+        <div class="action-title">Track and segment AI referral traffic in GA4</div>
+        <div class="action-desc">Create a custom GA4 segment for chatgpt.com + gemini.google.com referrals. Once conversions are tracked, monitor the AI referral conversion rate vs. other channels monthly. Set a goal: grow AI-sourced sessions from 79 to 200+ by Dec 2026 through the content and schema actions above. This is a channel with near-zero cost and above-average engagement — invest in it now.</div>
+      </div>
+      <div class="priority low">Ongoing</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:28px">
+    <div class="card-title">30 / 60 / 90 Day Focus</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">30 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          ✔ Configure GA4 conversions<br>
+          ✔ Rewrite 3 high-impression title tags<br>
+          ✔ Add FAQ schema to AI pages
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px">60 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          ✔ Publish 2 vertical AI guides<br>
+          ✔ Build /agency/ landing page<br>
+          ✔ Review/pause Google Ads with data
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">90 Days</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.7">
+          ✔ Refresh "incentivize google reviews" post<br>
+          ✔ Review AI referral growth vs baseline<br>
+          ✔ Set Q4 content calendar by channel
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  el.classList.add('active');
+  if (id === 'traffic') buildChart('monthlyChart2');
+}
+
+const months = [
+  { label: 'Jul '25', val: 703 },
+  { label: 'Aug '25', val: 824 },
+  { label: 'Sep '25', val: 814 },
+  { label: 'Oct '25', val: 607 },
+  { label: 'Nov '25', val: 664 },
+  { label: 'Dec '25', val: 539 },
+  { label: 'Jan '26', val: 693 },
+  { label: 'Feb '26', val: 745 },
+  { label: 'Mar '26', val: 809 },
+  { label: 'Apr '26', val: 1061 },
+  { label: 'May '26', val: 1381 },
+  { label: 'Jun '26', val: 1071 },
+];
+const MAX = 1381;
+
+function buildChart(id) {
+  const el = document.getElementById(id);
+  if (!el || el.dataset.built) return;
+  el.dataset.built = '1';
+  months.forEach((m, i) => {
+    const pct = (m.val / MAX) * 100;
+    const isPeak = m.val === MAX;
+    const color = isPeak ? 'var(--accent)' : (m.val < 600 ? 'var(--red)' : 'var(--blue)');
+    const wrap = document.createElement('div');
+    wrap.className = 'month-bar-wrap';
+    wrap.innerHTML = `
+      <div class="month-bar" style="height:${pct}%;background:${color};opacity:${isPeak?1:0.65}" title="${m.label}: ${m.val.toLocaleString()} sessions">
+        ${isPeak ? '<div class="month-bar-val" style="color:var(--accent)">' + m.val.toLocaleString() + '</div>' : ''}
+      </div>
+      <div class="month-bar-label">${m.label}</div>`;
+    el.appendChild(wrap);
+  });
+}
+
+buildChart('monthlyChart');
+</script>
+</body>
+</html>
